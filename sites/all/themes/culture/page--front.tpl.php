@@ -180,37 +180,24 @@
         <div id="main-wrapper" class="clearfix">
             <h1 class="heading-main-hide">Главная страница</h1>
             <div id="main" class="clearfix">
-                <?php print render($page['main_slider']); ?>
-
-            <h2 class="title-section bottom-border-title">В ЦЕНТРЕ ВНИМАНИЯ</h2>
-
-
-                <div id="content" class="container">
-
                 <section class="section">
-                    <?php print render($page['main_afisha']); ?>
+                    <?php if ($page['main_slider']): ?>
+                        <?php print render($page['main_slider']); ?>
+                    <?php endif; ?>
+                </section>
+                <section class="section">
+                    <h2 class="title-section bottom-border-title">В ЦЕНТРЕ ВНИМАНИЯ</h2>
+
+
+                    <div  class="container">
+
+                        <?php if ($page['main_afisha']): ?>
+                            <?php print render($page['main_afisha']); ?>
+                        <?php endif; ?>
+
+                    </div>
                 </section>
 
-                        <?php /*if ($page['highlighted']): ?>
-                            <div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
-
-
-                        <?php if ($tabs): ?>
-                            <div class="tabs">
-                                <?php print render($tabs); ?>
-                            </div>
-                        <?php endif; ?>
-                        <?php print render($page['help']); ?>
-                        <?php if ($action_links): ?>
-                            <ul class="action-links">
-                                <?php print render($action_links); ?>
-                            </ul>
-                        <?php endif; ?>
-                        <?php print render($page['content']); ?>
-                        <?php print $feed_icons; */?>
-
-
-                </div> <!-- /.section, /#content -->
 
                 <?php if ($page['sidebar_second']): ?>
                     <div id="sidebar-second" class="column sidebar">
@@ -293,12 +280,13 @@
 
                         ?>
                     </div>
-                    <div class="footer-bottom"  >
-                        <p class="footer-oth" ><a target="_blank" title="Перейти на сайт разработчика" href="http://asmart-group.ru/">Сайт создан в  IT-Company <span>ASMART</span></a></p>
+                    <div class="footer-bottom">
+                        <p class="footer-oth"><a target="_blank" title="Перейти на сайт разработчика"
+                                                 href="http://asmart-group.ru/">Сайт создан в IT-Company
+                                <span>ASMART</span></a></p>
                     </div>
 
                 </div>
-
 
 
             </div>
