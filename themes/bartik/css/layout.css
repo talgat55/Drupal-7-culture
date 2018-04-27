@@ -8,19 +8,24 @@ body,
 }
 #page-wrapper {
   min-height: 100%;
-  min-width: 960px;
+  min-width: 1100px;
 }
-#header div.section,
-#featured div.section,
-#messages div.section,
-#main,
-#triptych,
-#footer-columns,
-#footer {
-  width: 960px;
+.clearfix:after,
+.clearfix:before {
+  display: table;
+  content: ""
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.container{
+  width: 1100px;
   margin-left: auto;
   margin-right: auto;
 }
+
 #header div.section {
   position: relative;
 }

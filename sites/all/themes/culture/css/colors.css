@@ -1,0 +1,58 @@
+
+/* ---------- Color Module Styles ----------- */
+
+body,
+body.overlay {
+  color: #3b3b3b;
+}
+.comment .comment-arrow {
+  border-color: #ffffff;
+}
+#page,
+#main-wrapper,
+#main-menu-links li a.active,
+#main-menu-links li.active-trail a {
+  background: #ffffff;
+}
+.tabs ul.primary li a.active {
+  background-color: #ffffff;
+}
+.tabs ul.primary li.active a {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+.header {
+ background-image: -webkit-gradient(linear, 0% 50%, 100% 50%,color-stop(0, rgb(31, 27, 47)),color-stop(0.395, rgb(37, 45, 69)),color-stop(0.667, rgb(40, 90, 108)),color-stop(0.998, rgb(36, 131, 138)));
+  /* Android 2.3 */
+  background-image: -webkit-linear-gradient(0deg,rgb(31, 27, 47) 0%,rgb(37, 45, 69) 39.5%,rgb(40, 90, 108) 66.7%,rgb(36, 131, 138) 99.8%);
+  /* IE10+ */
+  background-image: linear-gradient(90deg,rgb(31, 27, 47) 0%,rgb(37, 45, 69) 39.5%,rgb(40, 90, 108) 66.7%,rgb(36, 131, 138) 99.8%);
+  background-image: -ms-linear-gradient(0deg,rgb(31, 27, 47) 0%,rgb(37, 45, 69) 39.5%,rgb(40, 90, 108) 66.7%,rgb(36, 131, 138) 99.8%);
+
+}
+a {
+  color: #0071B3;
+}
+a:hover,
+a:focus {
+  color: #018fe2;
+}
+a:active {
+  color: #23aeff;
+}
+.sidebar .block {
+  background-color: #f6f6f2;
+  border-color: #f9f9f9;
+}
+#page-wrapper,
+#footer-wrapper {
+  background: #303030;
+}
+.region-header,
+.region-header a,
+.region-header li a.active,
+#name-and-slogan,
+#name-and-slogan a,
+#secondary-menu-links li a {
+  color: #fffeff;
+}

@@ -1,6 +1,12 @@
 
 /* ---------- Overall Specifications ---------- */
-
+@font-face {
+  font-family: 'NeoSansPro-Medium';
+  src: url('NeoSansPro-Medium.woff') format('woff'),
+  url('NeoSansPro-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   line-height: 1.5;
   font-size: 87.5%;
@@ -293,8 +299,20 @@ ul.tips {
   outline: 0;
 }
 #logo {
-  float: left; /* LTR */
-  padding: 15px 15px 15px 10px; /* LTR */
+  display: table-cell;
+  vertical-align: middle;
+}
+#logo  img{
+  width: 344px;
+}
+.top-header{
+  display: table;
+  width: 100%;
+}
+.center-top-header,
+.right-top-header{
+  display: table-cell;
+  vertical-align: middle;
 }
 #name-and-slogan {
   float: left; /* LTR */
