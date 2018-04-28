@@ -1163,7 +1163,21 @@ div.password-confirm {
     list-style: none;
     width: 22%;
     float: left;
-    margin: 0 1.5%;
+    padding: 0 1.5%;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-bottom: 50px;
+}
+.news.home-page li:hover{
+    -webkit-box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
 }
 .news.home-page{
     padding: 0;
@@ -1193,15 +1207,15 @@ div.password-confirm {
 .news.home-page li p{
     font-family: 'OpenSans';
     font-size: 14px;
-    margin-bottom: 70px;
+    margin-bottom: 20px;
 }
 .news-block .link-to-mateerial{
     margin-top: 0!important;
 }
-.news.home-page li:nth-of-type(8n+5) p,
-.news.home-page li:nth-of-type(8n+6) p,
-.news.home-page li:nth-of-type(8n+7) p,
-.news.home-page li:nth-of-type(8n+8) p{
+.news.home-page li:nth-of-type(8n+5) ,
+.news.home-page li:nth-of-type(8n+6) ,
+.news.home-page li:nth-of-type(8n+7) ,
+.news.home-page li:nth-of-type(8n+8) {
     margin-bottom: 30px;
 }
 .culture-detail li:nth-of-type(3n+1){
