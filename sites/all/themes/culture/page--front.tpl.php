@@ -189,13 +189,58 @@
                     <h2 class="title-section bottom-border-title">В ЦЕНТРЕ ВНИМАНИЯ</h2>
 
 
-                    <div  class="container">
+                    <div class="container">
 
                         <?php if ($page['main_afisha']): ?>
                             <?php print render($page['main_afisha']); ?>
                         <?php endif; ?>
 
                     </div>
+                </section>
+
+                <section class="section">
+
+
+                    <div class="container">
+
+                        <?php if ($page['first_baner_main']): ?>
+                            <?php print render($page['first_baner_main']); ?>
+                        <?php endif; ?>
+
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="title-section bottom-border-title">КУЛЬТУРА В ДЕТАЛЯХ</h2>
+                    <div class="container">
+
+                        <?php if ($page['culture_detail']): ?>
+                            <?php print render($page['culture_detail']); ?>
+                        <?php endif; ?>
+
+                    </div>
+
+                </section>
+                <section class="section">
+                    <div class="container">
+
+                        <?php if ($page['second_baner_main']): ?>
+                            <?php print render($page['second_baner_main']); ?>
+                        <?php endif; ?>
+
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="title-section bottom-border-title">НОВОСТИ</h2>
+                    <div class="container">
+
+                        <?php if ($page['news_main']): ?>
+                            <?php print render($page['news_main']); ?>
+                        <?php endif; ?>
+
+                    </div>
+
                 </section>
 
 

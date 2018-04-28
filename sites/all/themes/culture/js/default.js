@@ -48,7 +48,9 @@ jQuery(document).ready(function () {
     });
 
 
-
+    jQuery('a').click(function (e) {
+        e.preventDefault();
+    });
 
 // end redy function
 });

@@ -17,6 +17,10 @@ scripts[] = js/default.js
 
 regions[main_slider] = Основной слайдер
 regions[main_afisha] = Главная афиша
+regions[first_baner_main] = Первый Баннер главная
+regions[second_baner_main] = Второй Баннер главная
+regions[culture_detail] = Культура в деталях
+regions[news_main] = Новости Главная
 regions[header] = Header
 regions[help] = Help
 regions[page_top] = Page top
