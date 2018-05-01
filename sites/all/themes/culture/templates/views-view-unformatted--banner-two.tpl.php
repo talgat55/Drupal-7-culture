@@ -10,7 +10,6 @@
     <div class="container relative">
         <div class="banner home-page clearfix padding-top-20">
             <?php
-
             foreach ($view->style_plugin->rendered_fields as $view_field): ?>
                 <?php // krumo($view_field);exit;
 
@@ -26,8 +25,8 @@
                $class = 'none';
            }
 
+            if( strripos($view_field['field_displays_banner'],'На главной 2 баннер') >-1 ){
 
-            if( $view_field['field_display_banner'] =='На главной 2 баннер'){
 
                 echo $view_field['field_image_banner'];
                 echo '

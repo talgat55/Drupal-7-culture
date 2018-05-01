@@ -87,7 +87,6 @@
 ?>
 <div id="page-wrapper">
     <div id="page">
-
         <header id="header">
             <div class="header">
                 <div class="container clearfix">
@@ -158,7 +157,7 @@
                     </div>
                 </div>
             </div>
-            <div class="bottom-header">
+            <div class="bottom-header  <?php if(!$is_front){  echo 'border-header-bottom';  } ?>">
                 <div class="container clearfix">
                     <div class="main-header-menu">
                         <?php
@@ -178,164 +177,4 @@
         </header>
 
         <div id="main-wrapper" class="clearfix">
-            <h1 class="heading-main-hide">Главная страница</h1>
-            <div id="main" class="clearfix">
-                <section class="section">
-                    <?php if ($page['main_slider']): ?>
-                        <?php print render($page['main_slider']); ?>
-                    <?php endif; ?>
-                </section>
-                <section class="section">
-                    <h2 class="title-section bottom-border-title">В ЦЕНТРЕ ВНИМАНИЯ</h2>
 
-
-                    <div class="container">
-
-                        <?php if ($page['main_afisha']): ?>
-                            <?php print render($page['main_afisha']); ?>
-                        <?php endif; ?>
-
-                    </div>
-                </section>
-
-                <section class="section">
-
-
-                    <div class="container">
-
-                        <?php if ($page['first_baner_main']): ?>
-                            <?php print render($page['first_baner_main']); ?>
-                        <?php endif; ?>
-
-                    </div>
-                </section>
-
-                <section class="section">
-                    <h2 class="title-section bottom-border-title">КУЛЬТУРА В ДЕТАЛЯХ</h2>
-                    <div class="container">
-
-                        <?php if ($page['culture_detail']): ?>
-                            <?php print render($page['culture_detail']); ?>
-                        <?php endif; ?>
-
-                    </div>
-
-                </section>
-                <section class="section">
-                    <div class="container">
-
-                        <?php if ($page['second_baner_main']): ?>
-                            <?php print render($page['second_baner_main']); ?>
-                        <?php endif; ?>
-
-                    </div>
-                </section>
-
-                <section class="section">
-                    <h2 class="title-section bottom-border-title">НОВОСТИ</h2>
-                    <div class="container">
-
-                        <?php if ($page['news_main']): ?>
-                            <?php print render($page['news_main']); ?>
-                        <?php endif; ?>
-
-                    </div>
-
-                </section>
-
-
-                <?php if ($page['sidebar_second']): ?>
-                    <div id="sidebar-second" class="column sidebar">
-                        <div class="section">
-                            <?php print render($page['sidebar_second']); ?>
-                        </div>
-                    </div> <!-- /.section, /#sidebar-second -->
-                <?php endif; ?>
-
-            </div>
-        </div> <!-- /#main, /#main-wrapper -->
-
-        <?php if ($page['triptych_first'] || $page['triptych_middle'] || $page['triptych_last']): ?>
-            <div id="triptych-wrapper">
-                <div id="triptych" class="clearfix">
-                    <?php print render($page['triptych_first']); ?>
-                    <?php print render($page['triptych_middle']); ?>
-                    <?php print render($page['triptych_last']); ?>
-                </div>
-            </div> <!-- /#triptych, /#triptych-wrapper -->
-        <?php endif; ?>
-
-        <footer id="footer-wrapper">
-            <div class="section container clearfix">
-                <div class="col-md-6">
-                    <?php if ($logo): ?>
-                        <a href="<?php print $front_page; ?>" title="<?php print t('Домашняя страница'); ?>"
-                           id="logo">
-                            <img src="<?php print $logo; ?>" alt="<?php print t('Логотип'); ?>"/>
-                        </a>
-                    <?php endif; ?>
-                    <ul class="link-to-social">
-                        <li>
-                            <a href="#" target="_blank" class="link-to-social-item">
-                                <img src="/<?php print path_to_theme(); ?>/images/facebook.png"
-                                     alt="ссылка на страницу в facebook">
-                            </a>
-
-                        </li>
-                        <li>
-                            <a href="#" target="_blank" class="link-to-social-item">
-                                <img src="/<?php print path_to_theme(); ?>/images/vk.png"
-                                     alt="ссылка на страницу вк">
-                            </a>
-
-                        </li>
-                        <!--<li>
-                                    <a href="#" target="_blank" class="link-to-social-item">
-                                        <img src="/<?php print path_to_theme(); ?>/images/telegram.png"
-                                             alt="ссылка на страницу телегамм">
-                                    </a>
-
-                                </li>-->
-                        <li>
-                            <a href="#" target="_blank" class="link-to-social-item">
-                                <img src="/<?php print path_to_theme(); ?>/images/instagram.png"
-                                     alt="ссылка на страницу instagram">
-                            </a>
-
-                        </li>
-
-
-                    </ul>
-                    <div class="alternative-version-view">
-                        <img src="/<?php print path_to_theme(); ?>/images/eye.png"
-                             alt="eye">
-                        <span>ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ</span>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="main-footer-menu">
-                        <?php
-                        $menu_main = menu_navigation_links('main-menu');
-                        print theme('links__name_of_your_menu', array(
-                            'links' => $menu_main,
-                            'attributes' => array(
-                                'class' => array('links', 'inline', 'clearfix', 'main-menu'),
-                            ),
-                        ));
-
-                        ?>
-                    </div>
-                    <div class="footer-bottom">
-                        <p class="footer-oth"><a target="_blank" title="Перейти на сайт разработчика"
-                                                 href="http://asmart-group.ru/">Сайт создан в IT-Company
-                                <span>ASMART</span></a></p>
-                    </div>
-
-                </div>
-
-
-            </div>
-        </footer>
-
-    </div>
-</div> <!-- /#page, /#page-wrapper -->

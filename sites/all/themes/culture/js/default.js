@@ -47,10 +47,10 @@ jQuery(document).ready(function () {
         jQuery(this).parent().parent().parent().find('.afisha-carousel').slick('slickNext');
     });
 
-
+/*
     jQuery('a').click(function (e) {
         e.preventDefault();
-    });
+    });*/
 
 // end redy function
 });

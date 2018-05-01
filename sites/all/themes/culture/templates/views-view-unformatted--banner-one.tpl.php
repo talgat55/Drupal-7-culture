@@ -27,7 +27,7 @@
            }
 
 
-            if( $view_field['field_display_banner'] =='На главной 1 баннер'){
+            if( strripos($view_field['field_displays_banner'],'На главной 1 баннер') >-1 ){
 
                 echo $view_field['field_image_banner'];
                 echo '

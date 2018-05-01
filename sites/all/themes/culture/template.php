@@ -163,3 +163,13 @@ function culture_form_search_block_form_alter(&$form, &$form_state, $form_id) {
 
     $form['search_block_form']['#attributes']['placeholder'] = t('Поиск');
 }
+
+
+/**
+ * Implements hook_page_alter().
+ */
+function culture_page_alter(&$page) {
+    if (isset($page['news_baner_main'])) {
+        $GLOBALS['region_news_baner_main'] = $page['news_baner_main'];
+    }
+}
