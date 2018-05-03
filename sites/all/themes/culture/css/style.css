@@ -1504,16 +1504,14 @@ div.password-confirm {
     width: 100%;
 }
 .gallery .pager-load-more{
-    margin-top: 50px;
+    margin-top: 25px;
 }
 .gallery-item:hover .overlay-gallery {
     opacity: 1;
     visibility: visible;
     height: 50%;
 }
-.gallery{
-    margin-bottom: 50px;
-}
+
 .overlay-gallery{
     width: 100%;
     -webkit-transition: all 0.3s ease;

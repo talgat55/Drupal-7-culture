@@ -95,7 +95,7 @@
         </div>
     </div>
 <?php endif; ?>
-    <h1 class="title-section bottom-border-title margin-bottom-60 no-after">Галерея</h1>
+    <h1 class="title-section bottom-border-title margin-top-10 margin-bottom-60 no-after">Галерея</h1>
     <div id="main" class="clearfix gallery">
 
         <?php print render($page['content']); ?>
