@@ -1388,14 +1388,11 @@ div.password-confirm {
     font-size: 25px;
     color:  #12a69d;
 }
-.title-field-banner a{
+.title-field-banner {
     font-family: 'NeoSansPro-Bold';
     font-size: 25px;
     color:  #12a69d;
     text-decoration: none;
-}
-.title-field-banner a:hover{
-    color:  #12a69d;
 }
 .padding-top-20{
     padding-top: 20px;
