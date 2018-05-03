@@ -31,6 +31,7 @@
                 echo $view_field['field_image_banner'];
                 echo '
                 <div class="textblock-banner  '.$class.'"> 
+                <div class="textblock-banner-wallpaper"> 
                 <div class="date-field-banner">'.$datefield_start[1].' '.$datefield_start[0].' - '.$datefield_end[1].' '.$datefield_end[0].'</div>
                 <div class="kind-field-banner">
                     '.$view_field['field_kind_event'].'
@@ -44,6 +45,7 @@
 
 
                 echo '
+                </div>
                 </div>
                 ';
             }

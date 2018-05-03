@@ -85,13 +85,18 @@
  * @see html.tpl.php
  */
 ?>
-<?php include('/../templates/header.tpl.php'); ?>
+
+
+<?php include('/../templates/header.tpl.php');  ?>
 <?php if ($breadcrumb): ?>
     <div class="container relative">
-        <div id="breadcrumb"><?php print $breadcrumb; ?></div>
+        <div id="breadcrumb">
+            <?php /*print $breadcrumb;*/ ?>
+            Главная / Новости
+        </div>
     </div>
 <?php endif; ?>
-    <h1 class="title-section bottom-border-title margin-bottom-60 no-after">Новости</h1>
+    <h1 class="title-section bottom-border-title margin-top-10 margin-bottom-60 no-after">Новости</h1>
     <div id="main" class="clearfix">
 
         <?php print render($page['content']); ?>

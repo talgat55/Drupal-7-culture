@@ -121,13 +121,12 @@
                                     </a>
 
                                 </li>
-                                <!--<li>
+                                <li>
                                     <a href="#" target="_blank" class="link-to-social-item">
                                         <img src="/<?php print path_to_theme(); ?>/images/telegram.png"
                                              alt="ссылка на страницу телегамм">
                                     </a>
-
-                                </li>-->
+                                </li>
                                 <li>
                                     <a href="#" target="_blank" class="link-to-social-item">
                                         <img src="/<?php print path_to_theme(); ?>/images/instagram.png"

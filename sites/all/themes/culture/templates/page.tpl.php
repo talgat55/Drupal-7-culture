@@ -87,34 +87,41 @@
 ?>
 <?php include('header.tpl.php'); ?>
 
-
-    <?php if ($breadcrumb): ?>
+<div class="container">
+    <?php /*if ($breadcrumb): ?>
       <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-    <?php endif; ?>
+    <?php endif; */?>
+
+    <div id="breadcrumb">
+        <?php /*print $breadcrumb;*/ ?>
+        Главная / Новости / Спектакль «Провинциалка»
+    </div>
+
+    <div id="content" class="column">
+        <div class="section">
 
 
 
-    <div id="content" class="column"><div class="section">
-
-
-
-                    <div id="content" class="column"><div class="section">
-                             <a id="main-content"></a>
+                    <div id="content" class="column">
+                        <div class="section">
+                            <?php print render($title_prefix); ?>
                             <?php if ($title): ?>
-                                <h1 class="title" id="page-title">
+                                <h1  class="title" id="page-title">
                                     <?php print $title; ?>
                                 </h1>
                             <?php endif; ?>
-
+                            <?php print render($title_suffix); ?>
                             <?php print render($page['content']); ?>
 
 
-                        </div></div> <!-- /.section, /#content -->
+                        </div>
+                    </div> <!-- /.section, /#content -->
 
 
 
 
-    </div></div> <!-- /.section, /#content -->
+        </div>
+    </div> <!-- /.section, /#content -->
 
     <?php if ($page['sidebar_second']): ?>
       <div id="sidebar-second" class="column sidebar"><div class="section">
@@ -122,5 +129,5 @@
       </div></div> <!-- /.section, /#sidebar-second -->
     <?php endif; ?>
 
-
+</div>
 <?php include('footer.tpl.php'); ?>

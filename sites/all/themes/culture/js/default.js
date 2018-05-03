@@ -51,6 +51,19 @@ jQuery(document).ready(function () {
     jQuery('a').click(function (e) {
         e.preventDefault();
     });*/
+    /*
+    * Lightbox for gallery
+     */
+    jQuery('.gallery-lists-single').lightGallery({
+        download: false,
+        selector: '.gallery-col-md-single a',
+        thumbnail: true,
+        exthumbimage: false
+    });
+
+
+
+
 
 // end redy function
 });

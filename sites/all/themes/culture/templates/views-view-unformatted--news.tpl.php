@@ -22,11 +22,13 @@
 
             echo '
                 <li>
-                    <div class="date-news">'.$datefieldinvert[1].' '.$datefieldinvert[0].'</div>
-                    '.$view_field["field_image"].'
-                    <h3>'.$view_field["title"].'</h3>
-                    <div>
-                        '.$view_field["body"].'
+                    <div class="news-item">
+                        <div class="date-news">'.$datefieldinvert[1].' '.$datefieldinvert[0].'</div>
+                        '.$view_field["field_image"].'
+                        <h3>'.$view_field["title"].'</h3>
+                        <div class="news-text-block">
+                            '.$view_field["field_anons"].'
+                        </div>
                     </div>
                 </li>
                 ';
@@ -47,7 +49,7 @@
 
 
         <div class="col-md-12 news-block">
-            <a href="#" class="link-to-mateerial">Больше новостей</a>
+            <a href="/news" class="link-to-mateerial">Больше новостей</a>
         </div>
 
 

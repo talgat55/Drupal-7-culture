@@ -73,12 +73,11 @@ body,
 #main-wrapper {
   min-height: 300px;
 }
-#content .section,
-.sidebar .section {
-  padding: 0 15px;
-}
+
 #breadcrumb {
-  margin: 0 15px;
+  margin: 15px 0 0 0;
+  font-family: 'OpenSans';
+  font-size: 16px;
 }
 .region-triptych-first,
 .region-triptych-middle,

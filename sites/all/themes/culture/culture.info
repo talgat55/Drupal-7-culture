@@ -10,9 +10,16 @@ stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/colors.css
 stylesheets[print][] = css/print.css
+stylesheets[all][] = css/lg-transitions.css
+stylesheets[all][] = css/lightgallery.css
 
 scripts[] = js/jquery-3.2.1.min.js
 scripts[] = js/slick.min.js
+scripts[] = js/lightgallery.min.js
+scripts[] = js/jquery.mousewheel.min.js
+scripts[] = js/lg-fullscreen.min.js
+scripts[] = js/lg-thumbnail.min.js
+scripts[] = js/lg-hash.min.js
 scripts[] = js/default.js
 
 regions[main_slider] = Основной слайдер
