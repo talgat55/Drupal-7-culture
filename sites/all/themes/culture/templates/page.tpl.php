@@ -88,14 +88,11 @@
 <?php include('header.tpl.php'); ?>
 
 <div class="container">
-    <?php /*if ($breadcrumb): ?>
+    <?php  if ($breadcrumb): ?>
       <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-    <?php endif; */?>
+    <?php endif;  ?>
 
-    <div id="breadcrumb">
-        <?php /*print $breadcrumb;*/ ?>
-        Главная / Новости / Спектакль «Провинциалка»
-    </div>
+
 
     <div id="content" class="column">
         <div class="section">

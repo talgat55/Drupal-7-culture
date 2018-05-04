@@ -90,8 +90,8 @@
 <?php if ($breadcrumb): ?>
     <div class="container relative">
         <div id="breadcrumb">
-            <?php /*print $breadcrumb;*/ ?>
-            Главная / Галерея
+            <?php  print $breadcrumb;  ?>
+
         </div>
     </div>
 <?php endif; ?>
