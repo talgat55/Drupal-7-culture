@@ -91,8 +91,9 @@
 <?php if ($breadcrumb): ?>
     <div class="container relative">
         <div id="breadcrumb">
-            <?php /*print $breadcrumb;*/ ?>
-            Главная / Новости
+
+            <?php  print $breadcrumb;  ?>
+
         </div>
     </div>
 <?php endif; ?>

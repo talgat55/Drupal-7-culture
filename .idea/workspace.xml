@@ -4,8 +4,7 @@
     <list default="true" id="335fdc75-9f90-41e5-bd15-35bce0f7a359" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/css/style.css" afterPath="$PROJECT_DIR$/sites/all/themes/culture/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/page/page--gallery.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/page/page--gallery.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/templates/page.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/templates/page.tpl.php" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/page/page--news.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/page/page--news.tpl.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,18 +28,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="898" column="26" lean-forward="true" selection-start-line="898" selection-start-column="26" selection-end-line="898" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="culture.info" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/culture.info">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+            <state relative-caret-position="401">
+              <caret line="1544" column="1" lean-forward="true" selection-start-line="1544" selection-start-column="1" selection-end-line="1544" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -86,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views-view-unformatted--banner-one.tpl.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--banner-one.tpl.php">
+      <file leaf-file-name="page--news.tpl.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page--news.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="13" column="57" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="57" />
+            <state relative-caret-position="390">
+              <caret line="98" column="15" lean-forward="true" selection-start-line="98" selection-start-column="15" selection-end-line="98" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -163,7 +152,6 @@
         <option value="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--gallery--page.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/css/lightgallery.css" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/culture.info" />
-        <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--news.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/page/node-article.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--news.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/page/node--article.tpl.php" />
@@ -180,6 +168,7 @@
         <option value="$PROJECT_DIR$/sites/all/themes/culture/templates/page.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--gallery.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/css/style.css" />
+        <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--news.tpl.php" />
       </list>
     </option>
   </component>
@@ -328,12 +317,12 @@
       <workItem from="1524890862635" duration="19137000" />
       <workItem from="1524932925199" duration="821000" />
       <workItem from="1525083290388" duration="70433000" />
-      <workItem from="1525313882033" duration="18935000" />
+      <workItem from="1525313882033" duration="20551000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180523000" />
+    <option name="totallyTimeSpent" value="182139000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -539,14 +528,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/node-article.tpl.php" />
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page--news.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="92" column="29" lean-forward="false" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/templates/page--front.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1664">
@@ -680,14 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/templates/page.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page--gallery.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -696,18 +669,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/css/style.css">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/culture.info">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="898" column="26" lean-forward="true" selection-start-line="898" selection-start-column="26" selection-end-line="898" selection-end-column="26" />
+        <state relative-caret-position="364">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/culture.info">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        <state relative-caret-position="401">
+          <caret line="1544" column="1" lean-forward="true" selection-start-line="1544" selection-start-column="1" selection-end-line="1544" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/templates/page.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page--news.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="98" column="15" lean-forward="true" selection-start-line="98" selection-start-column="15" selection-end-line="98" selection-end-column="15" />
           <folding />
         </state>
       </provider>

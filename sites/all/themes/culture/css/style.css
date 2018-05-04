@@ -1541,7 +1541,7 @@ div.password-confirm {
     margin-bottom: 1px;
     margin-right: 1px;
     background-size: cover!important;
-    background-position:  center center;
+    background-position:  center center!important;
 }
 .gallery-col-md-single{
     width: 33.33%;
