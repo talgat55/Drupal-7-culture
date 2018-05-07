@@ -63,7 +63,52 @@ jQuery(document).ready(function () {
 
 
 
-
+    InitFitRows();
+    InitFilterRows();
 
 // end redy function
 });
+/*
+*  Culture Details  Rows
+ */
+function InitFitRows(){
+    "use strict";
+
+    if(jQuery('.culture-detail-row').length){
+
+
+        var $container = jQuery('.culture-detail-row');
+        $container.imagesLoaded(function () {
+            $container.slideDown(1000).isotope({
+                itemSelector: '.culture-detail-item',
+                layoutMode: 'masonry'
+            });
+        });
+
+    }
+}
+
+//------------------
+//    Filterable Portfolio
+//-------------------
+function InitFilterRows(){
+    "use strict";
+
+    jQuery('.list-terms-culture-details li').click(function(){
+       // var $this = jQuery(this).parent('li');
+        var $this = jQuery(this);
+        if ( $this.hasClass('current') ) {
+            return;
+        }
+
+        var $optionSet = $this.parents('.list-terms-culture-details');
+        $optionSet.find('.current').removeClass('current');
+        $this.addClass('current');
+
+        var selector = jQuery(this).attr('data-filter');
+        jQuery('.culture-detail-row').isotope({ filter: selector });
+
+
+        return false;
+    });
+}

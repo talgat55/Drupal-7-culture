@@ -103,7 +103,7 @@
                         <div class="section">
                             <?php print render($title_prefix); ?>
                             <?php if ($title): ?>
-                                <h1  class="title" id="page-title">
+                                <h1  class="  title-section bottom-border-title margin-top-10 margin-bottom-60 no-after"  >
                                     <?php print $title; ?>
                                 </h1>
                             <?php endif; ?>

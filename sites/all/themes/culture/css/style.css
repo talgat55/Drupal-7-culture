@@ -1330,6 +1330,7 @@ div.password-confirm {
 }
 .culture-bottom-block div p{
     margin-bottom: 0;
+    text-decoration: none;
 }
 .culture-bottom-block h3 a{
     font-size: 25px;
@@ -2486,4 +2487,118 @@ div.admin-panel .description {
     /* Uncomment for 3D effect */
     /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
+.culture-detail-row li{
+    list-style: none;
+    width: 25%;
 
+    float: left;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1.5px solid #fff;
+
+}
+
+.row.culture-detail-rows{
+    margin: 0 -15px;
+}
+
+.culture-detail-row li img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.culture-detail-row{
+    padding: 0;
+}
+
+.culture-detail-row .culture-top-block .culture-date{
+    color:  #12a69d;
+}
+
+.culture-detail-row .culture-bottom-block{
+    position: relative;
+    padding: 0;
+}
+.culture-detail-row .culture-bottom-block h3{
+    font-family: 'NeoSansPro-Bold';
+    font-size: 18px;
+    text-decoration: none!important;
+    color: #000;
+    margin: 20px 0;
+}
+.culture-detail-row .culture-top-block{
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+}
+.culture-row-image {
+    height: 173px;
+}
+.culture-detail-row  .culture-bottom-block div{
+  color: #000;
+}
+
+.culture-detail-row  li:hover  h3{
+    color:  #12a69d;
+    display: inline-block;
+}
+.culture-detail-row  li:hover a {
+    -webkit-box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    border: 1.5px solid #eee;
+    position: relative;
+    z-index: 9;
+}
+.list-terms-culture-details{
+    margin: 0 auto 50px auto;
+    padding: 8px 11px;
+    display: table;
+    border-bottom: 1.5px solid #000;
+}
+
+.list-terms-culture-details li{
+    float: left;
+    list-style: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    font-family: 'NeoSansPro-Regular';
+    font-size: 18px;
+    cursor: pointer;
+}
+.list-terms-culture-details li:hover,
+.list-terms-culture-details li.current{
+    color: #12a69d;
+}
+
+.separator-culture-detail{
+    width: 5px;
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    margin: 0 30px;
+    height: 5px;
+    border-radius: 50%;
+    background: #000;
+}
+
+.culture-detail-row  .culture-detail-item a{
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 0 15px 15px 15px ;
+}
+.culture-detail-row  .culture-bottom-block div p{
+    margin-top: 0;
+    display: inline-block;
+}
+.page-culturedetails .title-section{
+    margin-bottom: 40px;
+}
