@@ -1,10 +1,4 @@
 <?php
-function culture_preprocess_page(&$vars, $hook) {
-    if (isset($vars['node']->type)) {
-        $vars['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
-    }
-}
-
 
 /*
  *  search form

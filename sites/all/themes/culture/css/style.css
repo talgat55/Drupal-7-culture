@@ -55,6 +55,13 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'OpenSans Extra-Bold';
+    src: url('../fonts/opensansextrabold.woff') format('woff'),
+    url('../fonts/opensansextrabold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
     line-height: 1.5;
@@ -1248,7 +1255,7 @@ div.password-confirm {
 }
 .news.home-page li .date-news{
     font-size: 18px;
-    font-family: 'OpenSans-Bold';
+    font-family: 'OpenSans Extra-Bold';
     margin-bottom: 20px;
     color:  #12a69d;
 }
@@ -1295,7 +1302,7 @@ div.password-confirm {
 .culture-top-block .culture-date{
     font-size: 18px;
     color: #fff;
-    font-family: 'NeoSansPro-Bold';
+    font-family: 'OpenSans Extra-Bold';
 }
 .culture-detail-item{
     position: relative;
@@ -2520,7 +2527,7 @@ div.admin-panel .description {
     padding: 0;
 }
 .culture-detail-row .culture-bottom-block h3{
-    font-family: 'NeoSansPro-Bold';
+    font-family: 'OpenSans Extra-Bold';
     font-size: 18px;
     text-decoration: none!important;
     color: #000;
@@ -2533,6 +2540,8 @@ div.admin-panel .description {
 }
 .culture-row-image {
     height: 173px;
+    position: relative;
+    z-index: 9;
 }
 .culture-detail-row  .culture-bottom-block div{
   color: #000;
@@ -2601,4 +2610,15 @@ div.admin-panel .description {
 }
 .page-culturedetails .title-section{
     margin-bottom: 40px;
+}
+.culture-top-block span{
+    font-family: 'NeoSansPro-Medium';
+    font-size: 18px;
+    color: #fff;
+    position: absolute;
+    bottom: -7px;
+    right: 9px;
+    background: #20acaf;
+    padding: 5px 17px;
+    transform: rotate(-5deg);
 }
