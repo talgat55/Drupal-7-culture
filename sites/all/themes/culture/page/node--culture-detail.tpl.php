@@ -173,7 +173,7 @@
     <div class="article-slider-row">
         <div class="article-slider">
             <?php
-            $field_gallery = field_get_items('node', $node, 'field_gallery');
+            $field_gallery = field_get_items('node', $node, 'field_gallery_culture');
 
             foreach ($field_gallery as $field) {
                 $my_image_url = file_create_url($field['uri']);
