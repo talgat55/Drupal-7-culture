@@ -92,93 +92,104 @@
     <div class="container relative">
 
         <div id="breadcrumb">
-            <?php /*print $breadcrumb;*/ ?>
+            <?php  print $breadcrumb;  ?>
 
         </div>
+
+
 
     </div>
 
 <?php endif; ?>
+
 <div id="main" class="clearfix">
-    <div class="container-article relative">
-        <div class="date-article">14:30 <span>22 марта 2018</span></div>
+    <div>
+        <?php
+        $uri = $_SERVER['HTTP_HOST'] . '/' . request_uri();
 
-        <img src="/<?php print path_to_theme(); ?>/images/article.jpg" alt="">
+        ?>
+        <div class="ya-share2" data-services="telegram,vkontakte,facebook"  data-title="<?php  print $node->title; ?>"   data-url="<?php  echo $uri; ?>"  ></div>
+    </div>
+    <div class="container-article news relative clearfix">
+
+        <div class="col-md-7">
+            <h1 class="title-section bottom-border-title margin-top-10 margin-bottom-60 no-after">Новости</h1>
+
+        <?php
+
+
+        $field_description = field_get_items('node', $node, 'field_descriptions');
+
+
+
+
+
+        ?>
         <div class="content-article">
-            <p>
-                нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.
-                Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции
-                требуют
-                от нас анализа модели развития. Товарищи! консультация с широким активом играет важную роль в
-                формировании
-                систем массового участия.
-                <br>
-                Повседневная практика показывает, что новая модель организационной деятельности требуют от нас анализа
-                модели развития. Идейные соображения высшего порядка, а также консультация с широким активом играет
-                важную
-                роль в формировании модели развития. Повседневная практика показывает, что реализация намеченных
-                плановых
-                заданий позволяет оценить значение системы обучения кадров, соответствует насущным потребностям. Равным
-                образом сложившаяся структура организации влечет за собой процесс внедрения и модернизации систем
-                массового
-                участия. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей
-                деятельности позволяет оценить значение существенных финансовых и административных условий.
-                Разнообразный и
-                богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения и модернизации
-                соответствующий
-                условий активизации.
-            </p>
-        </div>
-            <h2>Подзаголовок</h2>
+            <div class="date-article"><?php print(format_date($node->created, 'custom', 'G:i')); ?>
+                <span><?php print(format_date($node->created, 'custom', 'd M Y')); ?></span></div>
+            <?php print($field_description[0]["value"]); ?>
 
-            <img style="padding-right: 40px;"  src="/<?php print path_to_theme(); ?>/images/1.jpg" alt="">
-            <img src="/<?php print path_to_theme(); ?>/images/2.jpg" alt="">
+            <?php
 
-        <div class="content-article">
-            <p>
-                нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.
-                Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции
-                требуют
-                от нас анализа модели развития. Товарищи! консультация с широким активом играет важную роль в
-                формировании
-                систем массового участия.
-                <br>
-                Повседневная практика показывает, что новая модель организационной деятельности требуют от нас анализа
-                модели развития. Идейные соображения высшего порядка, а также консультация с широким активом играет
-                важную
-                роль в формировании модели развития. Повседневная практика показывает, что реализация намеченных
-                плановых
-                заданий позволяет оценить значение системы обучения кадров, соответствует насущным потребностям. Равным
-                образом сложившаяся структура организации влечет за собой процесс внедрения и модернизации систем
-                массового
-                участия. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей
-                деятельности позволяет оценить значение существенных финансовых и административных условий.
-                Разнообразный и
-                богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения и модернизации
-                соответствующий
-                условий активизации.
-            </p>
-            <p style="font-style: italic">Смирнова Анна</p>
-        </div>
-        <div class="main-article-menu">
+            $uid = user_load($node->uid);
+            $myprofile = $node->uid;
+            $profile = profile2_load_by_user($uid, 'main');
+
+            ?>
+            <p style="font-style: italic"><?php print($profile->field_names['und'][0]['value']); ?></p>
+            <div class="main-article-menu">
                 <?php
-                $menu_main = menu_navigation_links('main-menu');
+                $menu_main = menu_navigation_links('menu-menu-news-page');
                 print theme('links__name_of_your_menu', array(
                     'links' => $menu_main,
                     'attributes' => array(
-                        'class' => array('links', 'inline', 'clearfix', 'main-menu'),
+                        'class' => array('links', 'inline', 'clearfix', 'news-menu'),
                     ),
                 ));
 
                 ?>
+            </div>
         </div>
+
+        </div>
+        <div class="col-md-5">
+            <div class="aside">
+                <div class="block-photo">
+                    <img src="/<?php print path_to_theme(); ?>/images/elipse.png"
+                         alt="Фоторепортаж">
+                        <div class="block-aside-photo">
+                            <img src="/<?php print path_to_theme(); ?>/images/photo-camera.png"
+                                 alt="Иконка">
+
+                            <p>Фоторепортаж</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    <?php
+    <div class="article-slider-row">
+        <div class="article-slider">
+            <?php
+            $field_gallery = field_get_items('node', $node, 'field_gallery');
 
+            foreach ($field_gallery as $field) {
+                $my_image_url = file_create_url($field['uri']);
+                print('<div><img src="' . $my_image_url . '" alt="' . $field['alt'] . '" /> </div>');
 
-    /* var_dump($content);
-     echo 'EFESFSEF';
-     print render($content['field_body']);*/ ?>
+            }
+
+            ?>
+        </div>
+        <a href="#" class="slider-arrow-left">
+            <img src="/<?php print path_to_theme(); ?>/images/afisha-arr-mirror.png" alt="Предыдущий"/>
+        </a>
+
+        <a href="#" class="slider-arrow-right">
+            <img src="/<?php print path_to_theme(); ?>/images/afisha-arr.png" alt="Следующий"/>
+        </a>
+    </div>
 
 </div>

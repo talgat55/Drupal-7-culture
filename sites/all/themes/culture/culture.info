@@ -22,6 +22,7 @@ scripts[] = js/lg-thumbnail.min.js
 scripts[] = js/lg-hash.min.js
 scripts[] = js/default.js
 scripts[] = js/plugins.js
+scripts[] = https://yastatic.net/share2/share.js
 
 regions[main_slider] = Основной слайдер
 regions[main_afisha] = Главная афиша

@@ -71,11 +71,11 @@
     <div class="slider-nav">
         <div class="container relative clearfix">
             <a href="#" class="slider-arrow-left">
-                <img src="/<?php print path_to_theme(); ?>/images/slider-arr-mirror.png" alt="arrow  slider"/>
+                <img src="/<?php print path_to_theme(); ?>/images/slider-arr-mirror.png" alt="Предыдущий"/>
             </a>
 
             <a href="#" class="slider-arrow-right">
-                <img src="/<?php print path_to_theme(); ?>/images/slider-arr.png" alt="arrow slider"/>
+                <img src="/<?php print path_to_theme(); ?>/images/slider-arr.png" alt="Следующий"/>
             </a>
         </div>
     </div>
