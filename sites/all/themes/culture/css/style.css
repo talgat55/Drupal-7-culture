@@ -1698,6 +1698,7 @@ div.password-confirm {
 }
 .content-article img{
     max-width: 100%;
+    vertical-align: middle;
 }
 .content-article p {
     text-align: justify;

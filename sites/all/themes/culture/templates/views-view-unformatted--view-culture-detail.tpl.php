@@ -31,7 +31,7 @@
                             </div>
                             <div class="culture-bottom-block">
                                 <h3>'.$view_field['title'].'</h3>
-                                <div>'.$view_field['body'].'</div>
+                                <div>'.$view_field['field_excerpt_culture'].'</div>
                             </div>
                 </li>
                 ';
