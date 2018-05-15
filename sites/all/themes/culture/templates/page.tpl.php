@@ -87,44 +87,87 @@
 ?>
 <?php include('header.tpl.php'); ?>
 
-<div class="container">
-    <?php  if ($breadcrumb): ?>
-      <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-    <?php endif;  ?>
+    <div class="container">
+        <div class="top-block-content">
+        <?php if ($breadcrumb): ?>
+            <div id="breadcrumb"><?php print $breadcrumb; ?></div>
+        <?php endif; ?>
+            <?php
+            if ($node->type == 'culture_detail'  OR   $node->type == 'article') {
+                ?>
+                <div class="share-block">
+                    <?php
+                    $uri = $_SERVER['HTTP_HOST'] . '/' . request_uri();
 
+                    ?>
+                    <p>Поделиться</p> <div class="ya-share2" data-services="telegram,vkontakte,facebook"  data-title='<?php  print $node->title; ?>'   data-url="<?php  echo $uri; ?>"  ></div>
+                </div>
+                <?
+            }
 
-
-    <div id="content" class="column">
-        <div class="section">
-
-
-
-                    <div id="content" class="column">
-                        <div class="section">
-                            <?php print render($title_prefix); ?>
-                            <?php if ($title): ?>
-                                <h1  class="  title-section bottom-border-title margin-top-10 margin-bottom-60 no-after"  >
-                                    <?php print $title; ?>
-                                </h1>
-                            <?php endif; ?>
-                            <?php print render($title_suffix); ?>
-                            <?php print render($page['content']); ?>
-
-
-                        </div>
-                    </div> <!-- /.section, /#content -->
-
-
-
-
+            ?>
         </div>
-    </div> <!-- /.section, /#content -->
 
-    <?php if ($page['sidebar_second']): ?>
-      <div id="sidebar-second" class="column sidebar"><div class="section">
-        <?php print render($page['sidebar_second']); ?>
-      </div></div> <!-- /.section, /#sidebar-second -->
-    <?php endif; ?>
 
-</div>
+        <div id="content" class="column">
+            <div class="section">
+
+
+                <div id="content" class="column">
+                    <div class="section">
+                        <?php print render($title_prefix); ?>
+                        <?php if ($title ):
+                            $type = $node->type;
+                            if(  $type != 'culture_detail' ||  $type !='article'){
+
+                            echo '
+                            <h1 class="  title-section bottom-border-title margin-top-10 margin-bottom-60 no-after">
+                               '.$title.'
+                            </h1> ';
+                            }   endif; ?>
+                        <?php print render($title_suffix); ?>
+
+
+                        <?php
+                        // page Culture detail
+                        if(current_path() == 'culturedetails'){
+                            $name = 'culture_details';
+
+
+                            $myvoc = taxonomy_vocabulary_machine_name_load($name);
+                            $tree = taxonomy_get_tree($myvoc->vid);
+                            //var_dump($tree);
+                            echo '<ul class="list-terms-culture-details clearfix">';
+                            echo '<li class="current" data-filter>Все материалы</li>';
+
+                            foreach ($tree as $term) {
+                                $terms = taxonomy_get_term_by_name($term->name);
+                                foreach ($terms as $value) {
+                                    $value = $value->field_alias;
+
+                                }
+                                echo '<li data-filter=".' . $value[und][0]['value'] . '"><span class="separator-culture-detail"></span> ' . $term->name . ' </li>';
+                            }
+                            echo '</ul>';
+                        }
+                        ?>
+                        <?php print render($page['content']); ?>
+
+
+                    </div>
+                </div> <!-- /.section, /#content -->
+
+
+            </div>
+        </div> <!-- /.section, /#content -->
+
+        <?php if ($page['sidebar_second']): ?>
+            <div id="sidebar-second" class="column sidebar">
+                <div class="section">
+                    <?php print render($page['sidebar_second']); ?>
+                </div>
+            </div> <!-- /.section, /#sidebar-second -->
+        <?php endif; ?>
+
+    </div>
 <?php include('footer.tpl.php'); ?>

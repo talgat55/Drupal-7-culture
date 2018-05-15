@@ -11,11 +11,15 @@
 
 
         <div class="row culture-detail-rows">
+
             <ul class="culture-detail-row  clearfix">
 
                 <?php
 
+
+
                 foreach ($view->style_plugin->rendered_fields as $view_field):
+
 
                     $datefield = explode(',', $view_field['field_date_culture']);
                     $datefieldinvert = explode(' ', trim($datefield[1]));
@@ -26,12 +30,14 @@
 
                     }
 
-
+                    $nid = $view_field['nid'];
+                    $path = 'node/' . (int) $nid ;
+                    $alias = drupal_get_path_alias($path);
 
                     echo '
 
                 <li class="culture-detail-item ' . $value[und][0]['value'] . '">
-                    <a href="#">
+                    <a href="/'.$alias.'">
                     <div class="culture-top-block clearfix">
                         <div class="culture-date">' . $datefieldinvert[1] . ' ' . $datefieldinvert[0] . '</div> 
                         <span>'.$view_field['field_categories'].'</span>

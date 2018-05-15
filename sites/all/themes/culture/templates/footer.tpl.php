@@ -54,7 +54,7 @@
         <div class="col-md-6">
             <div class="main-footer-menu">
                 <?php
-                $menu_main = menu_navigation_links('main-menu');
+                $menu_main = menu_navigation_links('menu-footer');
                 print theme('links__name_of_your_menu', array(
                     'links' => $menu_main,
                     'attributes' => array(

@@ -105,16 +105,14 @@
 
                 echo '<div   class=" gallery-item gallery-col-md-single">';
 
-
-
                         echo '
                         <a  class="a-img-gallery gallery"   data-src="'.$my_image_url.'"     style="background: url(' . $my_image_url . ') no-repeat;">
                             <img src="'.$my_image_url.'"/>
+                            <div class="bottom-gallery-block">
+                                <div class="title-gallery">'.$view_field['alt'].'</div>
+                            </div>
                         </a>
                         ';
-
-
-
 
                 echo ' </div>';
                 //var_dump($view_field);

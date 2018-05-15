@@ -97,7 +97,7 @@
         </div>
     </div>
 <?php endif; ?>
-    <h1 class="title-section bottom-border-title margin-top-10 margin-bottom-60 no-after">awdawdКУЛЬТУРА В ДЕТАЛЯХ</h1>
+    <h1 class="title-section bottom-border-title margin-top-10 margin-bottom-60 no-after"> КУЛЬТУРА В ДЕТАЛЯХ</h1>
     <div id="main" class="clearfix">
         <?php
         $name = 'culture_details';

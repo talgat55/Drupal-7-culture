@@ -87,33 +87,11 @@
 ?>
 
 
-<?php if ($breadcrumb): ?>
-
-    <div class="container relative">
-
-        <div id="breadcrumb">
-            <?php  print $breadcrumb;  ?>
-
-        </div>
-
-
-
-    </div>
-
-<?php endif; ?>
-
 <div id="main" class="clearfix">
-    <div>
-        <?php
-        $uri = $_SERVER['HTTP_HOST'] . '/' . request_uri();
 
-        ?>
-        <div class="ya-share2" data-services="telegram,vkontakte,facebook"  data-title="<?php  print $node->title; ?>"   data-url="<?php  echo $uri; ?>"  ></div>
-    </div>
     <div class="container-article news relative clearfix">
 
         <div class="col-md-7">
-            <h1 class="title-section bottom-border-title margin-top-10 margin-bottom-60 no-after">Новости</h1>
 
         <?php
 
