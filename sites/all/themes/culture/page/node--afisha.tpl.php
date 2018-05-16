@@ -135,7 +135,11 @@
                             <div class="first-block-af">
                                 <p>Информация про <?php print $title; ?></p>
 
-                                <p><?php print $field_place[0][value]; ?></p>
+                                <p><?php  if($field_place[0][value] == 'none'){
+                                        print '-';
+                                    } else {
+                                        print $field_place[0][value];
+                                    } ?></p>
                             </div>
                             <ul class="main-block-af">
                                 <li>
