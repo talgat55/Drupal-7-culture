@@ -93,7 +93,7 @@
             <div id="breadcrumb"><?php print $breadcrumb; ?></div>
         <?php endif; ?>
             <?php
-            if ($node->type == 'culture_detail'  OR   $node->type == 'article') {
+            if ($node && $node->type == 'culture_detail'  OR  $node &&  $node->type == 'article'  ) {
                 ?>
                 <div class="share-block">
                     <?php
@@ -116,15 +116,19 @@
                 <div id="content" class="column">
                     <div class="section">
                         <?php print render($title_prefix); ?>
-                        <?php if ($title ):
+                        <?php
                             $type = $node->type;
-                            if(  $type != 'culture_detail' ||  $type !='article'){
+                            if(  $type == 'culture_detail' ||  $type =='article' ||  $type =='afisha'){
 
-                            echo '
-                            <h1 class="  title-section bottom-border-title margin-top-10 margin-bottom-60 no-after">
-                               '.$title.'
-                            </h1> ';
-                            }   endif; ?>
+                            }else{
+                                if ($title):
+
+                                    echo '
+                                    <h1 class="title-section bottom-border-title margin-top-10 margin-bottom-60 no-after">
+                                       '.$title.'
+                                    </h1> ';
+                                endif;
+                            }   ?>
                         <?php print render($title_suffix); ?>
 
 

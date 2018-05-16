@@ -89,8 +89,14 @@
 
 <div id="main" class="clearfix">
     <div class="container relative">
+        <?php
+        $field_description = field_get_items('node', $node, 'field_description_gallery');
 
 
+        ?>
+        <div class="description-gallery">
+            <?php  echo $field_description[0][value];   ?>
+        </div>
 
 
 

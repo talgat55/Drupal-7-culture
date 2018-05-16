@@ -90,6 +90,11 @@ body {
 .margin-bottom-30 {
     margin-bottom: 30px !important;
 }
+.margin-bottom-40 {
+    margin-bottom: 40px !important;
+}
+
+.page-afisha #breadcrumb,
 .page-news #breadcrumb,
 .page-gallery #breadcrumb{
     padding-top: 25px;
@@ -754,7 +759,10 @@ ul.links {
 #triptych-last #block-system-powered-by {
     text-align: right;
 }
+.page-search-node #search-form input.form-submit{
 
+    top: 26px!important;
+}
 /* ------------------ Footer ------------------ */
 
 #footer-wrapper {
@@ -993,12 +1001,51 @@ div.password-confirm {
 /*
 * Afisha
  */
+
 .item-afisha {
     text-align: center;
     position: relative;
     margin: 0px 10px;
 }
+.node-type-afisha .item-afisha {
 
+    margin: 0px 10px!important;
+}
+.node-type-afisha .title-afisha div h3{
+    font-size: 18px;
+    font-family: 'NeoSansPro-Regular';
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+.node-type-afisha .title-afisha div{
+    margin: 0;
+    position: relative;
+    top: 50%;
+    color: #fff;
+    padding: 10px;
+    transform: translateY(-50%);
+}
+.node-type-afisha .title-afisha{
+    margin-top: 32px!important;
+    margin-left: 0!important;
+    margin-right: 0!important;
+    margin-bottom: 0!important;
+}
+.node-type-afisha .article-slider-row{
+    margin-bottom: 40px!important;
+}
+.node-type-afisha .item-afisha {
+    overflow: hidden;
+}
+
+.link-c-a{
+    position: relative!important;
+    font-size: 15px!important;
+    text-decoration: underline!important;
+}
+.node-type-afisha .full-content-afisha{
+    margin-bottom: 30px!important;
+}
 .afisha-item-date {
     background: #fff;
     box-sizing: border-box;
@@ -1316,11 +1363,11 @@ div.password-confirm {
     background: #fff;
     border: 1.5px solid #fff;
 }
-
+/*
 .news.home-page li:hover .news-item {
     border: 1.5px solid #eee;
 }
-
+*/
 .news.home-page li:hover {
     -webkit-box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 0 40px 50px rgba(0, 0, 0, 0.4);
@@ -1392,12 +1439,17 @@ div.password-confirm {
 }
 
 .culture-top-block .cultre-place,
+.afisha-date ,
 .culture-top-block .culture-date {
     font-size: 18px;
     color: #fff;
     font-family: 'OpenSans Extra-Bold';
 }
-
+.afisha-date{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
 .culture-detail-item {
     position: relative;
 }
@@ -1620,6 +1672,7 @@ div.password-confirm {
     color: #fff;
     display: table-cell;
     vertical-align: middle;
+    float: right;
     font-family: 'NeoSansPro-Regular';
     font-size: 19px;
     width: 29px;
@@ -1627,7 +1680,12 @@ div.password-confirm {
     border: 1px solid #fff;
     position: relative;
 }
-
+.description-gallery{
+    margin-bottom: 30px;
+}
+.node-type-gallery .title-section{
+    margin-bottom: 20px!important;
+}
 .counter-gallery-items::after {
     content: " ";
     display: block;
@@ -1731,6 +1789,7 @@ div.password-confirm {
 
 .node-type-article .title-section {
     margin-bottom: 35px;
+    margin-top: 0!important;
 }
 
 .main-article-menu .main-menu li {
@@ -2652,6 +2711,7 @@ div.admin-panel .description {
     /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
+.afisha-row-list li,
 .culture-detail-row li {
     list-style: none;
     width: 25%;
@@ -2667,6 +2727,7 @@ div.admin-panel .description {
     margin: 0 -15px;
 }
 
+.afisha-row-list li img ,
 .culture-detail-row li img {
     max-width: 100%;
     vertical-align: middle;
@@ -2676,10 +2737,12 @@ div.admin-panel .description {
     padding: 0;
 }
 
+.afisha-row-list .culture-top-block .afisha-date ,
 .culture-detail-row .culture-top-block .culture-date {
     color: #12a69d;
 }
 
+.afisha-row-list .culture-bottom-block ,
 .culture-detail-row .culture-bottom-block {
     position: relative;
     padding: 0;
@@ -2692,7 +2755,32 @@ div.admin-panel .description {
     color: #000;
     margin: 20px 0;
 }
-
+.afisha-bottom-block h3{
+    font-family: 'NeoSansPro-Bold';
+    font-size: 14px;
+    text-decoration: none !important;
+    color: #fff;
+    margin:  0;
+}
+.afisha-bottom-block{
+    padding: 20px!important;
+    position: relative!important;
+    bottom: 0!important;
+    left: 0!important;
+    z-index: 10;
+    box-sizing: border-box;
+    width: 100%;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+    background-repeat: repeat-x;
+}
+.afisha-bottom-block-row{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
 .culture-detail-row .culture-top-block {
     padding-left: 0;
     padding-right: 0;
@@ -2728,6 +2816,11 @@ div.admin-panel .description {
     z-index: 9;
 }
 
+.list-terms-afisha {
+    margin: 0 auto ;
+    padding: 8px 11px;
+    display: table;
+}
 .list-terms-culture-details {
     margin: 0 auto 50px auto;
     padding: 8px 11px;
@@ -2735,6 +2828,15 @@ div.admin-panel .description {
     border-bottom: 1.5px solid #000;
 }
 
+.afisha-border-bottom{
+    border-bottom: 1.5px solid #000;
+}
+
+.list-terms-afisha li:nth-of-type(5n+1) .separator-culture-detail{
+    display: none;
+}
+
+.list-terms-afisha li ,
 .list-terms-culture-details li {
     float: left;
     list-style: none;
@@ -2744,8 +2846,13 @@ div.admin-panel .description {
     font-size: 18px;
     cursor: pointer;
 }
+.list-terms-afisha li{
+    padding: 6px;
+}
 
+.list-terms-afisha li:hover,
 .list-terms-culture-details li:hover,
+.list-terms-afisha li.current ,
 .list-terms-culture-details li.current {
     color: #12a69d;
 }
@@ -2754,7 +2861,7 @@ div.admin-panel .description {
     width: 5px;
     display: inline-block;
     position: relative;
-    top: -1px;
+    top: -3px;
     margin: 0 30px;
     height: 5px;
     border-radius: 50%;
@@ -2836,6 +2943,9 @@ div.admin-panel .description {
     color: #fff;
     margin-top: 0;
 }
+.node-type-article .container-article{
+    margin-top: 46px;
+}
 .block-aside-photo{
     position: absolute;
     top: 50%;
@@ -2897,9 +3007,142 @@ div.admin-panel .description {
     background: transparent!important;
 }
 .node-type-culture-detail .title-section{
-    margin-top: 60px!important;
+    margin-top: 0!important;
     margin-bottom: 20px!important;
 }
 .page-culturedetails  #breadcrumb{
     padding-top: 10px;
+}
+.node-type-culture-detail .container-article{
+    margin-top: 46px;
+}
+/*
+* Afisha page
+ */
+.afisha-top-bar-page{
+    display: table;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.afisha-top-bar-page div{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.afisha-select-block{
+    padding-right: 40px;
+    width: 200px;
+}
+
+.select-afisha-page{
+    background: #26737e;
+    font-family: 'OpenSans';
+    font-size: 14px;
+    color: #fff;
+}
+.page-afisha .title-section{
+    margin-bottom: 30px!important;
+}
+.afisha-row-list{
+    padding: 0;
+    margin: 0;
+}
+.afisha-row-list a{
+    display: block;
+    position: relative;
+    padding: 0 15px 15px 15px;
+}
+.afisha-row-image{
+    position: relative;
+    z-index: 9;
+}
+.afisha-row-list .culture-top-block span{
+    right: 15px;
+}
+.title-afisha-node{
+    text-align: left;
+    margin-top: 0!important;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    color: #12a69d;
+    font-family: 'NeoSansPro-Bold';
+    font-size: 30px;
+}
+.node-type-afisha .share-block {
+    text-align: left;
+    padding: 10px 0;
+}
+.node-type-afisha #breadcrumb{
+    padding-top: 10px;
+}
+.node-type-afisha .breadcrumb{
+    padding-bottom: 0;
+}
+.node-type-afisha .container-article{
+    margin-top: 28px;
+}
+.date-article-afisha{
+    font-family: 'NeoSansPro-Bold';
+    font-size: 18px;
+    color: #000;
+}
+.node-type-afisha .content-article{
+    width: 100%;
+}
+.node-type-afisha .col-md-7{
+    width: 70%;
+}
+.node-type-afisha .col-md-5{
+    width: 30%;
+}
+.aside-afisha-detail{
+    box-shadow: 0px 5px 12px 2px #eee;
+}
+.first-block-af p {
+    font-family: 'NeoSansPro-Regular';
+    font-size: 16px;
+    padding: 0 20px 10px 20px;
+    margin: 0;
+    text-align: left;
+    color: #12a69d;
+    border-bottom: 1px solid #eee;
+}
+.first-block-af p:first-child{
+    font-family: 'NeoSansPro-Bold';
+    font-size: 16px;
+    color: #000;
+    margin: 0;
+    border: none;
+    padding: 20px 20px;
+}
+.main-block-af{
+    margin: 0;
+    padding: 0;
+}
+.main-block-af li{
+    list-style: none;
+    color: #a8a8a8;
+    font-family: 'NeoSansPro-Regular';
+    font-size: 16px;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+.main-block-af li span{
+    color: #12a69d;
+    float: right;
+    font-family: 'NeoSansPro-Bold';
+}
+.full-content-afisha{
+    margin: 30px 0 50px 0;
+}/*
+.culture-detail-rows .culture-bottom-block{
+    min-height: 168px;
+}*/
+.recent-heading-afisha{
+    font-family: 'NeoSansPro-Regular';
+    font-size: 30px;
+    color: #000;
+    margin: 0;
+    text-align: center;
 }

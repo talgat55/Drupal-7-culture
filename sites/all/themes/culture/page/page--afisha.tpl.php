@@ -87,93 +87,60 @@
 ?>
 
 
-<div id="main" class="clearfix">
+<?php include('header.tpl.php'); ?>
+<?php if ($breadcrumb): ?>
+    <div class="container relative">
+        <div id="breadcrumb">
 
-    <div class="container-article news relative clearfix">
+            <?php print $breadcrumb; ?>
 
-        <div class="col-md-7">
+        </div>
+    </div>
+<?php endif; ?>
+    <div class="container">
+    <h1 class="title-section bottom-border-title margin-top-10 margin-bottom-60 no-after">Афиша</h1>
+    <div id="main" class="clearfix">
+        <div class="afisha-top-bar-page">
+            <div class="afisha-select-block">
+                <select class="select-afisha-page">
+                    <option value="soon">Скоро <img src="/<?php print path_to_theme(); ?>/images/angle-arrow-down.png" alt=" "/></option>
+                    <option value="value 2">Пункт</option>
+                </select>
+            </div>
 
-        <?php
-        if ($title):
-
-            echo '
-                                    <h1 class="title-section bottom-border-title margin-top-10 margin-bottom-60 no-after">
-                                       '.$title.'
-                                    </h1> ';
-        endif;
-
-        $field_description = field_get_items('node', $node, 'field_description_culture');
-
-
-
-
-
-        ?>
-        <div class="content-article">
-            <div class="date-article"><?php print(format_date($node->created, 'custom', 'G:i')); ?>
-                <span><?php print(format_date($node->created, 'custom', 'd M Y')); ?></span></div>
-            <?php print($field_description[0]["value"]); ?>
-
-            <?php
-
-            $uid = user_load($node->uid);
-            $myprofile = $node->uid;
-            $profile = profile2_load_by_user($uid, 'main');
-
-            ?>
-            <p style="font-style: italic"><?php print($profile->field_names['und'][0]['value']); ?></p>
-            <div class="main-article-menu">
+            <div>
                 <?php
-                $menu_main = menu_navigation_links('menu-menu-news-page');
-                print theme('links__name_of_your_menu', array(
-                    'links' => $menu_main,
-                    'attributes' => array(
-                        'class' => array('links', 'inline', 'clearfix', 'news-menu'),
-                    ),
-                ));
+                $name = 'cat_afisha';
+
+
+                $myvoc = taxonomy_vocabulary_machine_name_load($name);
+                $tree = taxonomy_get_tree($myvoc->vid);
+                //var_dump($tree);
+                echo '<ul class="list-terms-afisha clearfix">';
+
+                foreach ($tree as $key => $term) {
+                    $terms = taxonomy_get_term_by_name($term->name);
+                    foreach ($terms as $value) {
+                        $value = $value->field_alias_afisha;
+                    }
+                    // add border bottom
+                    if ($key <= 4) {
+                        $classbottom = 'afisha-border-bottom';
+                    } else {
+                        $classbottom = '';
+                    }
+                    echo '<li class="' . $classbottom . '" data-filter=".' . $value[und][0]['value'] . '"><span class="separator-culture-detail"></span> ' . $term->name . ' </li>';
+                }
+                echo '</ul>
+            </div>
+            </div>
+            ';
 
                 ?>
-            </div>
-        </div>
+                <?php print render($page['content']); ?>
 
-        </div>
-        <div class="col-md-5">
-            <div class="aside">
-                <div class="block-photo">
-                    <img src="/<?php print path_to_theme(); ?>/images/elipse.png"
-                         alt="Фоторепортаж">
-                        <div class="block-aside-photo">
-                            <img src="/<?php print path_to_theme(); ?>/images/photo-camera.png"
-                                 alt="Иконка">
-
-                            <p>Фоторепортаж</p>
-                        </div>
-                </div>
             </div>
-        </div>
 
     </div>
 
-    <div class="article-slider-row margin-bottom-40">
-        <div class="article-slider">
-            <?php
-            $field_gallery = field_get_items('node', $node, 'field_gallery_culture');
-
-            foreach ($field_gallery as $field) {
-                $my_image_url = file_create_url($field['uri']);
-                print('<div><img src="' . $my_image_url . '" alt="' . $field['alt'] . '" /> </div>');
-
-            }
-
-            ?>
-        </div>
-        <a href="#" class="slider-arrow-left">
-            <img src="/<?php print path_to_theme(); ?>/images/afisha-arr-mirror.png" alt="Предыдущий"/>
-        </a>
-
-        <a href="#" class="slider-arrow-right">
-            <img src="/<?php print path_to_theme(); ?>/images/afisha-arr.png" alt="Следующий"/>
-        </a>
-    </div>
-
-</div>
+<?php include('footer.tpl.php'); ?>

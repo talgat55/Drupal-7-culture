@@ -17,9 +17,18 @@
                 <?php
 
 
-
+                $i = 0;
                 foreach ($view->style_plugin->rendered_fields as $view_field):
+                    if ($i == 8) {
+                        echo '</ul>';
+                        echo '
+                   
+                        ';
+                        print views_embed_view('_1', 'block');
+                        // print views_embed_view('faculty_core','block_1', $node->nid);
 
+                        echo '<ul class="culture-detail-row">';
+                    }
 
                     $datefield = explode(',', $view_field['field_date_culture']);
                     $datefieldinvert = explode(' ', trim($datefield[1]));
@@ -53,7 +62,7 @@
                 </li>
                 
                 ';
-
+                    $i++;
                 endforeach;
 
                // print views_embed_view('banner-news', 'block');

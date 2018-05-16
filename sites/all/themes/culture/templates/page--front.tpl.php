@@ -100,9 +100,8 @@
 
                     <div class="container">
 
-                        <?php if ($page['main_afisha']): ?>
-                            <?php print render($page['main_afisha']); ?>
-                        <?php endif; ?>
+                            <?php /*print views_embed_view('afisha_block', 'block'); */?>
+
 
                     </div>
                 </section>

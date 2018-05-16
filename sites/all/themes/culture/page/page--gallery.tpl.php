@@ -85,7 +85,7 @@
  * @see html.tpl.php
  */
 ?>
-<?php include('/../templates/header.tpl.php'); ?>
+<?php include('header.tpl.php'); ?>
 
 <?php if ($breadcrumb): ?>
     <div class="container relative">
@@ -104,4 +104,4 @@
 
 
 
-<?php include('/../templates/footer.tpl.php');  ?>
+<?php include('footer.tpl.php');  ?>

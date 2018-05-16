@@ -61,12 +61,19 @@ jQuery(document).ready(function () {
         exthumbimage: false
     });
 
+    /*
+    * Match Height
+     */
+    jQuery('.news.home-page li').matchHeight();
+
+
 
 
     InitFitRows();
     InitFilterRows();
+    InitFitRowsAfisha();
     InitSliderNewsPage();
-
+    InitFilterRowsAfisha();
 // end redy function
 });
 /*
@@ -88,9 +95,28 @@ function InitFitRows(){
 
     }
 }
+/*
+*    Afisha  Rows
+ */
+function InitFitRowsAfisha(){
+    "use strict";
+
+    if(jQuery('.afisha-row-list').length){
+
+
+        var $container = jQuery('.afisha-row-list');
+        $container.imagesLoaded(function () {
+            $container.slideDown(1000).isotope({
+                itemSelector: '.culture-detail-item',
+                layoutMode: 'masonry'
+            });
+        });
+
+    }
+}
 
 //------------------
-//    Filterable Portfolio
+//    Filterable in Culture detail page
 //-------------------
 function InitFilterRows(){
     "use strict";
@@ -108,6 +134,30 @@ function InitFilterRows(){
 
         var selector = jQuery(this).attr('data-filter');
         jQuery('.culture-detail-row').isotope({ filter: selector });
+
+
+        return false;
+    });
+}
+//------------------
+//    Filterable afisha page
+//-------------------
+function InitFilterRowsAfisha(){
+    "use strict";
+
+    jQuery('.list-terms-afisha li').click(function(){
+       // var $this = jQuery(this).parent('li');
+        var $this = jQuery(this);
+        if ( $this.hasClass('current') ) {
+            return;
+        }
+
+        var $optionSet = $this.parents('.list-terms-afisha');
+        $optionSet.find('.current').removeClass('current');
+        $this.addClass('current');
+
+        var selector = jQuery(this).attr('data-filter');
+        jQuery('.afisha-row-list').isotope({ filter: selector });
 
 
         return false;

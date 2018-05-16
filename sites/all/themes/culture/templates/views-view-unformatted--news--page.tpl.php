@@ -25,7 +25,7 @@
                         echo '
                    
                         ';
-                        print views_embed_view('banner-news', 'block');
+                        print views_embed_view('banner_news', 'block');
                         // print views_embed_view('faculty_core','block_1', $node->nid);
 
                         echo '<ul class="news home-page clearfix margin-botom-news-custom">';
