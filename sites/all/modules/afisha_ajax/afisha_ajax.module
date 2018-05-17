@@ -1,0 +1,135 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function afisha_ajax_menu() {
+    $items['node/get/ajax/%/%'] = array(
+        'page callback' => 'afisha_ajax_ajax_get_ajax', // Render HTML.
+        'page arguments' => array(3,4,5),
+        'type' => MENU_CALLBACK,
+        'access arguments' => array('access content'),
+        'delivery callback' => 'afisha_ajax_ajax_callback',  // Magic goes here.
+    );
+    return $items;
+}
+
+/**
+ * @param $tid
+ * @param $date1
+ * @param null $date2
+ * @return mixed
+ */
+function afisha_ajax_ajax_get_ajax($tid, $date1, $date2 = null) {
+
+    $query = new EntityFieldQuery();
+    $query->entityCondition('entity_type', 'node')
+        ->entityCondition('bundle', 'afisha')
+        ->propertyCondition('status', NODE_PUBLISHED);
+
+    if (is_numeric($date1)) {
+        if ($date1 && $date2 == "") {
+            $query->fieldCondition('field_date_afisha', 'value',  $date1, '=');
+        } else {
+            $query->fieldCondition('field_date_afisha', 'value',  $date1, '>=');
+            $query->fieldCondition('field_date_afisha', 'value',  $date2, '<=');
+        }
+    }
+
+
+    if ($tid != 'all') {
+        $query->fieldCondition('field_cat_afisha', 'tid',  $tid, '=');
+    }
+    $query->range(0, 10);
+    $result = $query->execute();
+    if (isset($result['node'])) {
+        $news_items_nids = array_keys($result['node']);
+        $news_items = entity_load('node', $news_items_nids);
+    }
+   // var_dump($news_items);exit;
+
+    return $news_items;
+    /*var_dump($date1[0]);
+    var_dump($news_items);
+    exit; */
+    /*
+    $node = node_load($nid);
+    return node_view($node, 'teaser');
+    */
+}
+
+function afisha_ajax_ajax_callback($page_callback_result) {
+
+//    $build = array(
+//        '#theme' => 'item_list',
+//        '#items' => array_filter(reset(node_view_multiple($page_callback_result)), function(&$node) {
+//            if (!is_array($node)) {
+//                return false;
+//            }
+//
+//            $node = drupal_render($node);
+//            return true;
+//        }),
+//    );
+    $arr = [
+        'январь',
+        'февраль',
+        'март',
+        'апрель',
+        'май',
+        'июнь',
+        'июль',
+        'август',
+        'сентябрь',
+        'октябрь',
+        'ноябрь',
+        'декабрь'
+    ];
+
+    $output = "";
+    foreach ($page_callback_result as $node) {
+
+
+
+        $my_image_url = file_create_url($node->field_image_afisha['und'][0]['uri']);
+
+        $month = date( 'm', $node->field_date_afisha['und'][0]['value'] )-1;
+           $path = 'node/' . $node->nid ;
+        //$path =  $node->nid ;
+        $alias = drupal_get_path_alias($path);
+
+        $term = taxonomy_term_load($node->field_cat_afisha['und'][0]['tid']);
+        $output .= '   
+             <li class="culture-detail-item  ">
+                 <a href="' . $alias . '">
+                    <div class="culture-top-block clearfix">
+                        <span>' .$term->name . '</span>
+                    </div> 
+                          <div class="afisha-row-image">   
+                              <div class="afisha-date">' . date( 'd', $node->field_date_afisha['und'][0]['value'] ) . ' ' . $arr[$month] . '</div> 
+                              <img src="' . $my_image_url. '" alt="' . $node->title . '" />
+                                  <div class="afisha-bottom-block-row">
+                                  <div class="afisha-bottom-block">
+                                      <h3>' . $node->title . '</h3> 
+                                            </div>
+                                  </div>
+                          </div>
+
+                 </a>         
+             </li>';
+    }
+    print $output;
+
+
+//    print drupal_render($build);
+//    exit;
+//    // Only render content
+//    $content = drupal_render($page_callback_result);
+//
+//    // Add CSS and JS files, add some markup
+//
+//    print $content;
+
+    // Perform end-of-request tasks.
+    drupal_page_footer();
+}

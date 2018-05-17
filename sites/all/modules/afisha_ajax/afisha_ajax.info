@@ -1,0 +1,4 @@
+name = Afisha AJAX example
+description = Example of AJAX Forms API in Drupal 7 forms
+version = VERSION
+core = 7.x

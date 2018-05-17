@@ -21,11 +21,11 @@ scripts[] = js/lg-fullscreen.min.js
 scripts[] = js/lg-thumbnail.min.js
 scripts[] = js/lg-hash.min.js
 scripts[] = js/jquery.matchHeight.js
+scripts[] = js/jquery-ui.min.js
 scripts[] = js/default.js
 scripts[] = js/plugins.js
 
 regions[main_slider] = Основной слайдер
-regions[main_afisha] = Главная афиша
 regions[first_baner_main] = Первый Баннер главная
 regions[second_baner_main] = Второй Баннер главная
 regions[news_main] = Новости на главной

@@ -100,7 +100,7 @@
 
                     <div class="container">
 
-                            <?php /*print views_embed_view('afisha_block', 'block'); */?>
+                            <?php  print views_embed_view('afisha_block', 'block');  ?>
 
 
                     </div>

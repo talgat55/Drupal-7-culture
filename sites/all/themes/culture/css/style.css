@@ -2253,11 +2253,13 @@ div.vertical-tabs .vertical-tabs-panes fieldset.vertical-tabs-pane {
 
 #search-form input#edit-keys,
 #block-search-form .form-item-search-block-form input {
-    float: left; /* LTR */
+    float: left;
     height: auto;
     padding: 9px 16px;
     border-radius: 19px;
     outline: none;
+    font-size: 16px;
+    line-height: 19px;
     width: 100%;
     box-sizing: border-box;
     margin: 0;
@@ -2271,7 +2273,7 @@ div.vertical-tabs .vertical-tabs-panes fieldset.vertical-tabs-pane {
     margin-right: 0;
     position: absolute;
     right: 10px;
-    top: 7px;
+    top: 9px;
     outline: none;
     height: 25px;
     width: 34px;
@@ -2711,7 +2713,15 @@ div.admin-panel .description {
     /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-.afisha-row-list li,
+.afisha-row-list li{
+    list-style: none;
+    width: 33.33%;
+    float: left;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1.5px solid #fff;
+
+}
 .culture-detail-row li {
     list-style: none;
     width: 25%;
@@ -3036,7 +3046,7 @@ div.admin-panel .description {
 }
 
 .select-afisha-page{
-    background: #26737e;
+    background: #1dc2b8;
     font-family: 'OpenSans';
     font-size: 14px;
     color: #fff;
@@ -3145,4 +3155,98 @@ div.admin-panel .description {
     color: #000;
     margin: 0;
     text-align: center;
+}
+.afisha-row-holder .col-md-8{
+    float: left;
+    width: 75%;
+}
+.afisha-row-holder .col-md-4{
+    float: left;
+    width: 25%;
+}
+.correct-afisha-row{
+    margin:  0 -15px;
+}
+.ui-datepicker-next span {
+    cursor: pointer;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiBREONTrZvpmtAAAAPklEQVQoz2NggABhhvUMnAx4QQjDDsJKthNWso2Bg5CSrVRRsoUYJVDnMuFQwsrAiE//TgauISktzLAeuzQALlIPqE9II+kAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDUtMTdUMTQ6NTM6NTgrMDI6MDCRP9NqAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTA1LTE3VDE0OjUzOjU4KzAyOjAw4GJr1gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII=)!important;
+    background-position: 0px 0px !important;
+}
+.ui-datepicker-prev span {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiBREONxVAWcZ2AAAAPUlEQVQoz2NgwAa4GNYzCDPgBFwMOxlChpc0E5T+z/CbgQDgYNiCzwqIkq1UUbKNkBJOhu2ElewgrAQe3QAr0hGicEsnKQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0wNS0xN1QxNDo1NToyMSswMjowMAN87+cAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMDUtMTdUMTQ6NTU6MjErMDI6MDByIVdbAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAABJRU5ErkJggg==)!important;
+    background-position: 0px 0px !important;
+    cursor: pointer;
+}
+.not-found{
+    color: #000;
+    font-family: 'NeoSansPro-Regular';
+    font-size: 16px;
+    text-align: center;
+}
+.select-afisha-page{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiBRERGzAlFp3SAAAAV0lEQVQoz73OOw6AMAwEUZeElqvtPdPwvdtIpkAEQRxRwbbzJNvs+/nwUsmolRHZvGeLCWL1ZNYgiMXTeakiiLnkmiAm757/FhLmiyDGMBfSzge5vfbPdosTQC15FZA7AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTA1LTE3VDE3OjI3OjQ4KzAyOjAwwI8KwwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wNS0xN1QxNzoyNzo0OCswMjowMLHSsn8AAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC) !important;
+    background-repeat: no-repeat!important;
+    border: none;
+    border-radius: 20px;
+    line-height: 2;
+    padding: 7px 40px 7px 20px;
+    background-position: 88% 53%;
+    outline: none;
+    cursor: pointer;
+}
+.ui-datepicker .ui-datepicker-title{
+    font-family: 'NeoSansPro-Regular';
+    font-size: 16px;
+    color: #1dc2b8;
+}
+.ui-datepicker-year{
+    display: none;
+}
+.ui-datepicker .ui-datepicker-header{
+    border: none;
+}
+.ui-datepicker-calendar thead{
+    background-color: #f3f3f3;
+    font-family: 'NeoSansPro-Regular';
+    color: #1dc2b8;
+}
+#eventCalendar{
+    padding-left: 10px;
+}
+.ui-widget.ui-widget-content{
+    border: none;
+    box-shadow: 0px 4px 12px 3px #eee;
+    padding: 0;
+    margin: 0;
+}
+.ui-state-default, .ui-widget-content .ui-state-default{
+    color: #6e6e6e;
+    padding: 6px 7px!important;
+    text-align: center;
+}
+.ui-datepicker td {
+    padding: 0!important;
+    border: 1px dashed #adadad!important;
+}
+.ui-datepicker td a {
+    border: none!important;
+}
+.ui-datepicker-calendar .ui-state-active{
+    background:   #1dc2b8;
+    color: #fff;
+}
+.ui-datepicker td a:hover{
+    background:   #1b1426!important;
+    color: #fff;
+}
+.ui-datepicker table{
+    margin: 0!important;
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover{
+    opacity: .5;
+    border: none;
+
 }

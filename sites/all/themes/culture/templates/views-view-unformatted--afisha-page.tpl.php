@@ -5,16 +5,19 @@
  * Date: 26.04.2018
  * Time: 11:42
  */
+
 ?>
-<div class="culture-detail-holder">
-    <div class="container relative afisha-rows">
+<div class="afisha-row-holder">
+    <div class="container relative afisha-rows ">
 
 
+        <div class="correct-afisha-row clearfix">
         <div class="col-md-8">
             <div class="row">
                 <ul class="afisha-row-list clearfix">
 
                     <?php
+
                     //  var_dump($view->style_plugin->rendered_fields);
                     $arrayscat = '';
                     $i = 0;
@@ -73,6 +76,9 @@
             </div>
         </div>
         <div class="col-md-4">
+            <div class="date"></div>
+            <div id="eventCalendar"> </div>
+        </div>
         </div>
 
 

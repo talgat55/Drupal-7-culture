@@ -230,12 +230,11 @@
 
                 $my_image_url = file_create_url($field->field_image_afisha['und'][0]['uri']);
 
-             //   $path = 'node/' . $field->nid ;
+              //  $path = 'node/' . $field->nid ;
                 $path =  $field->nid ;
                 $alias = drupal_get_path_alias($path);
 
                 $month = date( 'm', $field->field_date_afisha['und'][0]['value'] )-1;
-
                 //  <div class="afisha-item-date">'.$datefieldinvert[1].' '.$datefieldinvert[0].'</div>
                 echo '
                     <div class="item-afisha">

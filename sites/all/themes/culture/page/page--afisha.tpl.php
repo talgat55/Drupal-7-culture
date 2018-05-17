@@ -103,11 +103,12 @@
         <div class="afisha-top-bar-page">
             <div class="afisha-select-block">
                 <select class="select-afisha-page">
-                    <option value="soon">Скоро <img src="/<?php print path_to_theme(); ?>/images/angle-arrow-down.png" alt=" "/></option>
-                    <option value="value 2">Пункт</option>
+                    <option value="soon">Скоро</option>
+                    <option value="thisweek">На этой недели </option>
+                    <option value="tomorrow">Завтра</option>
                 </select>
             </div>
-
+            <?php /* <img src="/<?php print path_to_theme(); ?>/images/angle-arrow-down.png" alt=" "/>    */ ?>
             <div>
                 <?php
                 $name = 'cat_afisha';
@@ -119,17 +120,23 @@
                 echo '<ul class="list-terms-afisha clearfix">';
 
                 foreach ($tree as $key => $term) {
+                        /*
+                         *
+                         *
+                         * for filterable
                     $terms = taxonomy_get_term_by_name($term->name);
                     foreach ($terms as $value) {
                         $value = $value->field_alias_afisha;
-                    }
+                    }*/
                     // add border bottom
                     if ($key <= 4) {
                         $classbottom = 'afisha-border-bottom';
                     } else {
                         $classbottom = '';
                     }
-                    echo '<li class="' . $classbottom . '" data-filter=".' . $value[und][0]['value'] . '"><span class="separator-culture-detail"></span> ' . $term->name . ' </li>';
+
+                    //  for filterable            echo '<li class="' . $classbottom . '" data-id="' . $term->tid. '"    data-filter=".' . $value[und][0]['value'] . '"><span class="separator-culture-detail"></span> ' . $term->name . ' </li>';
+                    echo '<li class="' . $classbottom . '" data-id="' . $term->tid. '"><span class="separator-culture-detail"></span> ' . $term->name . ' </li>';
                 }
                 echo '</ul>
             </div>
