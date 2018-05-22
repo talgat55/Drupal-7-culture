@@ -84,6 +84,21 @@
  * @see bartik_process_page()
  * @see html.tpl.php
  */
+$arr = [
+    'января',
+    'февраля',
+    'марта',
+    'апреля',
+    'майя',
+    'июня',
+    'июля',
+    'августа',
+    'сентября',
+    'октября',
+    'ноября',
+    'декабря'
+];
+
 ?>
 
 
@@ -98,6 +113,9 @@
         </div>-->
         <div class="share-block">
             <?php
+
+
+
             $uri = $_SERVER['HTTP_HOST'] . '/' . request_uri();
 
             ?>
@@ -146,29 +164,40 @@
                                 if ($field_age[0]['value']) {
                                     ?>
                                     <li>
-                                        Ограничение по возрасту: <span><?php echo $field_age[0]['value']; ?></span>
+                                        <span>Ограничение по возрасту:</span> <span><?php echo $field_age[0]['value']; ?></span>
                                     </li>
                                     <?php
                                 }
                                 if ($field_price[0]['value']) {
                                     ?>
                                     <li>
-                                        Цены на билеты: <span><?php echo $field_price[0]['value']; ?></span>
+                                        <span>Цены на билеты:</span> <span><?php echo $field_price[0]['value']; ?></span>
                                     </li>
                                     <?php
                                 }
                                 ?>
                                 <li>
-                                    Начало:
-                                    <span><?php print(format_date($field_date[0]['value'], 'custom', 'd M  '));
-                                        print " в ";
-                                        print(format_date($field_date[0]['value'], 'custom', 'G:i')); ?></span>
+                                    <span>Начало:</span>
+                                    <span><?php
+                                        foreach ($field_date as $key => $fieldvalue){
+                                            if($key != 0){
+                                                print ", ";
+                                            }
+                                            $month = format_date($fieldvalue['value'], 'custom', 'm') - 1;
+                                            print(format_date($fieldvalue['value'], 'custom', 'd'));
+                                            print ' '.$arr[$month];
+                                            print " в ";
+                                            print(format_date($fieldvalue['value'], 'custom', 'G:i'));
+
+                                        }
+
+                                        ?></span>
                                 </li>
                                 <?php
                                 if ($field_duration[0]['value']) {
                                     ?>
                                     <li>
-                                        Продолжительность: <span><?php echo $field_duration[0]['value']; ?></span>
+                                        <span>Продолжительность:</span> <span><?php echo $field_duration[0]['value']; ?></span>
                                     </li>
                                     <?php
                                 }
@@ -196,20 +225,6 @@
     <div class="article-slider-row">
         <div class="article-slider">
             <?php
-            $arr = [
-                'января',
-                'февраля',
-                'марта',
-                'апреля',
-                'майя',
-                'июня',
-                'июля',
-                'августа',
-                'сентября',
-                'октября',
-                'ноября',
-                'декабря'
-            ];
 
 
             // place

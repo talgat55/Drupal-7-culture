@@ -48,7 +48,7 @@ function afisha_ajax_ajax_get_ajax($tid, $date1, $date2 = null) {
     }
    // var_dump($news_items);exit;
 
-    return $news_items;
+    return [$news_items,$date1];
     /*var_dump($date1[0]);
     var_dump($news_items);
     exit; */
@@ -72,22 +72,24 @@ function afisha_ajax_ajax_callback($page_callback_result) {
 //        }),
 //    );
     $arr = [
-        'январь',
-        'февраль',
-        'март',
-        'апрель',
-        'май',
-        'июнь',
-        'июль',
-        'август',
-        'сентябрь',
-        'октябрь',
-        'ноябрь',
-        'декабрь'
+        'января',
+        'февраля',
+        'марта',
+        'апреля',
+        'майя',
+        'июня',
+        'июля',
+        'августа',
+        'сентября',
+        'октября',
+        'ноября',
+        'декабря'
     ];
 
+
     $output = "";
-    foreach ($page_callback_result as $node) {
+
+    foreach ($page_callback_result[0] as $node) {
 
 
 
@@ -106,7 +108,15 @@ function afisha_ajax_ajax_callback($page_callback_result) {
 
 
         }
+        $day =  gmdate("d", $page_callback_result[1]);
+        $monthsearch = (int)  gmdate("m", $page_callback_result[1])-1;
 
+        $count = count($node->field_date_afisha['und']);
+        if($count > 1){  /// if many dates
+            $redydate = $day . ' '.$arr[$monthsearch];
+        }else{
+                $redydate = date( 'd', $node->field_date_afisha['und'][0]['value'] ) . ' ' . $arr[$month];
+        }
         $output .= '   
              <li class="culture-detail-item  ' . $value[und][0]['value'] . '">
                  <a href="' . $alias . '">
@@ -114,7 +124,7 @@ function afisha_ajax_ajax_callback($page_callback_result) {
                         <span>' .$term->name . '</span>
                     </div> 
                           <div class="afisha-row-image">   
-                              <div class="afisha-date">' . date( 'd', $node->field_date_afisha['und'][0]['value'] ) . ' ' . $arr[$month] . '</div> 
+                              <div class="afisha-date">' . $redydate . '</div> 
                               <img src="' . $my_image_url. '" alt="' . $node->title . '" />
                                   <div class="afisha-bottom-block-row">
                                   <div class="afisha-bottom-block">

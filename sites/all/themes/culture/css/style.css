@@ -3158,7 +3158,10 @@ div.admin-panel .description {
     padding: 0;
 }
 .main-block-af li{
+    display: table;
     list-style: none;
+    width: 100%;
+    box-sizing: border-box;
     color: #a8a8a8;
     font-family: 'NeoSansPro-Regular';
     font-size: 16px;
@@ -3167,8 +3170,12 @@ div.admin-panel .description {
 }
 .main-block-af li span{
     color: #12a69d;
-    float: right;
+    display: table-cell;
+    vertical-align: middle;
     font-family: 'NeoSansPro-Bold';
+}
+.main-block-af li span:last-child{
+    text-align: right;
 }
 .full-content-afisha{
     margin: 30px 0 50px 0;
