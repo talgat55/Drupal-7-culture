@@ -242,8 +242,8 @@
             $nid = $node->nid;
             foreach ($news_items as $field) {
                 if ($nid != $field->nid) {
-                    $my_image_url = file_create_url($field->field_image_afisha['und'][0]['uri']);
-
+                    //$my_image_url = file_create_url($field->field_image_afisha['und'][0]['uri']);
+                    $my_image_url = image_style_url("afisha_related", $field->field_image_afisha['und'][0]['uri']);
                     //  $path = 'node/' . $field->nid ;
                     $path = $field->nid;
                     $alias = drupal_get_path_alias($path);
