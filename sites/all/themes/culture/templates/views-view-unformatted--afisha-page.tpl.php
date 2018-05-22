@@ -21,8 +21,12 @@
                     //  var_dump($view->style_plugin->rendered_fields);
                     $arrayscat = '';
                     $i = 0;
+                    $count = 0;
                     foreach ($view->style_plugin->rendered_fields as $view_field):
 
+                        $day =  gmdate("d", $view_field['field_date_afisha_1']);
+                        $month =  gmdate("m", $view_field['field_date_afisha_1']);
+                    if($day == date('d')  AND $month == date('m') ){
 
                         $datefield = explode(',', $view_field['field_date_afisha']);
                         $datefieldinvert = explode(' ', trim($datefield[1]));
@@ -36,11 +40,18 @@
                         $arrayscat .= ' ' . $view_field['field_cat_afisha'];
                         $check = substr_count($arrayscat, $view_field['field_cat_afisha']);
 
-                        if ($check <= 2) {
+                        if ($check <= 2) { // for every category
                             $i++;
-                            if ($i <= 12) {
+                            $count++;
+                            if ($i <= 12) {  // limit only 12 items
+
                                // $image_uri = image_style_path('afisha', );
                               //  $final_image_path = drupal_realpath($image_uri);
+
+                                    $my_image_url = image_style_url("afisha", $view_field['field_image_afisha']);
+
+
+
                                 echo '
 
                                 <li class="culture-detail-item ' . $value[und][0]['value'] . '">
@@ -51,7 +62,7 @@
                                     </div> 
                                     <div class="afisha-row-image">   
                                         <div class="afisha-date">' . $datefieldinvert[1] . ' ' . $datefieldinvert[0] . '</div> 
-                                        <img src="' .$view_field['field_image_afisha']. '" alt="' . $view_field['title'] . '" />
+                                        <img src="' .$my_image_url. '" alt="' . $view_field['title'] . '" />
                                             <div class="afisha-bottom-block-row">
                                             <div class="afisha-bottom-block">
                                                 <h3>' . $view_field['title'] . '</h3> 
@@ -66,9 +77,11 @@
 
                             }
                         }
-
+                    }
                     endforeach;
-
+                    if($count == 0){
+                        echo '<div class="not-found">Мероприятий на сегодня нет</div>';
+                    }
                     // print views_embed_view('banner-news', 'block');
                     ?>
 

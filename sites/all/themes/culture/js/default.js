@@ -95,7 +95,8 @@ jQuery(document).ready(function () {
                 jQuery(".afisha-row-list").html(' ');
                 if (data != '') {
                     jQuery(".afisha-row-list").html(data);
-                    jQuery('.afisha-row-list').isotope();
+                    var $container = jQuery('.afisha-row-list');
+                    $container.imagesLoaded(function(){$container.isotope( 'reloadItems' ).isotope({ sortBy: 'original-order' });});
                 } else {
                     jQuery(".afisha-row-list").html('<div class="not-found"  >Записей не найдено</div>');
                 }
@@ -159,7 +160,9 @@ jQuery(document).ready(function () {
             jQuery(".afisha-row-list").html(' ');
             if (data != '') {
                 jQuery(".afisha-row-list").html(data);
-                jQuery('.afisha-row-list').isotope();
+                var $container = jQuery('.afisha-row-list');
+                $container.imagesLoaded(function(){$container.isotope( 'reloadItems' ).isotope({ sortBy: 'original-order' });});
+
             } else {
                 jQuery(".afisha-row-list").html('<div class="not-found"  >Записей не найдено</div>');
             }
@@ -220,7 +223,7 @@ function InitFitRowsAfisha() {
 
         var $container = jQuery('.afisha-row-list');
         $container.imagesLoaded(function () {
-            $container.slideDown(1000).isotope({
+            $container.isotope({
                 itemSelector: '.culture-detail-item',
                 layoutMode: 'masonry'
             });

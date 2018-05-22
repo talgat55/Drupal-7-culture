@@ -91,7 +91,8 @@ function afisha_ajax_ajax_callback($page_callback_result) {
 
 
 
-        $my_image_url = file_create_url($node->field_image_afisha['und'][0]['uri']);
+       // $my_image_url = file_create_url($node->field_image_afisha['und'][0]['uri']);
+        $my_image_url = image_style_url("afisha", $node->field_image_afisha['und'][0]['uri']);
 
         $month = date( 'm', $node->field_date_afisha['und'][0]['value'] )-1;
            $path = 'node/' . $node->nid ;
