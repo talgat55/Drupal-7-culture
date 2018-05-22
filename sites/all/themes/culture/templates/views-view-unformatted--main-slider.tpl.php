@@ -15,7 +15,8 @@
             $datefieldinvert = explode(' ', trim($datefield[1]));
             echo '<div>';
             echo '<div class="image-block-slider" style="background: url(' . $view_field['field_image_main'] . ');">';
-            echo '    <div class="text-block-slider">
+            echo '            <div class="overlay-block-slider"></div>
+                            <div class="text-block-slider">
                             <div class="container clearfix">';
             echo '
                                     <div class="col-md-6">

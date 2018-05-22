@@ -104,10 +104,17 @@
             <?php
 
             $field_my_image = field_get_items('node', $node, 'field_images');
+            $field_my_watermark = field_get_items('node', $node, 'field_watermark');
 
             foreach ($field_my_image as  $i =>   $view_field):
+                if($field_my_watermark[0]['value'] == 1){
 
-                $my_image_url = file_create_url($view_field['uri']);
+                    $my_image_url = image_style_url("gallery_watermark", $view_field['uri']);
+
+                }else{
+                    $my_image_url = file_create_url($view_field['uri']);
+                }
+
 
                 echo '<div   class=" gallery-item gallery-col-md-single">';
 

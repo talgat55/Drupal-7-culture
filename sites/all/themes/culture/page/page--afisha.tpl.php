@@ -103,8 +103,8 @@
         <div class="afisha-top-bar-page">
             <div class="afisha-select-block">
                 <select class="select-afisha-page">
-                    <option value="soon">Скоро</option>
-                    <option value="thisweek">На этой недели </option>
+                    <option value="soon">Сегодня</option>
+                    <option value="thisweek">На выходных</option>
                     <option value="tomorrow">Завтра</option>
                 </select>
             </div>
@@ -120,14 +120,11 @@
                 echo '<ul class="list-terms-afisha clearfix">';
 
                 foreach ($tree as $key => $term) {
-                        /*
-                         *
-                         *
-                         * for filterable
+
                     $terms = taxonomy_get_term_by_name($term->name);
                     foreach ($terms as $value) {
                         $value = $value->field_alias_afisha;
-                    }*/
+                    }
                     // add border bottom
                     if ($key <= 4) {
                         $classbottom = 'afisha-border-bottom';
@@ -136,7 +133,7 @@
                     }
 
                     //  for filterable            echo '<li class="' . $classbottom . '" data-id="' . $term->tid. '"    data-filter=".' . $value[und][0]['value'] . '"><span class="separator-culture-detail"></span> ' . $term->name . ' </li>';
-                    echo '<li class="' . $classbottom . '" data-id="' . $term->tid. '"><span class="separator-culture-detail"></span> ' . $term->name . ' </li>';
+                    echo '<li class="' . $classbottom . '" data-id="' . $term->tid. '"  data-filter=".' . $value[und][0]['value'] . '"><span class="separator-culture-detail"></span> ' . $term->name . ' </li>';
                 }
                 echo '</ul>
             </div>

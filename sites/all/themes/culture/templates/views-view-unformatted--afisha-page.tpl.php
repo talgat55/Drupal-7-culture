@@ -39,7 +39,8 @@
                         if ($check <= 2) {
                             $i++;
                             if ($i <= 12) {
-
+                               // $image_uri = image_style_path('afisha', );
+                              //  $final_image_path = drupal_realpath($image_uri);
                                 echo '
 
                                 <li class="culture-detail-item ' . $value[und][0]['value'] . '">
@@ -50,7 +51,7 @@
                                     </div> 
                                     <div class="afisha-row-image">   
                                         <div class="afisha-date">' . $datefieldinvert[1] . ' ' . $datefieldinvert[0] . '</div> 
-                                        <img src="' . $view_field['field_image_afisha'] . '" alt="' . $view_field['title'] . '" />
+                                        <img src="' .$view_field['field_image_afisha']. '" alt="' . $view_field['title'] . '" />
                                             <div class="afisha-bottom-block-row">
                                             <div class="afisha-bottom-block">
                                                 <h3>' . $view_field['title'] . '</h3> 

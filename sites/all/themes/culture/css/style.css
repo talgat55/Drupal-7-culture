@@ -151,21 +151,22 @@ body {
     text-align: right;
 }
 
-.news-menu li{
+.news-tags li{
     padding-right: 30px!important;
+    display: inline;
 }
 
-.news-menu li a {
+.news-tags li a {
     font-family: 'NeoSansPro-Regular';
     font-size: 16px;
     color: #12a69d;
     position: relative;
     text-decoration: none;
 }
-.news-menu li:first-child a::before {
+.news-tags li:first-child a::before {
     display: none!important;
 }
-.news-menu li a::before {
+.news-tags li a::before {
     content: " ";
     display: block;
     position: absolute;
@@ -176,10 +177,12 @@ body {
     border-radius: 50%;
     background: #cdcdcd;
 }
-.news-menu li:first-child{
+.news-tags li:first-child{
     padding-left: 0;
 }
-
+.news-tags{
+    padding: 0;
+}
 .menu-contact a {
     text-transform: uppercase;
     text-decoration: none;
@@ -1006,6 +1009,7 @@ div.password-confirm {
     text-align: center;
     position: relative;
     margin: 0px 10px;
+    overflow: hidden;
 }
 .node-type-afisha .item-afisha {
 
@@ -1020,13 +1024,13 @@ div.password-confirm {
 .node-type-afisha .title-afisha div{
     margin: 0;
     position: relative;
-    top: 50%;
+    top: 44%;
     color: #fff;
     padding: 10px;
     transform: translateY(-50%);
 }
 .node-type-afisha .title-afisha{
-    margin-top: 32px!important;
+    margin-top: 44px!important;
     margin-left: 0!important;
     margin-right: 0!important;
     margin-bottom: 0!important;
@@ -1129,6 +1133,7 @@ div.password-confirm {
 .slider-main-link.link-button {
     margin: 20px 0 0 0;
     color: #fff;
+    background-color: #12a69d;
 }
 
 .pager-load-more a {
@@ -1137,10 +1142,14 @@ div.password-confirm {
 
 .pager-load-more a:hover,
 .textblock-banner .link-button:hover,
-.slider-main-link.link-button:hover,
+
 .link-to-mateerial:hover {
     color: #fff;
     background-color: #12a69d;
+}
+.slider-main-link.link-button:hover{
+    color: #12a69d;
+    background-color: transparent;
 }
 
 .textblock-banner-wallpaper {
@@ -1194,7 +1203,8 @@ div.password-confirm {
 .place-main-slier {
     font-family: 'NeoSansPro-Regular';
     color: #fff;
-    font-size: 15px;
+    font-size: 17px;
+    font-weight: 600;
     text-align: center;
     width: 222px;
     text-transform: uppercase;
@@ -1311,6 +1321,7 @@ div.password-confirm {
     height: 588px;
     background-size: cover !important;
     background-repeat: no-repeat !important;
+    position: relative;
 }
 
 .cultre-place img {
@@ -1324,8 +1335,17 @@ div.password-confirm {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 9;
 }
-
+.overlay-block-slider{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    background: rgba(0,0,0,.3);
+}
 .slider-main-title {
     font-family: 'NeoSansPro-Medium';
     font-size: 50px;
@@ -1405,6 +1425,7 @@ div.password-confirm {
     text-decoration: none;
     font-family: 'OpenSans-Bold';
     color: #000;
+    font-weight: 400;
 
 }
 
@@ -2764,6 +2785,7 @@ div.admin-panel .description {
     text-decoration: none !important;
     color: #000;
     margin: 20px 0;
+    font-weight: 400;
 }
 .afisha-bottom-block h3{
     font-family: 'NeoSansPro-Bold';
@@ -2771,6 +2793,7 @@ div.admin-panel .description {
     text-decoration: none !important;
     color: #fff;
     margin:  0;
+    font-weight: 400;
 }
 .afisha-bottom-block{
     padding: 20px!important;
@@ -2828,7 +2851,8 @@ div.admin-panel .description {
 
 .list-terms-afisha {
     margin: 0 auto ;
-    padding: 8px 11px;
+   /* padding: 8px 11px;*/
+    padding:0;
     display: table;
 }
 .list-terms-culture-details {
@@ -3083,6 +3107,9 @@ div.admin-panel .description {
     text-align: left;
     padding: 10px 0;
 }
+.node-type-afisha .item-afisha img {
+    margin-top: 44px;
+}
 .node-type-afisha #breadcrumb{
     padding-top: 10px;
 }
@@ -3161,7 +3188,7 @@ div.admin-panel .description {
     width: 75%;
 }
 .afisha-row-holder .col-md-4{
-    float: left;
+    float: right;
     width: 25%;
 }
 .correct-afisha-row{
@@ -3177,6 +3204,13 @@ div.admin-panel .description {
     background-position: 0px 0px !important;
     cursor: pointer;
 }
+.ui-datepicker-prev span:hover,
+.ui-datepicker-next span {
+    opacity: .5;
+}
+
+
+
 .not-found{
     color: #000;
     font-family: 'NeoSansPro-Regular';
@@ -3246,7 +3280,19 @@ div.admin-panel .description {
     margin: 0!important;
 }
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover{
-    opacity: .5;
     border: none;
 
+}
+.afisha-row-holder{
+    margin-bottom: 40px;
+}
+.prev-history{
+    margin-bottom: 10px;
+    padding: 0 0 1px 0;
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+}
+.prev-history:hover{
+    text-decoration: underline;
 }

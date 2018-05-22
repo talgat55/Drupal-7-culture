@@ -99,8 +99,15 @@ function afisha_ajax_ajax_callback($page_callback_result) {
         $alias = drupal_get_path_alias($path);
 
         $term = taxonomy_term_load($node->field_cat_afisha['und'][0]['tid']);
+        $terms = taxonomy_get_term_by_name($term->name);
+        foreach ($terms as $value) {
+            $value = $value->field_alias_afisha;
+
+
+        }
+
         $output .= '   
-             <li class="culture-detail-item  ">
+             <li class="culture-detail-item  ' . $value[und][0]['value'] . '">
                  <a href="' . $alias . '">
                     <div class="culture-top-block clearfix">
                         <span>' .$term->name . '</span>

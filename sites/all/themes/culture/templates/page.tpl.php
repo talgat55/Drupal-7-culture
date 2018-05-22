@@ -89,18 +89,20 @@
 
     <div class="container">
         <div class="top-block-content">
-        <?php if ($breadcrumb): ?>
-            <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-        <?php endif; ?>
+            <?php if ($breadcrumb): ?>
+                <div id="breadcrumb"><?php print $breadcrumb; ?></div>
+            <?php endif; ?>
             <?php
-            if ($node && $node->type == 'culture_detail'  OR  $node &&  $node->type == 'article'  ) {
+            if ($node && $node->type == 'culture_detail' OR $node && $node->type == 'article') {
                 ?>
                 <div class="share-block">
                     <?php
                     $uri = $_SERVER['HTTP_HOST'] . '/' . request_uri();
 
                     ?>
-                    <p>Поделиться</p> <div class="ya-share2" data-services="telegram,vkontakte,facebook"  data-title='<?php  print $node->title; ?>'   data-url="<?php  echo $uri; ?>"  ></div>
+                    <p>Поделиться</p>
+                    <div class="ya-share2" data-services="telegram,vkontakte,facebook"
+                         data-title='<?php print $node->title; ?>' data-url="<?php echo $uri; ?>"></div>
                 </div>
                 <?
             }
@@ -117,24 +119,24 @@
                     <div class="section">
                         <?php print render($title_prefix); ?>
                         <?php
-                            $type = $node->type;
-                            if(  $type == 'culture_detail' ||  $type =='article' ||  $type =='afisha'){
+                        $type = $node->type;
+                        if ($type == 'culture_detail' || $type == 'article' || $type == 'afisha') {
 
-                            }else{
-                                if ($title):
+                        } else {
+                            if ($title):
 
-                                    echo '
+                                echo '
                                     <h1 class="title-section bottom-border-title margin-top-10 margin-bottom-60 no-after">
-                                       '.$title.'
+                                       ' . $title . '
                                     </h1> ';
-                                endif;
-                            }   ?>
+                            endif;
+                        } ?>
                         <?php print render($title_suffix); ?>
 
 
                         <?php
                         // page Culture detail
-                        if(current_path() == 'culturedetails'){
+                        if (current_path() == 'culturedetails') {
                             $name = 'culture_details';
 
 

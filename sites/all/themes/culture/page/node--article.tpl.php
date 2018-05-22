@@ -87,7 +87,6 @@
 ?>
 
 
-
 <div id="main" class="clearfix">
 
     <div class="container-article news relative clearfix">
@@ -95,56 +94,65 @@
         <div class="col-md-7">
             <h1 class="title-section bottom-border-title margin-top-10 margin-bottom-60 no-after"> <?php print $title; ?></h1>
 
-        <?php
-
-
-        $field_description = field_get_items('node', $node, 'field_descriptions');
-
-
-
-
-
-        ?>
-        <div class="content-article">
-            <div class="date-article"><?php print(format_date($node->created, 'custom', 'G:i')); ?>
-                <span><?php print(format_date($node->created, 'custom', 'd M Y')); ?></span></div>
-            <?php print($field_description[0]["value"]); ?>
-
             <?php
 
-            $uid = user_load($node->uid);
-            $myprofile = $node->uid;
-            $profile = profile2_load_by_user($uid, 'main');
+
+            $field_description = field_get_items('node', $node, 'field_descriptions');
+            $field_tags = field_get_items('node', $node, 'field_tags');
+            $field_author = field_get_items('node', $node, 'field_author');
+            $field_link = field_get_items('node', $node, 'field_link');
+            $field_link_title = field_get_items('node', $node, 'field_title_link');
+            $field_link_path = field_get_items('node', $node, 'field_path_link');
+
 
             ?>
-            <p style="font-style: italic"><?php print($profile->field_names['und'][0]['value']); ?></p>
-            <div class="main-article-menu">
-                <?php
-                $menu_main = menu_navigation_links('menu-menu-news-page');
-                print theme('links__name_of_your_menu', array(
-                    'links' => $menu_main,
-                    'attributes' => array(
-                        'class' => array('links', 'inline', 'clearfix', 'news-menu'),
-                    ),
-                ));
+            <div class="content-article">
+                <a class="prev-history" href="#"  onclick="window.history.go(-1); return false;"><img style="margin-right: 15px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAKlBMVEUAAAAgICAdIB0AAAAeIB0eIBwAAAAcHBweIB0eHxweIBweIB4eIB0AAACjigrKAAAADHRSTlMACHEDuM4CEqqikGfxMGkjAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAAN1wAADdcBQiibeAAAAAd0SU1FB+IFFgIEGF5OHiYAAAAuSURBVAjXY2DAAoQMIDSjawKEIRIOEyhAFWDombUKBFYjGHApuGJkoQQ0K9ABAEyFDy9raWQNAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTA1LTIyVDAyOjA0OjI0KzAyOjAw2/i/BQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wNS0yMlQwMjowNDoyNCswMjowMKqlB7kAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC">Вернуться к новостям</a>
+                <div class="date-article"><?php print(format_date($node->created, 'custom', 'G:i')); ?>
+                    <span><?php print(format_date($node->created, 'custom', 'd M Y')); ?></span></div>
+                <?php print($field_description[0]["value"]); ?>
 
-                ?>
+                <p style="font-style: italic"><?php print($field_author[0][value]); ?></p>
+                <div class="main-article-menu">
+                    <?php
+
+                    echo '<ul class="news-tags">';
+                    foreach ($field_tags as $value) {
+
+                        print '<li><a href="#">' . $value['taxonomy_term']->name . '</a></li>';
+
+                    }
+                    echo '</ul>';
+                    ?>
+                </div>
             </div>
-        </div>
 
         </div>
         <div class="col-md-5">
             <div class="aside">
-                <div class="block-photo">
-                    <img src="/<?php print path_to_theme(); ?>/images/elipse.png"
-                         alt="Фоторепортаж">
-                        <div class="block-aside-photo">
-                            <img src="/<?php print path_to_theme(); ?>/images/photo-camera.png"
-                                 alt="Иконка">
+                <?php
 
-                            <p>Фоторепортаж</p>
-                        </div>
-                </div>
+                 if($field_link[0]['value']) {
+
+
+                     ?>
+                     <a href="<?php  echo $field_link_path[0]['value']; ?>" class="block-photo">
+                         <img src="/<?php print path_to_theme(); ?>/images/elipse.png"
+                              alt="Фоторепортаж">
+                         <div class="block-aside-photo">
+                             <img src="/<?php print path_to_theme(); ?>/images/photo-camera.png"
+                                  alt="Иконка">
+
+                             <p><?php  echo $field_link_title[0]['value'];  ?></p>
+                         </div>
+                     </a>
+                     <?php
+                 }
+
+
+                ?>
+
+
             </div>
         </div>
 
@@ -163,13 +171,19 @@
 
             ?>
         </div>
-        <a href="#" class="slider-arrow-left">
-            <img src="/<?php print path_to_theme(); ?>/images/afisha-arr-mirror.png" alt="Предыдущий"/>
-        </a>
+        <?php
+        if ($field_gallery) {
+            ?>
+            <a href="#" class="slider-arrow-left">
+                <img src="/<?php print path_to_theme(); ?>/images/afisha-arr-mirror.png" alt="Предыдущий"/>
+            </a>
 
-        <a href="#" class="slider-arrow-right">
-            <img src="/<?php print path_to_theme(); ?>/images/afisha-arr.png" alt="Следующий"/>
-        </a>
+            <a href="#" class="slider-arrow-right">
+                <img src="/<?php print path_to_theme(); ?>/images/afisha-arr.png" alt="Следующий"/>
+            </a>
+            <?php
+        }
+        ?>
     </div>
 
 </div>

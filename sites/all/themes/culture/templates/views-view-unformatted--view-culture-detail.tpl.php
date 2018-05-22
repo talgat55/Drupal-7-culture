@@ -52,7 +52,7 @@
 
 
         <div class="col-md-12">
-            <a href="#" class="link-to-mateerial">Все материалы</a>
+            <a href="/culturedetails" class="link-to-mateerial">Все материалы</a>
         </div>
 
 

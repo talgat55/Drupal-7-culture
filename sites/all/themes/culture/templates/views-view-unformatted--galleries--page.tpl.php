@@ -37,11 +37,11 @@
 
 
             }
-            echo '<a  href="'.$view_field['path'].'" class="bottom-gallery-block">
+            echo '<div   class="bottom-gallery-block">
                     <div class="title-gallery">'.$view_field['title'].'</div>
                     <div class="counter-gallery-items">'.$count_items.'</div>
                     ';
-            echo '</a><div class="overlay-gallery"></div></div>';
+            echo '</div><div class="overlay-gallery"></div></div>';
             //var_dump($view_field);
 
         endforeach; ?>

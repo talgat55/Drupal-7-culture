@@ -74,10 +74,11 @@ jQuery(document).ready(function () {
         onSelect: function (date) {
             //var unix = new Date(date.split("-").reverse().join("-")).getTime();
             // var unix  =   new Date(date).getTime();
+
             var d = new Date(date);
 
             var nextday = new Date(d.valueOf() + 24 * 60 * 60 * 1000).getTime();
-            var previoustday = new Date(d.valueOf() - 24 * 60 * 60 * 1000).getTime();
+            var previoustday = new Date(d.valueOf()).getTime();
 
             if (jQuery('.afisha-border-bottom.current').length) {
 
@@ -94,6 +95,7 @@ jQuery(document).ready(function () {
                 jQuery(".afisha-row-list").html(' ');
                 if (data != '') {
                     jQuery(".afisha-row-list").html(data);
+                    jQuery('.afisha-row-list').isotope();
                 } else {
                     jQuery(".afisha-row-list").html('<div class="not-found"  >Записей не найдено</div>');
                 }
@@ -109,6 +111,7 @@ jQuery(document).ready(function () {
 
 
     jQuery('.select-afisha-page').on('change', function () {
+
         if (jQuery('.afisha-border-bottom.current').length) {
 
             var cat = jQuery('.afisha-border-bottom.current').data('id');
@@ -118,10 +121,12 @@ jQuery(document).ready(function () {
 
         if(this.value == 'soon'){
             var d = new Date();
+            d.setHours(24,0,0,0);
 
-            var firstday = new Date(d.valueOf()-24*60*60*1000).getTime();
-            var lastday = new Date(d.valueOf()+48*60*60*1000).getTime();
-
+            var firstday = new Date(d.valueOf()-18*60*60*1000).getTime();
+            var lastday = new Date(d.valueOf()+6*59*60*1000).getTime();
+            console.log(d.getTime());
+            console.log(lastday);
 
         }else if(this.value == 'thisweek'){
 
@@ -129,8 +134,10 @@ jQuery(document).ready(function () {
             var d = new Date();
             var first = d.getDate() - d.getDay(); // First day is the day of the month - the day of the week
             var last = first + 6; // last day is the first day + 6
+            var last1 = first + 5; // last day is the first day + 6
 
-            var firstday = new Date(d.setDate(first)).getTime();
+            //var firstday = new Date(d.setDate(first)).getTime();
+            var firstday = new Date(d.setDate(last1)+48*60*60*1000).getTime();
             var lastday = new Date(d.setDate(last)+48*60*60*1000).getTime();
 
 
@@ -138,9 +145,9 @@ jQuery(document).ready(function () {
 
         } else{
             var d = new Date();
-
-            var firstday = new Date(d.valueOf()).getTime();
-            var lastday = new Date(d.valueOf()+48*60*60*1000).getTime();
+            d.setHours(24,0,0,0);
+            var firstday = new Date(d.valueOf()+6*60*60*1000).getTime();
+            var lastday = new Date(d.valueOf()+30*60*60*1000).getTime();
 
         }
 
@@ -152,6 +159,7 @@ jQuery(document).ready(function () {
             jQuery(".afisha-row-list").html(' ');
             if (data != '') {
                 jQuery(".afisha-row-list").html(data);
+                jQuery('.afisha-row-list').isotope();
             } else {
                 jQuery(".afisha-row-list").html('<div class="not-found"  >Записей не найдено</div>');
             }
@@ -161,7 +169,9 @@ jQuery(document).ready(function () {
 
 
     });
-
+    jQuery('.page-news .pager-next a').click(function () {
+        jQuery('.news.home-page li').matchHeight();
+    });
 
 
     /*
@@ -261,10 +271,10 @@ function InitFilterRowsAfisha() {
         $optionSet.find('.current').removeClass('current');
         $this.addClass('current');
 
-        /*
+
                 var selector = jQuery(this).attr('data-filter');
                 jQuery('.afisha-row-list').isotope({ filter: selector });
-        */
+
 
         return false;
     });
