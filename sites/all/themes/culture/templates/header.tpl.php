@@ -91,12 +91,12 @@
             <div class="header">
                 <div class="container clearfix">
                     <div class="top-header">
-                        <?php if ($logo): ?>
+                        
                             <a href="<?php print $front_page; ?>" title="<?php print t('Домашняя страница'); ?>"
                                id="logo">
-                                <img src="<?php print $logo; ?>" alt="<?php print t('Логотип'); ?>"/>
+                                <img src="/<?php print path_to_theme(); ?>/images/logo.png""/>
                             </a>
-                        <?php endif; ?>
+                     
                         <div class="center-top-header">
                             <?php print render($page['header']); ?>
                         </div>

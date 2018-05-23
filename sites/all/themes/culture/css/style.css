@@ -114,6 +114,7 @@ body {
 
 #logo img {
     width: 344px;
+    vertical-align: middle;
 }
 
 .main-header-menu a.active {

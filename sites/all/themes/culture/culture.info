@@ -32,8 +32,7 @@ regions[news_main] = Новости на главной
 regions[culture_detail] = Культура в деталях
 regions[header] = Header
 regions[content] = Content
-
-features[ ] = favicon
+ 
 
 settings[shortcut_module_link] = 0
 
