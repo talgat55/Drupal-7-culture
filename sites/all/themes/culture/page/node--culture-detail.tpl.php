@@ -103,10 +103,11 @@
         endif;
 
         $field_description = field_get_items('node', $node, 'field_description_culture');
-
-
-
-
+        $field_link = field_get_items('node', $node, 'field_link_culture');
+        $field_link_path = field_get_items('node', $node, 'field_path_link_culture');
+        $field_link_title = field_get_items('node', $node, 'field_title_link_culture');
+        $field_tags = field_get_items('node', $node, 'field_tags_culture');
+        $field_author = field_get_items('node', $node, 'field_author_culture');
 
         ?>
         <div class="content-article">
@@ -114,24 +115,18 @@
                 <span><?php print(format_date($node->created, 'custom', 'd M Y')); ?></span></div>
             <?php print($field_description[0]["value"]); ?>
 
-            <?php
 
-            $uid = user_load($node->uid);
-            $myprofile = $node->uid;
-            $profile = profile2_load_by_user($uid, 'main');
-
-            ?>
-            <p style="font-style: italic"><?php print($profile->field_names['und'][0]['value']); ?></p>
+            <p style="font-style: italic"><?php print($field_author[0][value]); ?></p>
             <div class="main-article-menu">
                 <?php
-                $menu_main = menu_navigation_links('menu-menu-news-page');
-                print theme('links__name_of_your_menu', array(
-                    'links' => $menu_main,
-                    'attributes' => array(
-                        'class' => array('links', 'inline', 'clearfix', 'news-menu'),
-                    ),
-                ));
 
+                echo '<ul class="news-tags">';
+                foreach ($field_tags as $value) {
+
+                    print '<li><a href="#">' . $value['taxonomy_term']->name . '</a></li>';
+
+                }
+                echo '</ul>';
                 ?>
             </div>
         </div>
@@ -139,16 +134,27 @@
         </div>
         <div class="col-md-5">
             <div class="aside">
-                <div class="block-photo">
+                <?php
+
+                if($field_link[0]['value']) {
+
+
+                ?>
+                <a href="<?php  echo $field_link_path[0]['value']; ?>" class="block-photo">
                     <img src="/<?php print path_to_theme(); ?>/images/elipse.png"
                          alt="Фоторепортаж">
                         <div class="block-aside-photo">
                             <img src="/<?php print path_to_theme(); ?>/images/photo-camera.png"
                                  alt="Иконка">
 
-                            <p>Фоторепортаж</p>
+                            <p><?php  echo $field_link_title[0]['value'];  ?></p>
                         </div>
-                </div>
+                </a>
+                    <?php
+                }
+
+
+                ?>
             </div>
         </div>
 
@@ -167,6 +173,9 @@
 
             ?>
         </div>
+        <?php
+        if ($field_gallery  AND  count($field_gallery) > 4) {
+        ?>
         <a href="#" class="slider-arrow-left">
             <img src="/<?php print path_to_theme(); ?>/images/afisha-arr-mirror.png" alt="Предыдущий"/>
         </a>
@@ -174,6 +183,9 @@
         <a href="#" class="slider-arrow-right">
             <img src="/<?php print path_to_theme(); ?>/images/afisha-arr.png" alt="Следующий"/>
         </a>
+            <?php
+        }
+        ?>
     </div>
 
 </div>

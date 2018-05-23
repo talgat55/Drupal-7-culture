@@ -1513,7 +1513,7 @@ div.password-confirm {
     text-decoration: none;
 }
 
-.culture-bottom-block h3 a {
+.culture-bottom-block h3  {
     font-size: 25px;
     color: #fff;
     text-decoration: none;
@@ -2995,7 +2995,13 @@ div.admin-panel .description {
 .top-block-content #breadcrumb,
 .top-block-content .share-block{
     display: table-cell;
-    vertical-align: bottom;
+    vertical-align: middle;
+}
+.row.culture-detail-rows{
+    padding-bottom: 40px;
+}
+.node-type-culture-detail #breadcrumb{
+    width: 70%;
 }
 .share-block p{
     margin-bottom: 0;

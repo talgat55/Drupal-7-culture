@@ -38,15 +38,15 @@
                         $value = $value->field_alias;
 
                     }
-
+/*
                     $nid = $view_field['nid'];
                     $path = 'node/' . (int) $nid ;
                     $alias = drupal_get_path_alias($path);
-
+*/
                     echo '
 
                 <li class="culture-detail-item ' . $value[und][0]['value'] . '">
-                    <a href="/'.$alias.'">
+                    <a href="'.$view_field['path'].'">
                     <div class="culture-top-block clearfix">
                         <div class="culture-date">' . $datefieldinvert[1] . ' ' . $datefieldinvert[0] . '</div> 
                         <span>'.$view_field['field_categories'].'</span>
