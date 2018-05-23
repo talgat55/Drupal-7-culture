@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="335fdc75-9f90-41e5-bd15-35bce0f7a359" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/css/style.css" afterPath="$PROJECT_DIR$/sites/all/themes/culture/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/page/node--culture-detail.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/page/node--culture-detail.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--culturedetails--page.tpl.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--view-culture-detail.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--view-culture-detail.tpl.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -269,7 +265,7 @@
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../radiat" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -316,12 +312,12 @@
       <workItem from="1526614577542" duration="4975000" />
       <workItem from="1526856453984" duration="4615000" />
       <workItem from="1526900796596" duration="25695000" />
-      <workItem from="1526982732778" duration="23201000" />
+      <workItem from="1526982732778" duration="23676000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="391141000" />
+    <option name="totallyTimeSpent" value="391616000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="2" width="1934" height="1036" extended-state="0" />
