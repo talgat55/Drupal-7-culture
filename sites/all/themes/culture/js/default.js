@@ -76,10 +76,12 @@ jQuery(document).ready(function () {
             // var unix  =   new Date(date).getTime();
 
             var d = new Date(date);
+          //  d.setHours(24,0,0,0);
 
             var nextday = new Date(d.valueOf() + 24 * 60 * 60 * 1000).getTime();
+            //var nextday = new Date(d.valueOf() + 24 * 60 * 60 * 1000).getTime();
             var previoustday = new Date(d.valueOf()).getTime();
-
+            console.log(previoustday.toString().slice(0, 10));
             if (jQuery('.afisha-border-bottom.current').length) {
 
                 var cat = jQuery('.afisha-border-bottom.current').data('id');

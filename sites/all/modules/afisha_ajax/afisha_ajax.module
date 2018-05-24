@@ -40,7 +40,7 @@ function afisha_ajax_ajax_get_ajax($tid, $date1, $date2 = null) {
     if ($tid != 'all') {
         $query->fieldCondition('field_cat_afisha', 'tid',  $tid, '=');
     }
-    $query->range(0, 10);
+    $query->range(0, 150);
     $result = $query->execute();
     if (isset($result['node'])) {
         $news_items_nids = array_keys($result['node']);
@@ -76,7 +76,7 @@ function afisha_ajax_ajax_callback($page_callback_result) {
         'февраля',
         'марта',
         'апреля',
-        'майя',
+        'мая',
         'июня',
         'июля',
         'августа',
@@ -111,30 +111,57 @@ function afisha_ajax_ajax_callback($page_callback_result) {
         $day =  gmdate("d", $page_callback_result[1]);
         $monthsearch = (int)  gmdate("m", $page_callback_result[1])-1;
 
+
+
+
         $count = count($node->field_date_afisha['und']);
         if($count > 1){  /// if many dates
-            $redydate = $day . ' '.$arr[$monthsearch];
-        }else{
-                $redydate = date( 'd', $node->field_date_afisha['und'][0]['value'] ) . ' ' . $arr[$month];
-        }
-        $output .= '   
-             <li class="culture-detail-item  ' . $value[und][0]['value'] . '">
-                 <a href="' . $alias . '">
-                    <div class="culture-top-block clearfix">
-                        <span>' .$term->name . '</span>
-                    </div> 
-                          <div class="afisha-row-image">   
-                              <div class="afisha-date">' . $redydate . '</div> 
-                              <img src="' . $my_image_url. '" alt="' . $node->title . '" />
-                                  <div class="afisha-bottom-block-row">
-                                  <div class="afisha-bottom-block">
-                                      <h3>' . $node->title . '</h3> 
-                                            </div>
-                                  </div>
-                          </div>
 
-                 </a>         
-             </li>';
+            $redydate = $day . ' '.$arr[$monthsearch];
+
+        }else{
+
+            $redydate = date( 'd', $node->field_date_afisha['und'][0]['value'] ) . ' ' . $arr[$month];
+
+        }
+
+        foreach ($node->field_date_afisha['und'] as $date){
+
+            $dayvalue = (int) gmdate("d", $date['value']);
+
+            $monthvalue = (int) gmdate("m", $date['value'])-1;
+
+
+
+
+            if($day ==  $dayvalue  AND $monthsearch == $monthvalue ){
+          //  if($day ==  $dayvalue   ){
+
+                $output .= '   
+                     <li class="culture-detail-item  ' . $value[und][0]['value'] . '">
+                         <a href="' . $alias . '">
+                         
+                            <div class="culture-top-block clearfix">
+                                <span>' .$term->name . '</span>
+                            </div> 
+                                  <div class="afisha-row-image">   
+                                      <div class="afisha-date">' . $redydate . '</div> 
+                                      <img src="' . $my_image_url. '" alt="' . $node->title . '" />
+                                          <div class="afisha-bottom-block-row">
+                                          <div class="afisha-bottom-block">
+                                              <h3>' . $node->title . '</h3> 
+                                                    </div>
+                                          </div>
+                                  </div>
+        
+                         </a>         
+                     </li>';
+                break;
+
+            }
+
+        }
+
     }
     print $output;
 
