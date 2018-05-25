@@ -50,7 +50,7 @@
             </a>
         </div>
         <div class="col-md-12">
-            <a href="#" class="link-to-mateerial">Вся афиша</a>
+            <a href="/afisha" class="link-to-mateerial">Вся афиша</a>
         </div>
 
 

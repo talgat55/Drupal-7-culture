@@ -137,6 +137,7 @@ $arr = [
         $field_price = field_get_items('node', $node, 'field_price');
         $field_date = field_get_items('node', $node, 'field_date_afisha');
         $field_duration = field_get_items('node', $node, 'field_duration_afisha');
+        $field_duration_date = field_get_items('node', $node, 'field_field_duration_date_afisha');
 
 
         ?>
@@ -179,9 +180,10 @@ $arr = [
                                 <li>
                                     <span>Начало:</span>
                                     <span><?php
+
                                         foreach ($field_date as $key => $fieldvalue){
                                             if($key != 0){
-                                                print ", ";
+                                                print "<br> ";
                                             }
                                             $month = format_date($fieldvalue['value'], 'custom', 'm') - 1;
                                             print(format_date($fieldvalue['value'], 'custom', 'd'));
@@ -194,13 +196,42 @@ $arr = [
                                         ?></span>
                                 </li>
                                 <?php
-                                if ($field_duration[0]['value']) {
+
+                                if ($field_duration[0]['value']  ||  $field_duration_date[0]['value']) {
                                     ?>
                                     <li>
-                                        <span>Продолжительность:</span> <span><?php echo $field_duration[0]['value']; ?></span>
+                                        <span>Продолжительность:</span>
+                                        <span>
+
+                                            <?php
+
+                                                if($field_duration_date[0]['value']){
+                                                    foreach ($field_duration_date as $key => $fieldvaluedateducration){
+                                                        if($key == 0){
+                                                            print "c ";
+                                                        }else{
+                                                            print '<br> по ';
+                                                        }
+
+                                                        $monthdurationdate = (int) format_date($fieldvaluedateducration['value'], 'custom', 'm') - 1;
+                                                        print(format_date($fieldvaluedateducration['value'], 'custom', 'd'));
+                                                        print ' '.$arr[$monthdurationdate]. ' ';
+
+
+                                                    }
+
+                                                }else{
+                                                    echo $field_duration[0]['value'];
+                                                }
+
+
+                                            ?>
+
+                                        </span>
                                     </li>
                                     <?php
                                 }
+
                                 ?>
 
 
@@ -218,7 +249,7 @@ $arr = [
         </div>
 
         <h3 class="recent-heading-afisha">
-            Ближайшие события учереждения
+            Ближайшие события учреждения
         </h3>
     </div>
 
@@ -234,12 +265,7 @@ $arr = [
                 ->entityCondition('bundle', 'afisha')
                 ->propertyCondition('status', NODE_PUBLISHED)
                 ->fieldCondition('field_place_afisha', 'value', $tid, '=')
-                // See the comment about != NULL above.
-                //   ->fieldCondition('field_photo', 'fid', 'NULL', '!=')
-                //    ->fieldCondition('field_faculty_tag', 'tid', $value)
-                //   ->fieldCondition('field_news_publishdate', 'value', db_like($year) . '%', 'like')
-                //    ->fieldCondition('field_news_subtitle', 'value', '%' . db_like($year) . '%', 'like')
-                // ->fieldOrderBy('field_photo', 'fid', 'DESC')
+                ->fieldOrderBy('field_date_afisha', 'value', 'ASC')
                 ->range(0, 10);
             // Run the query as user 1.
             //   ->addMetaData('account', user_load(1));

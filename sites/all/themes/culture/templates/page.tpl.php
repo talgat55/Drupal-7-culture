@@ -93,7 +93,7 @@
                 <div id="breadcrumb"><?php print $breadcrumb; ?></div>
             <?php endif; ?>
             <?php
-            if ($node && $node->type == 'culture_detail' OR $node && $node->type == 'article') {
+            if ($node && $node->type == 'culture_detail' ||  $node && $node->type == 'article') {
                 ?>
                 <div class="share-block">
                     <?php
