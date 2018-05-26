@@ -62,6 +62,8 @@ body {
     outline: 0;
     background-image: url(../images/bg.png);
 }
+ 
+ 
 .news .col-md-7,
 .news .col-md-5{
     float: left;

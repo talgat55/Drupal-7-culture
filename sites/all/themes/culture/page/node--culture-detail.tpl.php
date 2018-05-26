@@ -133,7 +133,7 @@
 
         </div>
         <div class="col-md-5">
-            <div class="aside">
+            <div  id="stickyblock"  class="aside">
                 <?php
 
                 if($field_link[0]['value']) {

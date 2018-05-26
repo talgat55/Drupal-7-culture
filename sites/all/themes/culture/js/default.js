@@ -1,3 +1,4 @@
+
 jQuery(document).ready(function () {
     "use strict";
     /*
@@ -25,10 +26,11 @@ jQuery(document).ready(function () {
     });
 
    /*
-   * Sticky Block
+   * Sticky Block 
     */
-    jQuery(".block-photo").stick_in_parent();
-
+   jQuery('#stickyblock').goesSticky({ scope: jQuery("#main-wrapper"), offest: 0 });
+  
+ 
     /*
     *  Afisha carousel
      */

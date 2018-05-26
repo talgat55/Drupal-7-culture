@@ -85,7 +85,7 @@
  * @see html.tpl.php
  */
 ?>
-<div id="page-wrapper">
+<div id="page-wrapper" class="clearfix">
     <div id="page">
         <header id="header">
             <div class="header">
