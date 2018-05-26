@@ -23,6 +23,12 @@ jQuery(document).ready(function () {
         e.preventDefault();
         jQuery(this).parent().parent().parent().find('.main-slider').slick('slickNext');
     });
+
+   /*
+   * Sticky Block
+    */
+    jQuery(".block-photo").stick_in_parent();
+
     /*
     *  Afisha carousel
      */

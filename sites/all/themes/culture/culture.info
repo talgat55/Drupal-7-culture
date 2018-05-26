@@ -15,6 +15,7 @@ stylesheets[all][] = css/lightgallery.css
 
 scripts[] = js/jquery-3.2.1.min.js
 scripts[] = js/slick.min.js
+scripts[] = js/jquery.sticky-kit.min.js
 scripts[] = js/lightgallery.min.js
 scripts[] = js/jquery.mousewheel.min.js
 scripts[] = js/lg-fullscreen.min.js

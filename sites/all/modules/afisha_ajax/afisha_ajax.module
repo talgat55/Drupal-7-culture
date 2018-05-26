@@ -31,8 +31,10 @@ function afisha_ajax_ajax_get_ajax($tid, $date1, $date2 = null) {
         if ($date1 && $date2 == "") {
             $query->fieldCondition('field_date_afisha', 'value',  $date1, '=');
         } else {
-            $query->fieldCondition('field_date_afisha', 'value',  $date1, '>=');
-            $query->fieldCondition('field_date_afisha', 'value',  $date2, '<=');
+           // $query->fieldCondition('field_date_afisha', 'value',  $date1, '>=');
+            $query->fieldCondition('field_duration_date_afisha', 'value',  $date1, '>');
+           // $query->fieldCondition('field_date_afisha', 'value',  $date2, '<=');
+           $query->fieldCondition('field_duration_date_afisha', 'value2',  $date2, '<=');
         }
     }
 
@@ -99,8 +101,10 @@ function afisha_ajax_ajax_callback($page_callback_result) {
 
 
 
+
        // $my_image_url = file_create_url($node->field_image_afisha['und'][0]['uri']);
         $my_image_url = image_style_url("afisha", $node->field_image_afisha['und'][0]['uri']);
+
 
         $month = date( 'm', $node->field_date_afisha['und'][0]['value'] )-1;
            $path = 'node/' . $node->nid ;
@@ -131,7 +135,7 @@ function afisha_ajax_ajax_callback($page_callback_result) {
 
         }
 
-        foreach ($node->field_date_afisha['und'] as $date){
+        foreach ($node->field_date_afisha['und'] as $date){     // for array dates
 
             $dayvalue = (int) gmdate("d", $date['value']);
 
@@ -140,7 +144,7 @@ function afisha_ajax_ajax_callback($page_callback_result) {
 
 
 
-            if($day ==  $dayvalue  AND $monthsearch == $monthvalue ){
+            if($day ==  $dayvalue  AND $monthsearch == $monthvalue ){   // check if entry date
           //  if($day ==  $dayvalue   ){
 
                 $output .= '   

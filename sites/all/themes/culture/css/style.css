@@ -1815,6 +1815,10 @@ div.password-confirm {
     margin-bottom: 35px;
     margin-top: 0!important;
 }
+.node-type-article #breadcrumb{
+    width: 70%;
+}
+
 
 .main-article-menu .main-menu li {
     padding: 0 18.7px 0 0 !important;
