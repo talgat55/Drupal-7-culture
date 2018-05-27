@@ -51,7 +51,11 @@
     font-weight: normal;
     font-style: normal;
 }
-
+.display-none-overflow{
+    display: none;
+    height: 0;
+    overflow: hidden;
+}
 body {
     line-height: 1.5;
     font-size: 87.5%;
@@ -60,6 +64,7 @@ body {
     padding: 0;
     border: 0;
     outline: 0;
+    overflow-x: hidden;
     background-image: url(../images/bg.png);
 }
  
@@ -3317,4 +3322,156 @@ div.admin-panel .description {
 }
 .prev-history:hover{
     text-decoration: underline;
+}
+.page-place #breadcrumb{
+    padding-top: 10px;
+}
+.place-row .row{
+    margin: 0 -15px;
+}
+.place.home-page li{
+    float: left;
+    list-style: none;
+    width: 33.33%;
+    padding: 0 15px  30px 15px;
+    box-sizing: border-box;
+}
+.place.home-page{
+    padding: 0;
+}
+.place.home-page li img{
+    max-width: 100%;
+}
+.node-type-place .col-md-4,
+.place-row .col-md-4{
+    float: left;
+    width: 35%;
+    padding-right: 100px;
+    box-sizing: border-box;
+}
+.node-type-place .col-md-8,
+.place-row .col-md-8{
+    float: left;
+    width: 65%;
+}
+.cat-place-aside{
+    margin: 16px 0 0 0;
+    padding: 0;
+    border: 1.5px solid #000;
+}
+.cat-place-aside li{
+    list-style: none;
+    border-bottom: 1.5px solid #000;
+}
+.cat-place-aside li a{
+    display: table;
+    width: 100%;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 16px 20px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.cat-place-aside li .img-cat-place-aside-block,
+.cat-place-aside li h3{
+    display: table-cell;
+    vertical-align: middle;
+}
+.cat-place-aside li h3{
+    font-family: 'NeoSansPro-Regular';
+    font-size: 16px;
+    color: #000;
+}
+.img-cat-place-aside-block{
+    text-align: right;
+    width: 50px;
+}
+
+.img-std-place-hover{
+    display: none;
+}
+.cat-place-aside li:last-child{
+    border: none;
+}
+.cat-place-aside .current {
+    background: #20acaf;
+}
+.cat-place-aside .current  h3{
+    color: #fff;
+}
+.cat-place-aside .current  .img-std-place{
+    display: none;
+}
+.cat-place-aside .current  .img-std-place-hover{
+    display: block;
+}
+.place-holder .special-row{
+    margin: 0 -15px;
+}
+.place-item h3{
+    font-family: 'NeoSansPro-Regular';
+    color:  #20acaf;
+    font-size: 18px;
+    text-align: center;
+    line-height: 22px;
+}
+.place.home-page li a{
+   text-decoration: none;
+}
+.content-place{
+    font-family: 'OpenSans';
+    font-size: 16px;
+    margin: 0 0 30px 0;
+}
+.node-place-img img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+.node-place-img{
+    position: relative;
+}
+.node-place-img h1{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px;
+    margin: 0;
+    font-family: 'OpenSans-Bold';
+    font-size: 25px;
+    line-height: 30px;
+    text-align: left;
+    color: #fff;
+}
+.block-place-info{
+    display: table;
+    width: 100%;
+    background: #f7f7f7;
+    margin-top: 20px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    box-shadow: 1px 3px 6px 2px #dadada;
+}
+.place-node-site,
+.place-node-phone,
+.place-node-adress{
+    display: table-cell;
+    vertical-align: middle;
+}
+.block-place-info p{
+    display: inline-block;
+    font-family: 'NeoSansPro-Regular';
+    color:  #000;
+    font-size: 16px;
+}
+.block-place-info a{
+    text-decoration: none;
+}
+.block-place-info img {
+    vertical-align: middle;
+    padding-right: 10px;
+    position: relative;
+    top: -3px;
 }

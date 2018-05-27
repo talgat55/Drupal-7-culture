@@ -85,89 +85,62 @@
  * @see html.tpl.php
  */
 ?>
+
+
 <?php include('header.tpl.php'); ?>
-
-    <div class="container">
+<?php if ($breadcrumb): ?>
+    <div class="container relative">
         <div class="top-block-content">
-            <?php if ($breadcrumb): ?>
-                <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-            <?php endif; ?>
-            <?php
-            if (isset($node) && $node->type == 'culture_detail' ||  isset($node) && $node->type == 'article') {
-                ?>
-                <div class="share-block">
-                    <?php
-                    $uri = $_SERVER['HTTP_HOST'] . '/' . request_uri();
+            <div id="breadcrumb">
 
-                    ?>
-                    <p>Поделиться</p>
-                    <div class="ya-share2" data-services="telegram,vkontakte,facebook"
-                         data-title='<?php print $node->title; ?>' data-url="<?php echo $uri; ?>"></div>
-                </div>
-                <?
-            }
-
-            ?>
-        </div>
-
-
-        <div id="content" class="column">
-            <div class="section">
-
-
-                <div id="content" class="column">
-                    <div class="section">
-                        <?php print render($title_prefix); ?>
-                        <?php
-                        $type = $node->type;
-                        if ($type == 'culture_detail' || $type == 'article' || $type == 'afisha' || $type == 'place') {
-
-                        } else {
-                            if ($title):
-
-                                echo '
-                                    <h1 class="title-section bottom-border-title margin-top-10 margin-bottom-60 no-after">
-                                       ' . $title . '
-                                    </h1> ';
-                            endif;
-                        } ?>
-                        <?php print render($title_suffix); ?>
-
-
-                        <?php
-                        // page Culture detail
-                        if (current_path() == 'culturedetails') {
-                            $name = 'culture_details';
-
-
-                            $myvoc = taxonomy_vocabulary_machine_name_load($name);
-                            $tree = taxonomy_get_tree($myvoc->vid);
-                            //var_dump($tree);
-                            echo '<ul class="list-terms-culture-details clearfix">';
-                            echo '<li class="current" data-filter>Все материалы</li>';
-
-                            foreach ($tree as $term) {
-                                $terms = taxonomy_get_term_by_name($term->name);
-                                foreach ($terms as $value) {
-                                    $value = $value->field_alias;
-
-                                }
-                                echo '<li data-filter=".' . $value[und][0]['value'] . '"><span class="separator-culture-detail"></span> ' . $term->name . ' </li>';
-                            }
-                            echo '</ul>';
-                        }
-                        ?>
-                        <?php print render($page['content']); ?>
-
-
-                    </div>
-                </div> <!-- /.section, /#content -->
-
+                <?php print $breadcrumb; ?>
 
             </div>
-        </div> <!-- /.section, /#content -->
-
-
-
+        </div>
     </div>
+<?php endif; ?>
+    <h1 class="display-none-overflow title-section bottom-border-title margin-top-10 margin-bottom-60 no-after">
+        Места
+    </h1>
+    <div id="main" class="place-row clearfix">
+        <div class="container clearfix">
+            <div class="col-md-4">
+                <?php
+                $myvoc = taxonomy_vocabulary_machine_name_load('place');
+                $tree = taxonomy_get_tree($myvoc->vid);
+                echo '<ul class="cat-place-aside">';
+                foreach ($tree as $value){
+                    $terms = taxonomy_get_term_by_name($value->name);
+
+                    foreach ($terms as $term){
+
+                        $my_image_url = file_create_url($term->field_image_tax_place[und][0]['uri']);
+                        $my_image_url_hover = file_create_url($term->field_image_tax_hover_place[und][0]['uri']);
+
+                        $my_image_url_hover_redy = $my_image_url_hover ? $my_image_url_hover : $my_image_url;
+                        $tid = $term->tid;
+                    }
+                    echo '<li><a href="#" data-id="'.$tid.'"> ';
+                    echo '<h3>'.$value->name.'</h3>';
+                    echo '<div class="img-cat-place-aside-block">';
+                    echo '<img class="img-std-place"  src="'.$my_image_url.'" />';
+                    echo '<img class="img-std-place-hover"  src="'.$my_image_url_hover_redy.'" />';
+                    echo '</div>';
+                    echo '</a></li>';
+
+                }
+                echo '</ul>';
+
+                ?>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+
+                    <?php print render($page['content']); ?>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 <?php include('footer.tpl.php'); ?>
