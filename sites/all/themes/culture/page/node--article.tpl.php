@@ -136,7 +136,7 @@
 
 
                      ?>
-                     <a href="<?php  echo $field_link_path[0]['value']; ?>" class="block-photo">
+                     <a href="<?php  echo $field_link_path[0]['value']; ?>" target="_blank" class="block-photo">
                          <img src="/<?php print path_to_theme(); ?>/images/elipse.png"
                               alt="Фоторепортаж">
                          <div class="block-aside-photo">
