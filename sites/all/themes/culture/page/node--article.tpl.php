@@ -107,7 +107,6 @@
 
             ?>
             <div class="content-article">
-                <a class="prev-history" href="#"  onclick="window.history.go(-1); return false;"><img style="margin-right: 15px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAKlBMVEUAAAAgICAdIB0AAAAeIB0eIBwAAAAcHBweIB0eHxweIBweIB4eIB0AAACjigrKAAAADHRSTlMACHEDuM4CEqqikGfxMGkjAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAAN1wAADdcBQiibeAAAAAd0SU1FB+IFFgIEGF5OHiYAAAAuSURBVAjXY2DAAoQMIDSjawKEIRIOEyhAFWDombUKBFYjGHApuGJkoQQ0K9ABAEyFDy9raWQNAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTA1LTIyVDAyOjA0OjI0KzAyOjAw2/i/BQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wNS0yMlQwMjowNDoyNCswMjowMKqlB7kAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC">Вернуться к новостям</a>
                 <div class="date-article"><?php print(format_date($node->created, 'custom', 'G:i')); ?>
                     <span><?php print(format_date($node->created, 'custom', 'd M Y')); ?></span></div>
                 <?php print($field_description[0]["value"]); ?>
@@ -126,7 +125,11 @@
                     ?>
                 </div>
             </div>
+            <ul id="node-navigation">
+                <li class="prev"><?php print pn_node($node, 'p'); ?></li>
+                <li class="next"><?php print pn_node($node, 'n'); ?></li>
 
+            </ul>
         </div>
         <div class="col-md-5">
             <div id="stickyblock" class="aside">
@@ -164,6 +167,7 @@
             $field_gallery = field_get_items('node', $node, 'field_gallery');
 
             foreach ($field_gallery as $field) {
+
                 $my_image_url = file_create_url($field['uri']);
                 print('<div><img src="' . $my_image_url . '" alt="' . $field['alt'] . '" /> </div>');
 

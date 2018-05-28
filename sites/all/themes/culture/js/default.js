@@ -1,4 +1,3 @@
-
 jQuery(document).ready(function () {
     "use strict";
     /*
@@ -28,8 +27,10 @@ jQuery(document).ready(function () {
    /*
    * Sticky Block 
     */
-   jQuery('#stickyblock').goesSticky({ scope: jQuery("#main-wrapper"), offest: 0 });
-  
+
+    if (jQuery('#stickyblock').length) {
+        jQuery('#stickyblock').goesSticky({scope: jQuery("#main-wrapper"), offest: 0});
+    }
  
     /*
     *  Afisha carousel
@@ -55,10 +56,7 @@ jQuery(document).ready(function () {
         jQuery(this).parent().parent().parent().find('.afisha-carousel').slick('slickNext');
     });
 
-    /*
-        jQuery('a').click(function (e) {
-            e.preventDefault();
-        });*/
+
     /*
     * Lightbox for gallery
      */
@@ -147,11 +145,12 @@ jQuery(document).ready(function () {
             var last = first + 6; // last day is the first day + 6
             var last1 = first + 5; // last day is the first day + 6
 
-            //var firstday = new Date(d.setDate(first)).getTime();
-            var firstday = new Date(d.setDate(last1)+48*60*60*1000).getTime();
-            var lastday = new Date(d.setDate(last)+48*60*60*1000).getTime();
+           // var firstday = new Date(d.setDate(last1)).getTime();
+            var firstday = new Date(d.setDate(last1)+24*60*60*1000).getTime();
+          //  var lastday = new Date(d.setDate(last)).getTime();
+            var lastday = new Date(d.setDate(last)+24*60*60*1000).getTime();
 
-
+            console.log(firstday+' '+lastday);
 
 
         } else{
@@ -192,6 +191,7 @@ jQuery(document).ready(function () {
      */
     jQuery('.news.home-page li').matchHeight();
     jQuery('.culture-detail-row li').matchHeight();
+    jQuery('.place.home-page li').matchHeight();
 
 
     InitFitRows();

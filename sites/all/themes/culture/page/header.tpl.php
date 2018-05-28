@@ -8,7 +8,7 @@
                         <?php if ($logo): ?>
                             <a href="<?php print $front_page; ?>" title="<?php print t('Домашняя страница'); ?>"
                                id="logo">
-                                <img src="/<?php print path_to_theme(); ?>/images/logo.png""/>
+                                <img src="/<?php print path_to_theme(); ?>/images/logo.png"/>
                             </a>
                         <?php endif; ?>
                         <div class="center-top-header">
@@ -22,27 +22,27 @@
                             </div>
                             <ul class="link-to-social">
                                 <li>
-                                    <a href="#" target="_blank" class="link-to-social-item">
+                                    <a href="https://www.facebook.com/mincult.omsk/" target="_blank" class="link-to-social-item">
                                         <img src="/<?php print path_to_theme(); ?>/images/facebook.png"
                                              alt="ссылка на страницу в facebook">
                                     </a>
 
                                 </li>
                                 <li>
-                                    <a href="#" target="_blank" class="link-to-social-item">
+                                    <a href="https://vk.com/sibmincult" target="_blank" class="link-to-social-item">
                                         <img src="/<?php print path_to_theme(); ?>/images/vk.png"
                                              alt="ссылка на страницу вк">
                                     </a>
 
                                 </li>
                                 <li>
-                                    <a href="#" target="_blank" class="link-to-social-item">
+                                    <a href="https://t.me/prospekt_kulturi" target="_blank" class="link-to-social-item">
                                         <img src="/<?php print path_to_theme(); ?>/images/telegram.png"
                                              alt="ссылка на страницу телегамм"/>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" target="_blank" class="link-to-social-item">
+                                    <a href="https://www.instagram.com/minculto/" target="_blank" class="link-to-social-item">
                                         <img src="/<?php print path_to_theme(); ?>/images/instagram.png"
                                              alt="ссылка на страницу instagram">
                                     </a>

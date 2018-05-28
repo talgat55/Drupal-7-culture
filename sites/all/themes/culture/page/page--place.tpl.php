@@ -106,6 +106,8 @@
         <div class="container clearfix">
             <div class="col-md-4">
                 <?php
+                $redy_empty_photo = image_style_url("cat_img_place",'public://nofoto.png');
+
                 $myvoc = taxonomy_vocabulary_machine_name_load('place');
                 $tree = taxonomy_get_tree($myvoc->vid);
                 echo '<ul class="cat-place-aside">';
@@ -119,12 +121,24 @@
 
                         $my_image_url_hover_redy = $my_image_url_hover ? $my_image_url_hover : $my_image_url;
                         $tid = $term->tid;
+
+
+
+                        $my_image_url_hover_redy2 =  $my_image_url_hover_redy ?   $my_image_url_hover_redy : $redy_empty_photo;
+                        if($my_image_url){
+                            $my_image_url_redy = $my_image_url;
+                        }else{
+                            $my_image_url_redy = $redy_empty_photo;
+                        }
+
                     }
                     echo '<li><a href="#" data-id="'.$tid.'"> ';
                     echo '<h3>'.$value->name.'</h3>';
                     echo '<div class="img-cat-place-aside-block">';
-                    echo '<img class="img-std-place"  src="'.$my_image_url.'" />';
-                    echo '<img class="img-std-place-hover"  src="'.$my_image_url_hover_redy.'" />';
+
+
+                    echo '<img class="img-std-place"  src="'.$my_image_url_redy.'" />';
+                    echo '<img class="img-std-place-hover"  src="'.$my_image_url_hover_redy2.'" />';
                     echo '</div>';
                     echo '</a></li>';
 

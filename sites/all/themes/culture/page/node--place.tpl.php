@@ -112,8 +112,8 @@ $my_image_url_place = file_create_url($field_image_place[0]['uri']);
 
                 foreach ($terms as $term){
 
-                    $my_image_url = file_create_url($term->field_image_tax_place[und][0]['uri']);
-                    $my_image_url_hover = file_create_url($term->field_image_tax_hover_place[und][0]['uri']);
+                    $my_image_url = file_create_url($term->field_image_tax_place['und'][0]['uri']);
+                    $my_image_url_hover = file_create_url($term->field_image_tax_hover_place['und'][0]['uri']);
 
                     $my_image_url_hover_redy = $my_image_url_hover ? $my_image_url_hover : $my_image_url;
                     $tid = $term->tid;
@@ -140,7 +140,7 @@ $my_image_url_place = file_create_url($field_image_place[0]['uri']);
         <div class="col-md-8">
         <div class="node-place-img">
                 <img src="<?php echo $my_image_url_place; ?>" />
-                <h1><?php echo $title; ?></h1>
+                <h1><?php  echo  $node ->title ?></h1>
         </div>
 
             <div class="block-place-info">
@@ -154,18 +154,28 @@ $my_image_url_place = file_create_url($field_image_place[0]['uri']);
                     <p><?php  echo $field_phone_place[0]['value'];  ?></p>
                     </a>
                 </div>
+
                 <?php
 
                 $parseurl = parse_url($field_link_place[0]['value']);
 
                 ?>
+
                 <div class="place-node-site">
                     <a href="<?php echo $field_link_place[0]['value']; ?>">
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAABNmlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjarY6xSsNQFEDPi6LiUCsEcXB4kygotupgxqQtRRCs1SHJ1qShSmkSXl7VfoSjWwcXd7/AyVFwUPwC/0Bx6uAQIYODCJ7p3MPlcsGo2HWnYZRhEGvVbjrS9Xw5+8QMUwDQCbPUbrUOAOIkjvjB5ysC4HnTrjsN/sZ8mCoNTIDtbpSFICpA/0KnGsQYMIN+qkHcAaY6addAPAClXu4vQCnI/Q0oKdfzQXwAZs/1fDDmADPIfQUwdXSpAWpJOlJnvVMtq5ZlSbubBJE8HmU6GmRyPw4TlSaqo6MukP8HwGK+2G46cq1qWXvr/DOu58vc3o8QgFh6LFpBOFTn3yqMnd/n4sZ4GQ5vYXpStN0ruNmAheuirVahvAX34y/Axk/96FpPYgAAACBjSFJNAAB6JQAAgIMAAPn/AACA6AAAUggAARVYAAA6lwAAF2/XWh+QAAAA5UlEQVR42sTTvUpDQRAF4O/qgnZaKAbFH7ATrWy0ywvYK1YpfAgfQcEHEFtr+4CdnVgp2IkWVikMgiJocG0mEkIC95rCAwvLzNmzc3Zmi5yzUTBmRKSlqyZM4RjtiuenU2zm8ILDigJHXQsfeP+Dg07CMmZxg3VkPJUVTLjAJG6xgBpOcVJW4AzncXOBedRLdwFvsbp4RafKHPTPwniFR/xMA4IZX2hgA62wNtPHK7A5TOAbB9jGY5BXBnBbwwQmsItVbEX8Ds+RS70Ce9jBPRaj1EusRTf2o4ImriP38Ovj33/jzwBPvy+M8HVk+AAAAABJRU5ErkJggg==" />
                     <p>
                         <?php
                        // echo $parseurl['host'];
-                        echo $parseurl['path'];
+                      //  echo $parseurl['path'];
+                        if(strpos($field_link_place[0]['value'], 'http') !== false) {   // check url
+                            echo $field_link_place[0]['value'];
+                        }else{
+
+                            echo $field_link_place[0]['value'];
+
+                        }
+
 
                         ?>
                     </p>
@@ -198,32 +208,6 @@ $my_image_url_place = file_create_url($field_image_place[0]['uri']);
 
     </div>
 
-    <div class="article-slider-row">
-        <div class="article-slider">
-            <?php
-            $field_gallery = field_get_items('node', $node, 'field_gallery');
 
-            foreach ($field_gallery as $field) {
-                $my_image_url = file_create_url($field['uri']);
-                print('<div><img src="' . $my_image_url . '" alt="' . $field['alt'] . '" /> </div>');
-
-            }
-
-            ?>
-        </div>
-        <?php
-        if ($field_gallery) {
-            ?>
-            <a href="#" class="slider-arrow-left">
-                <img src="/<?php print path_to_theme(); ?>/images/afisha-arr-mirror.png" alt="Предыдущий"/>
-            </a>
-
-            <a href="#" class="slider-arrow-right">
-                <img src="/<?php print path_to_theme(); ?>/images/afisha-arr.png" alt="Следующий"/>
-            </a>
-            <?php
-        }
-        ?>
-    </div>
 
 </div>

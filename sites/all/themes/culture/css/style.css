@@ -2880,9 +2880,6 @@ div.admin-panel .description {
     border-bottom: 1.5px solid #000;
 }
 
-.list-terms-afisha li:nth-of-type(5n+1) .separator-culture-detail{
-    display: none;
-}
 
 .list-terms-afisha li ,
 .list-terms-culture-details li {
@@ -2895,7 +2892,7 @@ div.admin-panel .description {
     cursor: pointer;
 }
 .list-terms-afisha li{
-    padding: 6px;
+    padding: 6px 19px 6px 6px;
 }
 
 .list-terms-afisha li:hover,
@@ -2910,7 +2907,7 @@ div.admin-panel .description {
     display: inline-block;
     position: relative;
     top: -3px;
-    margin: 0 30px;
+    margin: 0 29px 0 0;
     height: 5px;
     border-radius: 50%;
     background: #000;
@@ -3345,17 +3342,17 @@ div.admin-panel .description {
 .node-type-place .col-md-4,
 .place-row .col-md-4{
     float: left;
-    width: 35%;
+    width: 32%;
     padding-right: 100px;
     box-sizing: border-box;
 }
 .node-type-place .col-md-8,
 .place-row .col-md-8{
     float: left;
-    width: 65%;
+    width: 68%;
 }
 .cat-place-aside{
-    margin: 16px 0 0 0;
+    margin: 16px 0 40px 0;
     padding: 0;
     border: 1.5px solid #000;
 }
@@ -3368,7 +3365,7 @@ div.admin-panel .description {
     width: 100%;
     text-decoration: none;
     box-sizing: border-box;
-    padding: 16px 20px;
+    padding: 8px 20px;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -3474,4 +3471,33 @@ div.admin-panel .description {
     padding-right: 10px;
     position: relative;
     top: -3px;
+}
+#node-navigation {
+    padding: 0;
+    display: table;
+    margin: 0 0 0 auto;
+    width: 90%;
+}
+#node-navigation li a{
+
+    font-family: 'NeoSansPro-Regular';
+    color:  #20acaf;
+    font-size: 16px;
+    line-height: 22px;
+    text-decoration: none;
+}
+#node-navigation li a:hover{
+    text-decoration: underline;
+    color: #000;
+}
+#node-navigation li{
+    list-style: none;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+}
+
+#node-navigation li:first-child{
+    text-align: left;
+
 }

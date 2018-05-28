@@ -104,7 +104,7 @@
             <div class="afisha-select-block">
                 <select class="select-afisha-page">
                     <option value="soon">Сегодня</option>
-                    <option value="thisweek">На выходных</option>
+                    <!--<option value="thisweek">На выходных</option>-->
                     <option value="tomorrow">Завтра</option>
                 </select>
             </div>
@@ -118,7 +118,7 @@
                 $tree = taxonomy_get_tree($myvoc->vid);
                 //var_dump($tree);
                 echo '<ul class="list-terms-afisha clearfix">';
-
+                echo '<li class="current"  data-filter="">Все</li>';
                 foreach ($tree as $key => $term) {
 
                     $terms = taxonomy_get_term_by_name($term->name);
@@ -126,11 +126,7 @@
                         $value = $value->field_alias_afisha;
                     }
                     // add border bottom
-                    if ($key <= 4) {
-                        $classbottom = 'afisha-border-bottom';
-                    } else {
-                        $classbottom = '';
-                    }
+
 
                     //  for filterable            echo '<li class="' . $classbottom . '" data-id="' . $term->tid. '"    data-filter=".' . $value[und][0]['value'] . '"><span class="separator-culture-detail"></span> ' . $term->name . ' </li>';
                     echo '<li class="' . $classbottom . '" data-id="' . $term->tid. '"  data-filter=".' . $value[und][0]['value'] . '"><span class="separator-culture-detail"></span> ' . $term->name . ' </li>';
