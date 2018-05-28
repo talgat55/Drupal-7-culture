@@ -33,7 +33,7 @@
 
 
                     echo '
-                <li>
+                <li class="item-news-page">
                     <div class="news-item">
                     <div class="date-news">' . $datefieldinvert[1] . ' ' . $datefieldinvert[0] . '</div>
                     ' . $view_field["field_image"] . '
@@ -51,7 +51,11 @@
 
 
             </ul>
-
+            <div class="item-list">
+                <ul class="pager pager-load-more  news"  >
+                     <a  href="#">показать еще</a>
+                </ul>
+            </div>
 
         </div>
     </div>

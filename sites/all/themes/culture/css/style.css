@@ -1453,11 +1453,11 @@ div.password-confirm {
 .news.home-page li:nth-of-type(8n+8) {
     margin-bottom: 30px;
 }
-
+/*
 .margin-botom-news-custom li {
     margin-bottom: 10px !important;
 }
-
+*/
 .culture-detail li:nth-of-type(3n+1) {
     height: 625px;
     width: 40% !important;
@@ -3500,4 +3500,8 @@ div.admin-panel .description {
 #node-navigation li:first-child{
     text-align: left;
 
+}
+
+.item-list .not-found{
+    margin-bottom: 30px;
 }

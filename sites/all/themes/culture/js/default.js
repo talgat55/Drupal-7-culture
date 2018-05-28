@@ -66,8 +66,37 @@ jQuery(document).ready(function () {
         thumbnail: true,
         exthumbimage: false
     });
+    /*
+    * Load More News
+     */
+    jQuery('.pager-load-more.news a').click(function (e) {
+        if(window.a == undefined){
+            window.a = 1;
+        } 
 
+        jQuery.get("/article/get/ajax/" + window.a , function (data, status) {
 
+            if (data != '') {
+                jQuery(".news.home-page.clearfix.margin-botom-news-custom").append(data);
+                var maxHeight = Math.max.apply(null, jQuery(".news.home-page li").map(function ()
+                {
+                    return jQuery(this).height();
+                }).get());
+                jQuery('.news.home-page.clearfix.margin-botom-news-custom li').css('height',maxHeight );
+
+                //jQuery(this).attr("data-number", parseInt($datanumber+1));
+                var redyval =parseInt(window.a +1);
+                window.a =redyval;
+
+            } else {
+                jQuery(".item-list").html(' ');
+                jQuery(".item-list").html('<div class="not-found"  >Записей не найдено</div>');
+                jQuery(".item-list").delay(3000).fadeOut();
+            }
+
+        });
+        e.preventDefault();
+    });
     /*
     * Calendar Afisha
      */
@@ -181,9 +210,7 @@ jQuery(document).ready(function () {
 
 
     });
-    jQuery('.page-news .pager-next a').click(function () {
-        jQuery('.news.home-page li').matchHeight();
-    });
+
 
 
     /*
