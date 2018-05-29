@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function place_ajax_menu() {
+    $items['place/get/ajax/%'] = array(
+        'page callback' => 'place_ajax_ajax_get_ajax', // Render HTML.
+        'page arguments' => array(3),
+        'type' => MENU_CALLBACK,
+        'access arguments' => array('access content'),
+        'delivery callback' => 'place_ajax_ajax_callback',  // Magic goes here.
+    );
+    return $items;
+}
+
+/**
+ * @param $tid
+ * @param $date1
+ * @param null $date2
+ * @return mixed
+ */
+function place_ajax_ajax_get_ajax($id) {
+
+    $query  = new EntityFieldQuery();
+    $query  ->entityCondition('entity_type', 'node')
+            ->entityCondition('bundle', 'place')
+            ->propertyCondition('status', NODE_PUBLISHED)
+            ->propertyOrderBy('created', 'DESC');
+    if($id) {
+        $query    ->fieldCondition('field_cat_place', 'tid', $id, '=');
+    }
+    $query->range(0, 12);
+        $result = $query->execute();
+    if (isset($result['node'])) {
+        $news_items_nids = array_keys($result['node']);
+        $news_items = entity_load('node', $news_items_nids);
+    }
+
+    return $news_items;
+
+}
+
+function place_ajax_ajax_callback($page_callback_result) {
+/*
+
+    echo '<pre>';
+    print_r($page_callback_result);
+    echo '</pre>';
+*/
+    $output = "";
+
+    foreach ($page_callback_result as $node) {
+
+        $my_image_url = file_create_url($node->field_image_place['und'][0]['uri']);
+        $output .= '
+                <li>
+                    <a href="'.drupal_get_path_alias('node/' . $node->nid).'">
+                        <div class="place-item">
+                       
+                           <img src="' . $my_image_url . '" />
+                            <h3>' . $node->title . '</h3>
+                        
+                        </div>
+                    </a>
+                </li>
+                ';
+
+
+    }
+    print $output;
+
+    drupal_page_footer();
+}

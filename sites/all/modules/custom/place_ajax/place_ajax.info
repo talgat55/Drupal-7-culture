@@ -1,0 +1,4 @@
+name = Place AJAX
+description = Example of AJAX Forms API in Drupal 7
+version = VERSION
+core = 7.x

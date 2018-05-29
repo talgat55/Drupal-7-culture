@@ -70,16 +70,16 @@ function article_ajax_ajax_callback($page_callback_result) {
 
         $my_image_url = file_create_url($node->field_image['und'][0]['uri']);
         $output .= '
-                <li class="item-news-page">
-                    <div class="news-item">
-                    <div class="date-news">' . $day . ' ' . $arr[$monthsearch] . '</div>
-                    <img src="'.$my_image_url.'"  />
-                    <h3><a href="'.drupal_get_path_alias('node/' . $node->nid).'"> ' . $node->title . '</a></h3>
-                    <div  class="news-text-block">
-                        ' . $node->field_anons['und'][0]['value'] . '
-                    </div>
-                    </div>
-                </li>
+                    <li class="item-news-page">
+                        <div class="news-item">
+                        <div class="date-news">' . $day . ' ' . $arr[$monthsearch] . '</div>
+                        <img src="'.$my_image_url.'"  />
+                        <h3><a href="'.drupal_get_path_alias('node/' . $node->nid).'"> ' . $node->title . '</a></h3>
+                        <div  class="news-text-block">
+                            ' . $node->field_anons['und'][0]['value'] . '
+                        </div>
+                        </div>
+                    </li>
                 ';
 
 

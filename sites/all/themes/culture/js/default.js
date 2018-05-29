@@ -23,6 +23,35 @@ jQuery(document).ready(function () {
         e.preventDefault();
         jQuery(this).parent().parent().parent().find('.main-slider').slick('slickNext');
     });
+    /*
+    * Load more place
+    */
+
+    jQuery('.cat-place-aside a').click(function (e) {
+        e.preventDefault();
+        var $id = jQuery(this).data('id');
+
+        jQuery.get("/place/get/ajax/" + $id , function (data, status) {
+
+            if (data != '') {
+                jQuery(".place.home-page").html(' ');
+                jQuery(".place.home-page").append(data);
+
+                var maxHeight = Math.max.apply(null, jQuery(" .place-item").map(function ()
+                {
+                    return jQuery(this).height();
+                }).get());
+                jQuery('.place.home-page li').css('height',maxHeight );
+            } else {
+                jQuery(".place.home-page").html(' ');
+                jQuery(".place.home-page").html('<div class="not-found"  >Записей не найдено</div>');
+                jQuery(".place.home-page .not-found").delay(3000).fadeOut();
+            }
+
+        });
+
+
+    });
 
    /*
    * Sticky Block 

@@ -2912,7 +2912,9 @@ div.admin-panel .description {
     border-radius: 50%;
     background: #000;
 }
-
+.list-terms-culture-details .separator-culture-detail{
+    margin: 0 29px;
+}
 .culture-detail-row .culture-detail-item a {
     text-decoration: none;
     -webkit-transition: all 0.3s ease;
@@ -3330,7 +3332,7 @@ div.admin-panel .description {
     float: left;
     list-style: none;
     width: 33.33%;
-    padding: 0 15px  30px 15px;
+   /* padding: 0 15px  30px 15px;*/
     box-sizing: border-box;
 }
 .place.home-page{
@@ -3338,6 +3340,10 @@ div.admin-panel .description {
 }
 .place.home-page li img{
     max-width: 100%;
+    height: 158px;
+}
+.place-item {
+    padding: 0 15px 30px 15px;
 }
 .node-type-place .col-md-4,
 .place-row .col-md-4{
@@ -3394,14 +3400,25 @@ div.admin-panel .description {
 .cat-place-aside .current {
     background: #20acaf;
 }
+.cat-place-aside a:hover h3,
 .cat-place-aside .current  h3{
     color: #fff;
 }
+.cat-place-aside a:hover .img-std-place,
 .cat-place-aside .current  .img-std-place{
     display: none;
 }
+.cat-place-aside a:hover .img-std-place-hover,
 .cat-place-aside .current  .img-std-place-hover{
     display: block;
+}
+.img-std-place,
+.img-std-place-hover{
+    vertical-align: middle;
+}
+
+.cat-place-aside a:hover{
+    background: #20acaf;
 }
 .place-holder .special-row{
     margin: 0 -15px;
@@ -3479,12 +3496,18 @@ div.admin-panel .description {
     width: 90%;
 }
 #node-navigation li a{
-
+    display: table;
+    width: 100%;
     font-family: 'NeoSansPro-Regular';
     color:  #20acaf;
     font-size: 16px;
     line-height: 22px;
     text-decoration: none;
+}
+#node-navigation li a p ,
+#node-navigation li a img {
+    display: table-cell;
+    margin: 0;
 }
 #node-navigation li a:hover{
     text-decoration: underline;
@@ -3495,6 +3518,7 @@ div.admin-panel .description {
     display: table-cell;
     vertical-align: middle;
     text-align: right;
+    width: 50%;
 }
 
 #node-navigation li:first-child{
