@@ -3,10 +3,11 @@
 /**
  * Implements hook_menu().
  */
-function afisha_ajax_menu() {
+function afisha_ajax_menu()
+{
     $items['node/get/ajax/%/%'] = array(
         'page callback' => 'afisha_ajax_ajax_get_ajax', // Render HTML.
-        'page arguments' => array(3,4,5),
+        'page arguments' => array(3, 4, 5),
         'type' => MENU_CALLBACK,
         'access arguments' => array('access content'),
         'delivery callback' => 'afisha_ajax_ajax_callback',  // Magic goes here.
@@ -20,35 +21,31 @@ function afisha_ajax_menu() {
  * @param null $date2
  * @return mixed
  */
-function afisha_ajax_ajax_get_ajax($tid, $date1, $date2 = null) {
+function afisha_ajax_ajax_get_ajax($tid, $date1, $date2 = null)
+{
 
-    $query  = new EntityFieldQuery();
-    $query  ->entityCondition('entity_type', 'node')
-            ->entityCondition('bundle', 'afisha')
-            ->propertyCondition('status', NODE_PUBLISHED);
+    $query = new EntityFieldQuery();
+    $query->entityCondition('entity_type', 'node')
+        ->entityCondition('bundle', 'afisha')
+        ->propertyCondition('status', NODE_PUBLISHED);
 
     if (is_numeric($date1)) {
+
         if ($date1 && $date2 == "") {
 
-            $query->fieldCondition('field_date_afisha', 'value',  $date1, '=');
+            $query->fieldCondition('field_date_afisha', 'value', $date1, '=');
 
         } else {
-            $query->fieldCondition('field_date_afisha', 'value',  $date1, '>=');
-            $query->fieldCondition('field_duration_date_afisha', 'value',  $date1, '<=');
-            
-            $query->fieldCondition('field_date_afisha', 'value',  $date2, '<=');
-            $query->fieldCondition('field_duration_date_afisha', 'value2',  $date2, '>=');
-        }
-    }
+            $query->fieldCondition('field_date_afisha', 'value', $date1, '>=');
 
+            $query->fieldCondition('field_date_afisha', 'value', $date2, '<=');
+        }
+
+    }
 
     if ($tid != 'all') {
-        $query->fieldCondition('field_cat_afisha', 'tid',  $tid, '=');
+        $query->fieldCondition('field_cat_afisha', 'tid', $tid, '=');
     }
-
-    //$query->fieldOrderBy('field_date_afisha', 'value', '');
- //   $query->fieldCondition('field_date_afisha', 'value', 'ASC');
-
 
 
     $query->range(0, 150);
@@ -57,9 +54,37 @@ function afisha_ajax_ajax_get_ajax($tid, $date1, $date2 = null) {
         $news_items_nids = array_keys($result['node']);
         $news_items = entity_load('node', $news_items_nids);
     }
-   // var_dump($news_items);exit;
+    /// for duration
+    $query2 = new EntityFieldQuery();
+    $query2->entityCondition('entity_type', 'node')
+        ->entityCondition('bundle', 'afisha')
+        ->propertyCondition('status', NODE_PUBLISHED);
 
-    return [$news_items,$date1];
+    if (is_numeric($date1)) {
+
+        $query2->fieldCondition('field_field_duration_date_afisha', 'value', $date1, '<=');
+
+        $query2->fieldCondition('field_field_duration_date_afisha', 'value', $date2, '>=');
+
+
+    }
+
+    if ($tid != 'all') {
+        $query2->fieldCondition('field_cat_afisha', 'tid', $tid, '=');
+    }
+
+
+    $query2->range(0, 150);
+    $result2 = $query2->execute();
+    if (isset($result2['node'])) {
+        $news_items_nids2 = array_keys($result2['node']);
+        $news_items2 = entity_load('node', $news_items_nids2);
+    }
+
+
+    // var_dump($news_items);exit;
+
+    return [$news_items, $news_items2, $date1, $date2];
     /*var_dump($date1[0]);
     var_dump($news_items);
     exit; */
@@ -69,19 +94,18 @@ function afisha_ajax_ajax_get_ajax($tid, $date1, $date2 = null) {
     */
 }
 
-function afisha_ajax_ajax_callback($page_callback_result) {
+function afisha_ajax_ajax_callback($page_callback_result)
+{
 
-//    $build = array(
-//        '#theme' => 'item_list',
-//        '#items' => array_filter(reset(node_view_multiple($page_callback_result)), function(&$node) {
-//            if (!is_array($node)) {
-//                return false;
-//            }
-//
-//            $node = drupal_render($node);
-//            return true;
-//        }),
-//    );
+
+    summary($page_callback_result[0], $page_callback_result[2], $page_callback_result[3]);
+    summary($page_callback_result[1], $page_callback_result[2], $page_callback_result[3]);
+
+    drupal_page_footer();
+}
+
+function summary($page_callback_result, $apidate, $apidate2)
+{
     $arr = [
         'января',
         'февраля',
@@ -97,20 +121,17 @@ function afisha_ajax_ajax_callback($page_callback_result) {
         'декабря'
     ];
 
-
     $output = "";
 
-    foreach ($page_callback_result[0] as $node) {
+    foreach ($page_callback_result as $node) {
+        $my_image_url =null;
 
-
-
-
-       // $my_image_url = file_create_url($node->field_image_afisha['und'][0]['uri']);
+        // $my_image_url = file_create_url($node->field_image_afisha['und'][0]['uri']);
         $my_image_url = image_style_url("afisha", $node->field_image_afisha['und'][0]['uri']);
 
 
-        $month = date( 'm', $node->field_date_afisha['und'][0]['value'] )-1;
-           $path = 'node/' . $node->nid ;
+        $month = date('m', $node->field_date_afisha['und'][0]['value']) - 1;
+        $path = 'node/' . $node->nid;
         //$path =  $node->nid ;
         $alias = drupal_get_path_alias($path);
 
@@ -121,45 +142,34 @@ function afisha_ajax_ajax_callback($page_callback_result) {
 
 
         }
-        $day =  gmdate("d", $page_callback_result[1]);
-        $monthsearch = (int)  gmdate("m", $page_callback_result[1])-1;
-
-
+        $day = gmdate("d", $apidate);
+        $day2 = (int)gmdate("d", $apidate2) - 1;
+        $monthsearch = (int)gmdate("m", $apidate) - 1;
+        $monthsearch2 = (int)gmdate("m", $apidate2) - 1;
 
 
         $count = count($node->field_date_afisha['und']);
-        if($count > 1){  /// if many dates
+        if ($count > 1) {  /// if many dates
 
-            $redydate = $day . ' '.$arr[$monthsearch];
+            $redydate = $day . ' ' . $arr[$monthsearch];
 
-        }else{
+        } else {
 
-            $redydate = date( 'd', $node->field_date_afisha['und'][0]['value'] ) . ' ' . $arr[$month];
+            $redydate = date('d', $node->field_date_afisha['und'][0]['value']) . ' ' . $arr[$month];
 
         }
 
-        foreach ($node->field_date_afisha['und'] as $date){     // for array dates
-
-            $dayvalue = (int) gmdate("d", $date['value']);
-
-            $monthvalue = (int) gmdate("m", $date['value'])-1;
-
-
-
-            echo $my_image_url;
-            if($day ==  $dayvalue  AND $monthsearch == $monthvalue ){   // check if entry date
-          //  if($day ==  $dayvalue   ){
-
-                $output .= '   
+        if ($node->field_field_duration_date_afisha['und'][0]['value']) {
+            $output .= '   
                      <li class="culture-detail-item  ' . $value['und'][0]['value'] . '">
                          <a href="' . $alias . '">
                          
                             <div class="culture-top-block clearfix">
-                                <span>' .$term->name . '</span>
+                                <span>' . $term->name . '</span>
                             </div> 
                                   <div class="afisha-row-image">   
-                                      <div class="afisha-date">' . $redydate . '</div> 
-                                      <img src="' . $my_image_url. '" alt="' . $node->title . '" />
+                                      <div class="afisha-date">' . $day . ' ' . $arr[$monthsearch] . '</div> 
+                                      <img src="' . $my_image_url . '" alt="' . $node->title . '" />
                                           <div class="afisha-bottom-block-row">
                                           <div class="afisha-bottom-block">
                                               <h3>' . $node->title . '</h3> 
@@ -169,25 +179,58 @@ function afisha_ajax_ajax_callback($page_callback_result) {
         
                          </a>         
                      </li>';
-                break;
+        } else {
+            foreach ($node->field_date_afisha['und'] as $date) {     // for array dates
+
+                $dayvalue = (int)gmdate("d", $date['value']);
+
+                $monthvalue = (int)gmdate("m", $date['value']) - 1;
+
+                // var_dump($node->field_field_duration_date_afisha['und']);
+//
+                if ($day == $dayvalue && $monthsearch == $monthvalue) {   // check if entry date
+
+                    $accept = true;
+
+                } else if ($day2 == $dayvalue && $monthsearch2 == $monthvalue) {
+                    $accept = true;
+                } else {
+                    $accept = false;
+                }
+
+
+                if ($accept) {
+
+                    //  if($day ==  $dayvalue   ){
+
+                    $output .= '   
+                     <li class="culture-detail-item  ' . $value['und'][0]['value'] . '">
+                         <a href="' . $alias . '">
+                         
+                            <div class="culture-top-block clearfix">
+                                <span>' . $term->name . '</span>
+                            </div> 
+                                  <div class="afisha-row-image">   
+                                      <div class="afisha-date">' . $redydate . '</div> 
+                                      <img src="' . $my_image_url . '" alt="' . $node->title . '" />
+                                          <div class="afisha-bottom-block-row">
+                                          <div class="afisha-bottom-block">
+                                              <h3>' . $node->title . '</h3> 
+                                                    </div>
+                                          </div>
+                                  </div>
+        
+                         </a>         
+                     </li>';
+                }
+
 
             }
-
         }
 
     }
+
     print $output;
 
 
-//    print drupal_render($build);
-//    exit;
-//    // Only render content
-//    $content = drupal_render($page_callback_result);
-//
-//    // Add CSS and JS files, add some markup
-//
-//    print $content;
-
-    // Perform end-of-request tasks.
-    drupal_page_footer();
 }

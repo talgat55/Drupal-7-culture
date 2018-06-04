@@ -162,7 +162,7 @@ $my_image_url_place = file_create_url($field_image_place[0]['uri']);
                 ?>
 
                 <div class="place-node-site">
-                    <a href="<?php echo $field_link_place[0]['value']; ?>">
+                    <a target="_blank"  href="<?php echo $field_link_place[0]['value']; ?>">
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAABNmlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjarY6xSsNQFEDPi6LiUCsEcXB4kygotupgxqQtRRCs1SHJ1qShSmkSXl7VfoSjWwcXd7/AyVFwUPwC/0Bx6uAQIYODCJ7p3MPlcsGo2HWnYZRhEGvVbjrS9Xw5+8QMUwDQCbPUbrUOAOIkjvjB5ysC4HnTrjsN/sZ8mCoNTIDtbpSFICpA/0KnGsQYMIN+qkHcAaY6addAPAClXu4vQCnI/Q0oKdfzQXwAZs/1fDDmADPIfQUwdXSpAWpJOlJnvVMtq5ZlSbubBJE8HmU6GmRyPw4TlSaqo6MukP8HwGK+2G46cq1qWXvr/DOu58vc3o8QgFh6LFpBOFTn3yqMnd/n4sZ4GQ5vYXpStN0ruNmAheuirVahvAX34y/Axk/96FpPYgAAACBjSFJNAAB6JQAAgIMAAPn/AACA6AAAUggAARVYAAA6lwAAF2/XWh+QAAAA5UlEQVR42sTTvUpDQRAF4O/qgnZaKAbFH7ATrWy0ywvYK1YpfAgfQcEHEFtr+4CdnVgp2IkWVikMgiJocG0mEkIC95rCAwvLzNmzc3Zmi5yzUTBmRKSlqyZM4RjtiuenU2zm8ILDigJHXQsfeP+Dg07CMmZxg3VkPJUVTLjAJG6xgBpOcVJW4AzncXOBedRLdwFvsbp4RafKHPTPwniFR/xMA4IZX2hgA62wNtPHK7A5TOAbB9jGY5BXBnBbwwQmsItVbEX8Ds+RS70Ce9jBPRaj1EusRTf2o4ImriP38Ovj33/jzwBPvy+M8HVk+AAAAABJRU5ErkJggg==" />
                     <p>
                         <?php

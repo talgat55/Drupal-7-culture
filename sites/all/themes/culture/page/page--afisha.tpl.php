@@ -104,7 +104,7 @@
             <div class="afisha-select-block">
                 <select class="select-afisha-page">
                     <option value="soon">Сегодня</option>
-                    <!--<option value="thisweek">На выходных</option>-->
+                    <option value="thisweek">На выходных</option>
                     <option value="tomorrow">Завтра</option>
                 </select>
             </div>
@@ -129,7 +129,7 @@
 
 
                     //  for filterable            echo '<li class="' . $classbottom . '" data-id="' . $term->tid. '"    data-filter=".' . $value[und][0]['value'] . '"><span class="separator-culture-detail"></span> ' . $term->name . ' </li>';
-                    echo '<li class="' . $classbottom . '" data-id="' . $term->tid. '"  data-filter=".' . $value[und][0]['value'] . '"><span class="separator-culture-detail"></span> ' . $term->name . ' </li>';
+                    echo '<li class="' . $classbottom . '" data-id="' . $term->tid. '"  data-filter=".' . $value['und'][0]['value'] . '"><span class="separator-culture-detail"></span> ' . $term->name . ' </li>';
                 }
                 echo '</ul>
             </div>

@@ -34,6 +34,7 @@
 
                     echo '
                 <li class="item-news-page">
+                    <a href="'.$view_field['path'].'">
                     <div class="news-item">
                     <div class="date-news">' . $datefieldinvert[1] . ' ' . $datefieldinvert[0] . '</div>
                     ' . $view_field["field_image"] . '
@@ -42,6 +43,7 @@
                         ' . $view_field["field_anons"] . '
                     </div>
                     </div>
+                    </a>
                 </li>
                 ';
 

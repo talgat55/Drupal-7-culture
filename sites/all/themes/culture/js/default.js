@@ -201,15 +201,16 @@ jQuery(document).ready(function () {
             var d = new Date();
             var first = d.getDate() - d.getDay(); // First day is the day of the month - the day of the week
             var last = first + 6; // last day is the first day + 6
-            var last1 = first + 5; // last day is the first day + 6
+            var last1 = first + 6; // last day is the first day + 6
 
            // var firstday = new Date(d.setDate(last1)).getTime();
-            var firstday = new Date(d.setDate(last1)+24*60*60*1000).getTime();
+          //  var firstday = new Date(d.setDate(last1)+24*60*60*1000).getTime();
           //  var lastday = new Date(d.setDate(last)).getTime();
-            var lastday = new Date(d.setDate(last)+24*60*60*1000).getTime();
+          //  var lastday = new Date(d.setDate(last)+24*60*60*1000).getTime();
+            var firstday = new Date(d.setDate(last1)-5*60*60*1000).getTime();
+            var lastday = new Date(d.setDate(last)+19*60*60*1000).getTime();
 
-            console.log(firstday+' '+lastday);
-
+            console.log(lastday);
 
         } else{
             var d = new Date();

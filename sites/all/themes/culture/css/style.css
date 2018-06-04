@@ -305,8 +305,10 @@ body {
 }
 
 .title-section {
-    font-size: 35px;
-    line-height: 40px;
+    /*font-size: 35px;
+    line-height: 40px;*/
+    font-size: 26px;
+    line-height: 26px;
     font-family: 'NeoSansPro-Medium';
     text-transform: uppercase;
     color: #000;
@@ -1330,6 +1332,7 @@ div.password-confirm {
     background-size: cover !important;
     background-repeat: no-repeat !important;
     position: relative;
+    background-position: center center!important;
 }
 
 .cultre-place img {
@@ -1428,15 +1431,18 @@ div.password-confirm {
     min-height: 52px;
 }
 
-.news.home-page li h3 a {
+.news.home-page li h3  {
     font-size: 18px;
-    text-decoration: none;
+
     font-family: 'OpenSans-Bold';
     color: #000;
     font-weight: 400;
 
 }
-
+.news.home-page li a{
+    text-decoration: none;
+    color: #000;
+}
 .news-text-block,
 .news.home-page li p {
     font-family: 'OpenSans';
@@ -3362,6 +3368,10 @@ div.admin-panel .description {
     padding: 0;
     border: 1.5px solid #000;
 }
+.node-type-place .node-place-img {
+    margin-top: 16px;
+}
+
 .cat-place-aside li{
     list-style: none;
     border-bottom: 1.5px solid #000;

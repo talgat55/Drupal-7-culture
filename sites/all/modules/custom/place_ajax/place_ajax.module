@@ -9,13 +9,13 @@ function place_ajax_menu() {
         'page arguments' => array(3),
         'type' => MENU_CALLBACK,
         'access arguments' => array('access content'),
-        'delivery callback' => 'place_ajax_ajax_callback',  // Magic goes here.
+       // 'delivery callback' => 'place_ajax_ajax_callback',  // Magic goes here.
     );
     return $items;
 }
-
 /**
  * @param $tid
+
  * @param $date1
  * @param null $date2
  * @return mixed
@@ -57,10 +57,8 @@ function place_ajax_ajax_callback($page_callback_result) {
                 <li>
                     <a href="'.drupal_get_path_alias('node/' . $node->nid).'">
                         <div class="place-item">
-                       
                            <img src="' . $my_image_url . '" />
                             <h3>' . $node->title . '</h3>
-                        
                         </div>
                     </a>
                 </li>

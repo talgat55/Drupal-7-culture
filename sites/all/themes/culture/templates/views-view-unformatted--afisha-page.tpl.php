@@ -26,7 +26,7 @@
 
                         $day =  gmdate("d", $view_field['field_date_afisha_1']);
                         $month =  gmdate("m", $view_field['field_date_afisha_1']);
-                    if($day == date('d')  AND $month == date('m') ){
+               //     if($day == date('d')  AND $month == date('m') ){
 
                         $datefield = explode(',', $view_field['field_date_afisha']);
                         $datefieldinvert = explode(' ', trim($datefield[1]));
@@ -77,7 +77,7 @@
 
                             }
                         }
-                    }
+                  //  }
                     endforeach;
                     if($count == 0){
                         echo '<div class="not-found">Мероприятий на сегодня нет</div>';

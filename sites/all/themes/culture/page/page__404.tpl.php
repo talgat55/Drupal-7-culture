@@ -85,15 +85,34 @@
  * @see html.tpl.php
  */
 ?>
-
-
 <?php include('header.tpl.php'); ?>
 
+    <div class="container">
 
-    <div id="main" class="place-row clearfix">
-        <div class="container clearfix" style="text-align: center;">
-            <p>Страница в разработке</p>
-        </div>
+
+
+        <div id="content" class="column">
+            <div class="section">
+
+
+                <div id="content" class="column">
+                    <div class="section">
+                            <p>Раздел в разработке</p>
+
+                        <?php
+
+                        ?>
+                        <?php print render($page['content']); ?>
+
+
+                    </div>
+                </div> <!-- /.section, /#content -->
+
+
+            </div>
+        </div> <!-- /.section, /#content -->
+
+
+
     </div>
-
 <?php include('footer.tpl.php'); ?>

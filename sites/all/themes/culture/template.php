@@ -15,6 +15,12 @@ function culture_preprocess_html(&$vars) {
     // Ally.js for accessibility
     drupal_add_js('https://yastatic.net/share2/share.js', array('type' => 'external', 'scope' => 'footer'));
 }
+function culture_preprocess_page(&$vars) {
+    $header = drupal_get_http_header('status');
+    if ($header == '404 Not Found') {
+        $vars['theme_hook_suggestions'][] = 'page__404';
+    }
+}
 /**
  * Implements hook_page_alter().
  */

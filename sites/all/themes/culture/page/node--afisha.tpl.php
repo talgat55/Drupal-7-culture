@@ -115,7 +115,6 @@ $arr = [
             <?php
 
 
-
             $uri = $_SERVER['HTTP_HOST'] . '/' . request_uri();
 
             ?>
@@ -165,14 +164,16 @@ $arr = [
                                 if ($field_age[0]['value']) {
                                     ?>
                                     <li>
-                                        <span>Ограничение по возрасту:</span> <span><?php echo $field_age[0]['value']; ?></span>
+                                        <span>Ограничение по возрасту:</span>
+                                        <span><?php echo $field_age[0]['value']; ?></span>
                                     </li>
                                     <?php
                                 }
                                 if ($field_price[0]['value']) {
                                     ?>
                                     <li>
-                                        <span>Цены на билеты:</span> <span><?php echo $field_price[0]['value']; ?></span>
+                                        <span>Цены на билеты:</span>
+                                        <span><?php echo $field_price[0]['value']; ?></span>
                                     </li>
                                     <?php
                                 }
@@ -180,24 +181,37 @@ $arr = [
                                 <li>
                                     <span>Начало:</span>
                                     <span><?php
+                                        if ($field_duration_date[0]['value']) {
+                                            foreach ($field_duration_date as $key => $fieldvaluedateducration) {
+                                                if ($key == 0) {
 
-                                        foreach ($field_date as $key => $fieldvalue){
-                                            if($key != 0){
-                                                print "<br> ";
+
+
+                                                $monthdurationdate = (int)format_date($fieldvaluedateducration['value'], 'custom', 'm') - 1;
+                                                print(format_date($fieldvaluedateducration['value'], 'custom', 'd'));
+                                                print ' ' . $arr[$monthdurationdate] . ' ';
+
+                                                }
                                             }
-                                            $month = format_date($fieldvalue['value'], 'custom', 'm') - 1;
-                                            print(format_date($fieldvalue['value'], 'custom', 'd'));
-                                            print ' '.$arr[$month];
-                                            print " в ";
-                                            print(format_date($fieldvalue['value'], 'custom', 'G:i'));
 
+                                        } else {
+                                            foreach ($field_date as $key => $fieldvalue) {
+                                                if ($key != 0) {
+                                                    print "<br> ";
+                                                }
+                                                $month = format_date($fieldvalue['value'], 'custom', 'm') - 1;
+                                                print(format_date($fieldvalue['value'], 'custom', 'd'));
+                                                print ' ' . $arr[$month];
+                                                print " в ";
+                                                print(format_date($fieldvalue['value'], 'custom', 'G:i'));
+
+                                            }
                                         }
-
                                         ?></span>
                                 </li>
                                 <?php
 
-                                if ($field_duration[0]['value']  ||  $field_duration_date[0]['value']) {
+                                if ($field_duration[0]['value'] || $field_duration_date[0]['value']) {
                                     ?>
                                     <li>
                                         <span>Продолжительность:</span>
@@ -205,24 +219,24 @@ $arr = [
 
                                             <?php
 
-                                                if($field_duration_date[0]['value']){
-                                                    foreach ($field_duration_date as $key => $fieldvaluedateducration){
-                                                        if($key == 0){
-                                                            print "c ";
-                                                        }else{
-                                                            print '<br> по ';
-                                                        }
-
-                                                        $monthdurationdate = (int) format_date($fieldvaluedateducration['value'], 'custom', 'm') - 1;
-                                                        print(format_date($fieldvaluedateducration['value'], 'custom', 'd'));
-                                                        print ' '.$arr[$monthdurationdate]. ' ';
-
-
+                                            if ($field_duration_date[0]['value']) {
+                                                foreach ($field_duration_date as $key => $fieldvaluedateducration) {
+                                                    if ($key == 0) {
+                                                        print "c ";
+                                                    } else {
+                                                        print '<br> по ';
                                                     }
 
-                                                }else{
-                                                    echo $field_duration[0]['value'];
+                                                    $monthdurationdate = (int)format_date($fieldvaluedateducration['value'], 'custom', 'm') - 1;
+                                                    print(format_date($fieldvaluedateducration['value'], 'custom', 'd'));
+                                                    print ' ' . $arr[$monthdurationdate] . ' ';
+
+
                                                 }
+
+                                            } else {
+                                                echo $field_duration[0]['value'];
+                                            }
 
 
                                             ?>
@@ -247,10 +261,38 @@ $arr = [
 
 
         </div>
+        <?php
 
-        <h3 class="recent-heading-afisha">
-            Ближайшие события учреждения
-        </h3>
+        // place
+        $tid = $field_place[0][value];
+        $query = new EntityFieldQuery();
+        $query->entityCondition('entity_type', 'node')
+            ->entityCondition('bundle', 'afisha')
+            ->propertyCondition('status', NODE_PUBLISHED)
+            ->fieldCondition('field_place_afisha', 'value', $tid, '=')
+            ->fieldOrderBy('field_date_afisha', 'value', 'ASC')
+            ->range(0, 10);
+        // Run the query as user 1.
+        //   ->addMetaData('account', user_load(1));
+
+        $result = $query->execute();
+        if (isset($result['node'])) {
+            $news_items_nids = array_keys($result['node']);
+            $news_items = entity_load('node', $news_items_nids);
+
+            if (count($news_items) > 1) {
+
+                echo '
+ 
+                    <h3 class="recent-heading-afisha">
+                        Ближайшие события учреждения
+                    </h3>
+                ';
+
+            }
+        }
+        ?>
+
     </div>
 
     <div class="article-slider-row">
@@ -258,40 +300,22 @@ $arr = [
             <?php
 
 
-            // place
-            $tid = $field_place[0][value];
-            $query = new EntityFieldQuery();
-            $query->entityCondition('entity_type', 'node')
-                ->entityCondition('bundle', 'afisha')
-                ->propertyCondition('status', NODE_PUBLISHED)
-                ->fieldCondition('field_place_afisha', 'value', $tid, '=')
-                ->fieldOrderBy('field_date_afisha', 'value', 'ASC')
-                ->range(0, 10);
-            // Run the query as user 1.
-            //   ->addMetaData('account', user_load(1));
-
-            $result = $query->execute();
-            if (isset($result['node'])) {
-                $news_items_nids = array_keys($result['node']);
-                $news_items = entity_load('node', $news_items_nids);
-            }
-
             /*  echo '<pre>';
               print_r($news_items);
               echo '</pre>';*/
+            if (count($news_items) > 0) {
+                $nid = $node->nid;
+                foreach ($news_items as $field) {
+                    if ($nid != $field->nid) {
+                        //$my_image_url = file_create_url($field->field_image_afisha['und'][0]['uri']);
+                        $my_image_url = image_style_url("afisha_related", $field->field_image_afisha['und'][0]['uri']);
+                        //  $path = 'node/' . $field->nid ;
+                        $path = $field->nid;
+                        $alias = drupal_get_path_alias($path);
 
-            $nid = $node->nid;
-            foreach ($news_items as $field) {
-                if ($nid != $field->nid) {
-                    //$my_image_url = file_create_url($field->field_image_afisha['und'][0]['uri']);
-                    $my_image_url = image_style_url("afisha_related", $field->field_image_afisha['und'][0]['uri']);
-                    //  $path = 'node/' . $field->nid ;
-                    $path = $field->nid;
-                    $alias = drupal_get_path_alias($path);
-
-                    $month = date('m', $field->field_date_afisha['und'][0]['value']) - 1;
-                    //  <div class="afisha-item-date">'.$datefieldinvert[1].' '.$datefieldinvert[0].'</div>
-                    echo '
+                        $month = date('m', $field->field_date_afisha['und'][0]['value']) - 1;
+                        //  <div class="afisha-item-date">'.$datefieldinvert[1].' '.$datefieldinvert[0].'</div>
+                        echo '
                     <div class="item-afisha">
                         
                         <div class="afisha-item-date">' . date('d', $field->field_date_afisha['und'][0]['value']) . ' ' . $arr[$month] . '</div>
@@ -300,6 +324,7 @@ $arr = [
                     </div>
                 
                 ';
+                    }
                 }
             }
 

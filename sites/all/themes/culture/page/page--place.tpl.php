@@ -29,6 +29,9 @@
 
                 $myvoc = taxonomy_vocabulary_machine_name_load('place');
                 $tree = taxonomy_get_tree($myvoc->vid);
+                echo '<pre>';
+                print_r($tree);
+                echo '</pre>';
                 echo '<ul class="cat-place-aside">';
                 foreach ($tree as $value){
                     $terms = taxonomy_get_term_by_name($value->name);

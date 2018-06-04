@@ -22,7 +22,8 @@
 
             echo '
                 <li>
-                    <div class="news-item">
+                    <a href="'.$view_field['path'].'" >
+                    <div  class="news-item">
                         <div class="date-news">'.$datefieldinvert[1].' '.$datefieldinvert[0].'</div>
                         '.$view_field["field_image"].'
                         <h3>'.$view_field["title"].'</h3>
@@ -30,6 +31,7 @@
                             '.$view_field["field_anons"].'
                         </div>
                     </div>
+                    </a>
                 </li>
                 ';
                 //var_dump($view_field);
