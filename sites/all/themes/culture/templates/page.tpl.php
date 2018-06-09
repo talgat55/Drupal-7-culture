@@ -170,4 +170,6 @@
 
 
     </div>
-<?php include('footer.tpl.php'); ?>
+<?php
+include('footer.tpl.php');
+?>

@@ -135,6 +135,7 @@ $arr = [
         $field_age = field_get_items('node', $node, 'field_age');
         $field_price = field_get_items('node', $node, 'field_price');
         $field_date = field_get_items('node', $node, 'field_date_afisha');
+        $field_link_to_place = field_get_items('node', $node, 'field_link_to_place');
         $field_duration = field_get_items('node', $node, 'field_duration_afisha');
         $field_duration_date = field_get_items('node', $node, 'field_field_duration_date_afisha');
 
@@ -156,7 +157,7 @@ $arr = [
                                 <p><?php if ($field_place[0][value] == 'none') {
                                         print '-';
                                     } else {
-                                        print $field_place[0][value];
+                                     print '<a class="afisha-link-to-place" href="'.$field_link_to_place[0][value].'">' ;   print $field_place[0][value];  print '</a>';
                                     } ?></p>
                             </div>
                             <ul class="main-block-af">

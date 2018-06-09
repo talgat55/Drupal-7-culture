@@ -391,7 +391,9 @@ body {
 #main-menu-links li a.active {
     border-bottom: none;
 }
-
+.search-advanced{
+    display: none;
+}
 .node-type-gallery .title,
 .node-type-article .title {
     font-family: 'NeoSansPro-Bold';
@@ -1394,6 +1396,9 @@ div.password-confirm {
     background: #fff;
     border: 1.5px solid #fff;
 }
+.news-item a{
+    text-decoration: none;
+}
 /*
 .news.home-page li:hover .news-item {
     border: 1.5px solid #eee;
@@ -1741,7 +1746,7 @@ div.password-confirm {
 .gallery-item:hover .overlay-gallery {
     opacity: 1;
     visibility: visible;
-    height: 50%;
+    height: 110px;
 }
 
 .overlay-gallery {
@@ -3538,4 +3543,21 @@ div.admin-panel .description {
 
 .item-list .not-found{
     margin-bottom: 30px;
+}
+.page-node-438 .title-section{
+    display: none;
+}
+.page-node-438 .field-item.even{
+    font-family: 'NeoSansPro-Regular';
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+}
+.afisha-link-to-place{
+    text-decoration: none;
+    color: #12a69d;
+    font-family: 'NeoSansPro-Bold';
+}
+.afisha-link-to-place:hover{
+    text-decoration: underline;
 }
