@@ -29,19 +29,56 @@ jQuery(document).ready(function () {
 
     jQuery('.cat-place-aside a').click(function (e) {
         e.preventDefault();
+        jQuery('.cat-place-aside a').removeClass('current');
+        jQuery(this).addClass('current');
         var $id = jQuery(this).data('id');
 
-        jQuery.get("/place/get/ajax/" + $id , function (data, status) {
+        jQuery.get("/place/get/ajax/" + $id, function (data, status) {
 
             if (data != '') {
-                jQuery(".place.home-page").html(' ');
-                jQuery(".place.home-page").append(data);
+                var dtat = jQuery.parseJSON(data);
 
-                var maxHeight = Math.max.apply(null, jQuery(" .place-item").map(function ()
-                {
-                    return jQuery(this).height();
-                }).get());
-                jQuery('.place.home-page li').css('height',maxHeight );
+                if (jQuery('body').hasClass('node-type-place')) {
+                    jQuery(".breadcrumb.contextual-links-region span").each(function (index) {
+
+                        if (index > 2) {
+                            jQuery(".breadcrumb.contextual-links-region span").eq(index).css('display', 'none');
+                        }
+
+                    });
+                }
+
+                var doom = dtat.data;
+
+                jQuery(".place.home-page").html(' ');
+
+                if (doom != '') {
+
+                    if(doom.length == 1){
+                        window.location.replace('/'+doom[0].path);
+                    }
+                    jQuery.each(doom, function () {
+
+                        jQuery(".place.home-page").append(' <li style="height: 272.8px;">\n' +
+                            '                    <a href="/' + this.path + '">\n' +
+                            '                        <div class="place-item">\n' +
+                            '                           <img src="' + this.src + '" />\n' +
+                            '                            <h3>' + this.title + '</h3>\n' +
+                            '                        </div>\n' +
+                            '                    </a>\n' +
+                            '                </li> ');
+
+                    });
+                } else {
+                    jQuery(".place.home-page").html('<div class="not-found"  >Записей не найдено</div>');
+                    jQuery(".place.home-page .not-found").delay(3000).fadeOut();
+                }
+                /*
+                                var maxHeight = Math.max.apply(null, jQuery(" .place-item").map(function ()
+                                {
+                                    return jQuery(this).height();
+                                }).get());
+                                jQuery('.place.home-page li').css('height',maxHeight );*/
             } else {
                 jQuery(".place.home-page").html(' ');
                 jQuery(".place.home-page").html('<div class="not-found"  >Записей не найдено</div>');
@@ -53,14 +90,14 @@ jQuery(document).ready(function () {
 
     });
 
-   /*
-   * Sticky Block 
-    */
+    /*
+    * Sticky Block
+     */
 
     if (jQuery('#stickyblock').length) {
         jQuery('#stickyblock').goesSticky({scope: jQuery("#main-wrapper"), offest: 0});
     }
- 
+
     /*
     *  Afisha carousel
      */
@@ -99,23 +136,22 @@ jQuery(document).ready(function () {
     * Load More News
      */
     jQuery('.pager-load-more.news a').click(function (e) {
-        if(window.a == undefined){
+        if (window.a == undefined) {
             window.a = 1;
-        } 
+        }
 
-        jQuery.get("/article/get/ajax/" + window.a , function (data, status) {
+        jQuery.get("/article/get/ajax/" + window.a, function (data, status) {
 
             if (data != '') {
                 jQuery(".news.home-page.clearfix.margin-botom-news-custom").append(data);
-                var maxHeight = Math.max.apply(null, jQuery(".news.home-page li").map(function ()
-                {
+                var maxHeight = Math.max.apply(null, jQuery(".news.home-page li").map(function () {
                     return jQuery(this).height();
                 }).get());
-                jQuery('.news.home-page.clearfix.margin-botom-news-custom li').css('height',maxHeight );
+                jQuery('.news.home-page.clearfix.margin-botom-news-custom li').css('height', maxHeight);
 
                 //jQuery(this).attr("data-number", parseInt($datanumber+1));
-                var redyval =parseInt(window.a +1);
-                window.a =redyval;
+                var redyval = parseInt(window.a + 1);
+                window.a = redyval;
 
             } else {
                 jQuery(".item-list").html(' ');
@@ -140,7 +176,7 @@ jQuery(document).ready(function () {
             // var unix  =   new Date(date).getTime();
 
             var d = new Date(date);
-          //  d.setHours(24,0,0,0);
+            //  d.setHours(24,0,0,0);
 
             var nextday = new Date(d.valueOf() + 24 * 60 * 60 * 1000).getTime();
             //var nextday = new Date(d.valueOf() + 24 * 60 * 60 * 1000).getTime();
@@ -162,7 +198,9 @@ jQuery(document).ready(function () {
                 if (data != '') {
                     jQuery(".afisha-row-list").html(data);
                     var $container = jQuery('.afisha-row-list');
-                    $container.imagesLoaded(function(){$container.isotope( 'reloadItems' ).isotope({ sortBy: 'original-order' });});
+                    $container.imagesLoaded(function () {
+                        $container.isotope('reloadItems').isotope({sortBy: 'original-order'});
+                    });
                 } else {
                     jQuery(".afisha-row-list").html('<div class="not-found"  >Записей не найдено</div>');
                 }
@@ -186,16 +224,16 @@ jQuery(document).ready(function () {
             var cat = 'all';
         }
 
-        if(this.value == 'soon'){
+        if (this.value == 'soon') {
             var d = new Date();
-            d.setHours(24,0,0,0);
+            d.setHours(24, 0, 0, 0);
 
-            var firstday = new Date(d.valueOf()-18*60*60*1000).getTime();
-            var lastday = new Date(d.valueOf()+6*59*60*1000).getTime();
+            var firstday = new Date(d.valueOf() - 18 * 60 * 60 * 1000).getTime();
+            var lastday = new Date(d.valueOf() + 6 * 59 * 60 * 1000).getTime();
             console.log(d.getTime());
             console.log(lastday);
 
-        }else if(this.value == 'thisweek'){
+        } else if (this.value == 'thisweek') {
 
 
             var d = new Date();
@@ -203,20 +241,20 @@ jQuery(document).ready(function () {
             var last = first + 6; // last day is the first day + 6
             var last1 = first + 6; // last day is the first day + 6
 
-           // var firstday = new Date(d.setDate(last1)).getTime();
-          //  var firstday = new Date(d.setDate(last1)+24*60*60*1000).getTime();
-          //  var lastday = new Date(d.setDate(last)).getTime();
-          //  var lastday = new Date(d.setDate(last)+24*60*60*1000).getTime();
-            var firstday = new Date(d.setDate(last1)-5*60*60*1000).getTime();
-            var lastday = new Date(d.setDate(last)+19*60*60*1000).getTime();
+            // var firstday = new Date(d.setDate(last1)).getTime();
+            //  var firstday = new Date(d.setDate(last1)+24*60*60*1000).getTime();
+            //  var lastday = new Date(d.setDate(last)).getTime();
+            //  var lastday = new Date(d.setDate(last)+24*60*60*1000).getTime();
+            var firstday = new Date(d.setDate(last1) - 5 * 60 * 60 * 1000).getTime();
+            var lastday = new Date(d.setDate(last) + 19 * 60 * 60 * 1000).getTime();
 
             console.log(lastday);
 
-        } else{
+        } else {
             var d = new Date();
-            d.setHours(24,0,0,0);
-            var firstday = new Date(d.valueOf()+6*60*60*1000).getTime();
-            var lastday = new Date(d.valueOf()+30*60*60*1000).getTime();
+            d.setHours(24, 0, 0, 0);
+            var firstday = new Date(d.valueOf() + 6 * 60 * 60 * 1000).getTime();
+            var lastday = new Date(d.valueOf() + 30 * 60 * 60 * 1000).getTime();
 
         }
 
@@ -229,7 +267,9 @@ jQuery(document).ready(function () {
             if (data != '') {
                 jQuery(".afisha-row-list").html(data);
                 var $container = jQuery('.afisha-row-list');
-                $container.imagesLoaded(function(){$container.isotope( 'reloadItems' ).isotope({ sortBy: 'original-order' });});
+                $container.imagesLoaded(function () {
+                    $container.isotope('reloadItems').isotope({sortBy: 'original-order'});
+                });
 
             } else {
                 jQuery(".afisha-row-list").html('<div class="not-found"  >Записей не найдено</div>');
@@ -240,7 +280,6 @@ jQuery(document).ready(function () {
 
 
     });
-
 
 
     /*
@@ -342,8 +381,8 @@ function InitFilterRowsAfisha() {
         $this.addClass('current');
 
 
-                var selector = jQuery(this).attr('data-filter');
-                jQuery('.afisha-row-list').isotope({ filter: selector });
+        var selector = jQuery(this).attr('data-filter');
+        jQuery('.afisha-row-list').isotope({filter: selector});
 
 
         return false;

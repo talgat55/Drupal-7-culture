@@ -137,7 +137,7 @@ $my_image_url_place = file_create_url($field_image_place[0]['uri']);
 
             ?>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 place home-page clearfix">
         <div class="node-place-img">
                 <img src="<?php echo $my_image_url_place; ?>" />
                 <h1><?php  echo  $node ->title ?></h1>

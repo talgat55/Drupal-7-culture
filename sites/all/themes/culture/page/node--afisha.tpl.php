@@ -310,10 +310,10 @@ $arr = [
                     if ($nid != $field->nid) {
                         //$my_image_url = file_create_url($field->field_image_afisha['und'][0]['uri']);
                         $my_image_url = image_style_url("afisha_related", $field->field_image_afisha['und'][0]['uri']);
-                        //  $path = 'node/' . $field->nid ;
-                        $path = $field->nid;
+                          $path = 'node/' . $field->nid ;
+                      //  $path = $field->nid;
                         $alias = drupal_get_path_alias($path);
-
+                      //  $real_path =drupal_get_path_alias($alias);
                         $month = date('m', $field->field_date_afisha['und'][0]['value']) - 1;
                         //  <div class="afisha-item-date">'.$datefieldinvert[1].' '.$datefieldinvert[0].'</div>
                         echo '
@@ -321,7 +321,7 @@ $arr = [
                         
                         <div class="afisha-item-date">' . date('d', $field->field_date_afisha['und'][0]['value']) . ' ' . $arr[$month] . '</div>
                              <img src="' . $my_image_url . '" alt="' . $field->field_image_afisha['und'][0]['alt'] . '" />
-                        <div class="title-afisha"><div><h3>' . $field->title . '</h3> <a class="link-c-a" href="' . $alias . '">Подробнее</a> </div></div>
+                        <div class="title-afisha"><div><h3>' . $field->title . '</h3> <a class="link-c-a" href="/' . $alias . '">Подробнее</a> </div></div>
                     </div>
                 
                 ';

@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="335fdc75-9f90-41e5-bd15-35bce0f7a359" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/css/style.css" afterPath="$PROJECT_DIR$/sites/all/themes/culture/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/article_ajax/article_ajax.module" afterPath="$PROJECT_DIR$/sites/all/modules/custom/article_ajax/article_ajax.module" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/place_ajax/place_ajax.module" afterPath="$PROJECT_DIR$/sites/all/modules/custom/place_ajax/place_ajax.module" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/js/default.js" afterPath="$PROJECT_DIR$/sites/all/themes/culture/js/default.js" />
       <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/page/node--afisha.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/page/node--afisha.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/template.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/template.php" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/templates/header.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/templates/header.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/templates/page.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/templates/page.tpl.php" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/page/node--place.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/page/node--place.tpl.php" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/page/page--place.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/page/page--place.tpl.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,76 +19,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="1744" column="0" lean-forward="true" selection-start-line="1744" selection-start-column="0" selection-end-line="1744" selection-end-column="0" />
+            <state relative-caret-position="346">
+              <caret line="1749" column="1" lean-forward="true" selection-start-line="1749" selection-start-column="1" selection-end-line="1749" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.tpl.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/templates/header.tpl.php">
+      <file leaf-file-name="default.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/js/default.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+            <state relative-caret-position="411">
+              <caret line="57" column="50" lean-forward="false" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
+              <folding>
+                <marker date="1528732041105" expanded="true" signature="1888:1904" ph="..." />
+                <marker date="1528732041105" expanded="true" signature="6748:6779" ph="..." />
+                <marker date="1528732041105" expanded="true" signature="6934:6951" ph="..." />
+                <marker date="1528732041105" expanded="true" signature="10681:10712" ph="..." />
+                <marker date="1528732041105" expanded="true" signature="10867:10884" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page--place.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page--place.tpl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="node--afisha.tpl.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/node--afisha.tpl.php">
+      <file leaf-file-name="node--place.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/node--place.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="159" column="74" lean-forward="false" selection-start-line="159" selection-start-column="54" selection-end-line="159" selection-end-column="74" />
-              <folding>
-                <marker date="1528557934691" expanded="true" signature="12411:12490" ph="..." />
-                <marker date="1528557934691" expanded="true" signature="13599:14074" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page__404.tpl.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page__404.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="99" column="44" lean-forward="false" selection-start-line="99" selection-start-column="44" selection-end-line="99" selection-end-column="44" />
+            <state relative-caret-position="468">
+              <caret line="122" column="51" lean-forward="false" selection-start-line="122" selection-start-column="36" selection-end-line="122" selection-end-column="51" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views-view-unformatted--news--page.tpl.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--news--page.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="754">
-              <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
-              <folding>
-                <marker date="1528150031177" expanded="true" signature="1078:1109" ph="..." />
-                <marker date="1528150031177" expanded="true" signature="1078:1606" ph="..." />
-                <marker date="1528150031177" expanded="true" signature="1133:1584" ph="..." />
-                <marker date="1528150031177" expanded="true" signature="1177:1559" ph="..." />
-                <marker date="1528150031177" expanded="true" signature="1446:1532" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views-view-unformatted--news.tpl.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--news.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="728">
-              <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-              <folding>
-                <marker date="1528149897962" expanded="true" signature="558:641" ph="..." />
-                <marker date="1528149897962" expanded="true" signature="558:1091" ph="..." />
-                <marker date="1528149897962" expanded="true" signature="659:1044" ph="..." />
-                <marker date="1528149897962" expanded="true" signature="927:1017" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -125,14 +98,13 @@
       <find>.image-block-slider</find>
       <find>image-block-slider</find>
       <find>field_duration_date_afisha</find>
-      <find>$alias</find>
       <find>$my_image_url</find>
-      <find>place_ajax_ajax_callback</find>
       <find>cat-place-aside</find>
       <find>.title-section</find>
       <find>news-item</find>
       <find>.news.home-page li h3 a</find>
-      <find>news-item</find>
+      <find>$alias</find>
+      <find>place_ajax_ajax_callback</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -177,21 +149,21 @@
         <option value="$PROJECT_DIR$/sites/all/modules/article_ajax/article_ajax.module" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--nofound.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/place_ajax/place_ajax.info" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/article_ajax/article_ajax.module" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page__404.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/culture/js/default.js" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--afisha.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/culture/page/node--place.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/afisha_ajax/afisha_ajax.module" />
-        <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--place.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/place_ajax/place_ajax.module" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--news.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--news--page.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/templates/page.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/template.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/templates/header.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/culture/page/node--afisha.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/css/style.css" />
+        <option value="$PROJECT_DIR$/sites/all/themes/culture/page/node--place.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/culture/page/node--afisha.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/afisha_ajax/afisha_ajax.module" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/place_ajax/place_ajax.module" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/article_ajax/article_ajax.module" />
+        <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--place.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/culture/js/default.js" />
       </list>
     </option>
   </component>
@@ -222,6 +194,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -239,6 +212,30 @@
               <item name="culture" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="sites" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="all" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="culture" type="b2602c69:ProjectViewProjectNode" />
+              <item name="culture" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sites" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="all" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="culture" type="b2602c69:ProjectViewProjectNode" />
+              <item name="culture" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sites" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="all" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="culture" type="b2602c69:ProjectViewProjectNode" />
+              <item name="culture" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sites" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="all" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="place_ajax" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="culture" type="b2602c69:ProjectViewProjectNode" />
@@ -277,7 +274,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -345,18 +341,19 @@
       <workItem from="1528141094229" duration="2327000" />
       <workItem from="1528470244691" duration="3383000" />
       <workItem from="1528522897181" duration="1881000" />
-      <workItem from="1528531658172" duration="2493000" />
+      <workItem from="1528531658172" duration="2618000" />
+      <workItem from="1528700157555" duration="15451000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="538100000" />
+    <option name="totallyTimeSpent" value="553676000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1934" height="1038" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17438105" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18406889" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -555,13 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/node--article.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1056">
-          <caret line="129" column="68" lean-forward="false" selection-start-line="129" selection-start-column="68" selection-end-line="129" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--view-culture-detail.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -574,20 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--place-view--page.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="32" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/article_ajax/article_ajax.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="70" column="35" lean-forward="false" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -612,45 +588,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/afisha_ajax/afisha_ajax.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="191" column="0" lean-forward="true" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/node--place.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="161" column="18" lean-forward="true" selection-start-line="161" selection-start-column="18" selection-end-line="161" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page--place.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="52" column="48" lean-forward="true" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/js/default.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4004">
-          <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/header.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="884">
           <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/place_ajax/place_ajax.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="59" column="57" lean-forward="false" selection-start-line="59" selection-start-column="57" selection-end-line="59" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -667,20 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--news--page.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
-          <folding>
-            <marker date="1528150031177" expanded="true" signature="1078:1109" ph="..." />
-            <marker date="1528150031177" expanded="true" signature="1078:1606" ph="..." />
-            <marker date="1528150031177" expanded="true" signature="1133:1584" ph="..." />
-            <marker date="1528150031177" expanded="true" signature="1177:1559" ph="..." />
-            <marker date="1528150031177" expanded="true" signature="1446:1532" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page__404.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
@@ -693,9 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="962">
           <caret line="120" column="29" lean-forward="false" selection-start-line="120" selection-start-column="29" selection-end-line="120" selection-end-column="29" />
-          <folding>
-            <marker date="1528472809015" expanded="true" signature="5690:5786" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -714,28 +638,122 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/templates/header.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+        <state relative-caret-position="1430">
+          <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--place-view--page.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/node--afisha.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="159" column="74" lean-forward="false" selection-start-line="159" selection-start-column="54" selection-end-line="159" selection-end-column="74" />
+        <state relative-caret-position="300">
+          <caret line="316" column="47" lean-forward="true" selection-start-line="316" selection-start-column="47" selection-end-line="316" selection-end-column="47" />
           <folding>
-            <marker date="1528557934691" expanded="true" signature="12411:12490" ph="..." />
-            <marker date="1528557934691" expanded="true" signature="13599:14074" ph="..." />
+            <marker date="1528730114747" expanded="true" signature="12411:12490" ph="..." />
+            <marker date="1528730114747" expanded="true" signature="13667:14143" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/afisha_ajax/afisha_ajax.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="161" column="73" lean-forward="true" selection-start-line="161" selection-start-column="73" selection-end-line="161" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--news--page.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="46" selection-end-column="21" />
+          <folding>
+            <marker date="1528150031177" expanded="true" signature="1078:1109" ph="..." />
+            <marker date="1528150031177" expanded="true" signature="1078:1606" ph="..." />
+            <marker date="1528150031177" expanded="true" signature="1133:1584" ph="..." />
+            <marker date="1528150031177" expanded="true" signature="1177:1559" ph="..." />
+            <marker date="1528150031177" expanded="true" signature="1446:1532" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/article_ajax/article_ajax.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="74" column="43" lean-forward="true" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="43" />
+          <folding>
+            <marker date="1528730755095" expanded="true" signature="1777:2315" ph="..." />
+            <marker date="1528730755095" expanded="true" signature="1856:2293" ph="..." />
+            <marker date="1528730755095" expanded="true" signature="1858:2293" ph="..." />
+            <marker date="1528730755095" expanded="true" signature="1901:2268" ph="..." />
+            <marker date="1528730755095" expanded="true" signature="2144:2241" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/node--article.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="165" column="17" lean-forward="true" selection-start-line="165" selection-start-column="17" selection-end-line="165" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="1744" column="0" lean-forward="true" selection-start-line="1744" selection-start-column="0" selection-end-line="1744" selection-end-column="0" />
+        <state relative-caret-position="346">
+          <caret line="1749" column="1" lean-forward="true" selection-start-line="1749" selection-start-column="1" selection-end-line="1749" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/node--place.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="122" column="51" lean-forward="false" selection-start-line="122" selection-start-column="36" selection-end-line="122" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page--place.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/place_ajax/place_ajax.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="71" column="20" lean-forward="true" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
+          <folding>
+            <marker date="1528730369505" expanded="true" signature="1649:1933" ph="..." />
+            <marker date="1528730369505" expanded="true" signature="1685:1911" ph="..." />
+            <marker date="1528730369505" expanded="true" signature="1734:1886" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/js/default.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="57" column="50" lean-forward="false" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
+          <folding>
+            <marker date="1528732041105" expanded="true" signature="1888:1904" ph="..." />
+            <marker date="1528732041105" expanded="true" signature="6748:6779" ph="..." />
+            <marker date="1528732041105" expanded="true" signature="6934:6951" ph="..." />
+            <marker date="1528732041105" expanded="true" signature="10681:10712" ph="..." />
+            <marker date="1528732041105" expanded="true" signature="10867:10884" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

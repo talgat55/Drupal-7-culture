@@ -9,7 +9,7 @@ function place_ajax_menu() {
         'page arguments' => array(3),
         'type' => MENU_CALLBACK,
         'access arguments' => array('access content'),
-       // 'delivery callback' => 'place_ajax_ajax_callback',  // Magic goes here.
+        'delivery callback' => 'place_ajax_ajax_callback',  // Magic goes here.
     );
     return $items;
 }
@@ -48,25 +48,38 @@ function place_ajax_ajax_callback($page_callback_result) {
     print_r($page_callback_result);
     echo '</pre>';
 */
-    $output = "";
 
+    $output = [];
     foreach ($page_callback_result as $node) {
 
         $my_image_url = file_create_url($node->field_image_place['und'][0]['uri']);
-        $output .= '
+/*
+        $output ['items']['src']  = $my_image_url;
+        $output ['items']['title']  = $node->title;
+        $output ['items']['path'] = drupal_get_path_alias('node/' . $node->nid);
+*/
+       /* $output .= '
                 <li>
-                    <a href="'.drupal_get_path_alias('node/' . $node->nid).'">
+                    <a href="'..'">
                         <div class="place-item">
                            <img src="' . $my_image_url . '" />
                             <h3>' . $node->title . '</h3>
                         </div>
                     </a>
                 </li>
-                ';
-
-
+                ';*/
+        array_push(
+            $output,
+            array(
+              'src'=>  $my_image_url,
+              'title' =>   $node->title,
+              'path' => drupal_get_path_alias('node/' . $node->nid)
+            )
+            );
     }
-    print $output;
+
+    $arr = ['cat'=> 'true', 'data'=> $output];
+    print json_encode($arr);
 
     drupal_page_footer();
 }

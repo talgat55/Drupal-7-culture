@@ -29,11 +29,11 @@
 
                 $myvoc = taxonomy_vocabulary_machine_name_load('place');
                 $tree = taxonomy_get_tree($myvoc->vid);
-                echo '<pre>';
+               /* echo '<pre>';
                 print_r($tree);
-                echo '</pre>';
+                echo '</pre>';*/
                 echo '<ul class="cat-place-aside">';
-                foreach ($tree as $value){
+                foreach ($tree as $key =>  $value){
                     $terms = taxonomy_get_term_by_name($value->name);
 
                     foreach ($terms as $term){
@@ -54,7 +54,14 @@
                         }
 
                     }
-                    echo '<li><a href="#" data-id="'.$tid.'"> ';
+                    if($key=='0'){
+                        $class = 'class="current"';
+                    }else{
+                        $class = '';
+                    }
+
+
+                    echo '<li><a  '.$class.' href="#" data-id="'.$tid.'"> ';
                     echo '<h3>'.$value->name.'</h3>';
                     echo '<div class="img-cat-place-aside-block">';
 
