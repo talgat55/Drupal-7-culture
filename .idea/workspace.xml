@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="335fdc75-9f90-41e5-bd15-35bce0f7a359" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/css/style.css" afterPath="$PROJECT_DIR$/sites/all/themes/culture/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/html.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/html.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/page/header.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/page/header.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/page/page--afisha.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/page/page--afisha.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/template.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/template.php" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/templates/header.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/templates/header.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--afisha-page.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--afisha-page.tpl.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,8 +36,8 @@
       <file leaf-file-name="views-view-unformatted--afisha-page.tpl.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--afisha-page.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="724">
-              <caret line="192" column="145" lean-forward="false" selection-start-line="192" selection-start-column="76" selection-end-line="192" selection-end-column="145" />
+            <state relative-caret-position="282">
+              <caret line="175" column="47" lean-forward="false" selection-start-line="175" selection-start-column="47" selection-end-line="175" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -186,7 +179,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="76" />
     <option name="y" value="-24" />
     <option name="width" value="1934" />
@@ -269,7 +262,7 @@
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../localhost" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -334,15 +327,15 @@
       <workItem from="1528700157555" duration="15645000" />
       <workItem from="1528746125108" duration="15538000" />
       <workItem from="1528798062612" duration="116000" />
-      <workItem from="1528866132068" duration="18115000" />
+      <workItem from="1528866132068" duration="19037000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="587639000" />
+    <option name="totallyTimeSpent" value="588561000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14285715" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -723,8 +716,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--afisha-page.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="192" column="145" lean-forward="false" selection-start-line="192" selection-start-column="76" selection-end-line="192" selection-end-column="145" />
+        <state relative-caret-position="282">
+          <caret line="175" column="47" lean-forward="false" selection-start-line="175" selection-start-column="47" selection-end-line="175" selection-end-column="47" />
           <folding />
         </state>
       </provider>

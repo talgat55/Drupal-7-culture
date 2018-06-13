@@ -161,6 +161,7 @@ jQuery(document).ready(function () {
         download: false,
         selector: '.gallery-col-md-single a',
         thumbnail: true,
+        zoom: true,
         exthumbimage: false
     });
     /*

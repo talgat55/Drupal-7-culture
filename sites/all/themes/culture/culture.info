@@ -25,6 +25,7 @@ scripts[] = js/jquery.mousewheel.min.js
 scripts[] = js/lg-fullscreen.min.js
 scripts[] = js/lg-thumbnail.min.js
 scripts[] = js/lg-hash.min.js
+scripts[] = js/lg-zoom.min.js
 scripts[] = js/jquery.matchHeight.js
 scripts[] = js/jquery-ui.min.js
 scripts[] = js/default.js
