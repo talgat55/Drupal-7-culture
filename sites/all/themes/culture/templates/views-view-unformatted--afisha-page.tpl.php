@@ -37,14 +37,14 @@
 
 
                         }
-                        $arrayscat .= ' ' . $view_field['field_cat_afisha'];
-                        $check = substr_count($arrayscat, $view_field['field_cat_afisha']);
+                    //    $arrayscat .= ' ' . $view_field['field_cat_afisha'];
+                    //    $check = substr_count($arrayscat, $view_field['field_cat_afisha']);
 
-                        if ($check <= 2) { // for every category
+                  /*      if ($check <= 2) { // for every category
                             $i++;
                             $count++;
                             if ($i <= 12) {  // limit only 12 items
-
+*/
                                // $image_uri = image_style_path('afisha', );
                               //  $final_image_path = drupal_realpath($image_uri);
 
@@ -75,8 +75,8 @@
                                 
                                 ';
 
-                            }
-                        }
+                          /* }
+                        }*/
                   //  }
                     endforeach;
                     if($count == 0){

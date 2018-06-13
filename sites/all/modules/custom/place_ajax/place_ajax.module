@@ -30,7 +30,7 @@ function place_ajax_ajax_get_ajax($id) {
     if($id) {
         $query    ->fieldCondition('field_cat_place', 'tid', $id, '=');
     }
-    $query->range(0, 12);
+    $query->range(0, 50);
         $result = $query->execute();
     if (isset($result['node'])) {
         $news_items_nids = array_keys($result['node']);

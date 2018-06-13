@@ -93,7 +93,7 @@
                 <div id="breadcrumb"><?php print $breadcrumb; ?></div>
             <?php endif; ?>
             <?php
-            if (isset($node) && $node->type == 'culture_detail' ||  isset($node) && $node->type == 'article') {
+            if (isset($node) && $node->type == 'culture_detail' || isset($node) && $node->type == 'article') {
                 ?>
                 <div class="share-block">
                     <?php
@@ -166,7 +166,6 @@
 
             </div>
         </div> <!-- /.section, /#content -->
-
 
 
     </div>

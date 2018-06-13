@@ -1,6 +1,21 @@
 jQuery(document).ready(function () {
     "use strict";
     /*
+    *
+     */
+    jQuery('.bvi-panel-open').bvi('Init', {
+            "BviPanel" : "1",
+            "BviPanelBg" : "white",
+            "BviPanelFontSize" : "12",
+            "BviPanelLetterSpacing" : "normal",
+            "BviPanelLineHeight" : "normal",
+            "BviPanelImg" : "1",
+            "BviPanelImgXY" : "1",
+            "BviPanelReload" : "0",
+            "BviCloseClassAndId" : ".hide-screen-fixed",
+            "BviFixPanel" : "1", "BviPlay" : "1"
+        });
+    /*
     *  Main Slider
      */
     jQuery('.main-slider').slick({
@@ -23,6 +38,22 @@ jQuery(document).ready(function () {
         e.preventDefault();
         jQuery(this).parent().parent().parent().find('.main-slider').slick('slickNext');
     });
+    /*
+    *  Pop UP Contacts Block
+     */
+
+    jQuery('.block-contact-popup .close').click(function (e) {
+        e.preventDefault();
+        jQuery('.block-contact-popup').fadeOut();
+    });
+
+    jQuery('.top-header-menu .menu-contact li a').click(function (e) {
+        e.preventDefault();
+        jQuery('.block-contact-popup').fadeIn();
+    });
+
+
+
     /*
     * Load more place
     */

@@ -104,7 +104,7 @@
             <div class="afisha-select-block">
                 <select class="select-afisha-page">
                     <option value="soon">Сегодня</option>
-                    <option value="thisweek">На выходных</option>
+                    <!--<option value="thisweek">На выходных</option>-->
                     <option value="tomorrow">Завтра</option>
                 </select>
             </div>
@@ -112,7 +112,16 @@
             <div>
                 <?php
                 $name = 'cat_afisha';
+                date_default_timezone_set('Asia/Omsk');
 
+                
+                $datenext = date('H:i:s Y-m-d', strtotime(' +1 day'));
+                $dateprevious = date('H:i:s Y-m-d', strtotime(' -1 day'));
+                echo $datenext.PHP_EOL;
+                echo $dateprevious.PHP_EOL;
+                echo gmmktime($datenext).PHP_EOL;
+                echo gmmktime($dateprevious).PHP_EOL;
+                //echo gmmktime("+1 day");
 
                 $myvoc = taxonomy_vocabulary_machine_name_load($name);
                 $tree = taxonomy_get_tree($myvoc->vid);

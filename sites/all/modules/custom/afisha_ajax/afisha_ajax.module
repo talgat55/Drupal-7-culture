@@ -124,7 +124,7 @@ function summary($page_callback_result, $apidate, $apidate2)
     $output = "";
 
     foreach ($page_callback_result as $node) {
-        $my_image_url =null;
+        $my_image_url ='';
 
         // $my_image_url = file_create_url($node->field_image_afisha['und'][0]['uri']);
         $my_image_url = image_style_url("afisha", $node->field_image_afisha['und'][0]['uri']);

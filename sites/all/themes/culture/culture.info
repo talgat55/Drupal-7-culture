@@ -12,9 +12,13 @@ stylesheets[all][] = css/colors.css
 stylesheets[print][] = css/print.css
 stylesheets[all][] = css/lg-transitions.css
 stylesheets[all][] = css/lightgallery.css
+stylesheets[all][] = css/bvi.min.css
 
 scripts[] = js/jquery-3.2.1.min.js
 scripts[] = js/slick.min.js
+scripts[] = js/bvi.js
+scripts[] = js/responsivevoice.min.js
+scripts[] = js/js.cookie.min.js
 scripts[] = js/goesSticky.min.js
 scripts[] = js/lightgallery.min.js
 scripts[] = js/jquery.mousewheel.min.js

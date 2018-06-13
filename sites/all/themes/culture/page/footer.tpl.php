@@ -48,7 +48,7 @@
             <div class="alternative-version-view">
                 <img src="/<?php print path_to_theme(); ?>/images/eye.png"
                      alt="eye">
-                <span>ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ</span>
+                <span><a href="#" class="bvi-panel-open-menu">ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ</a></span>
             </div>
         </div>
         <div class="col-md-6">
