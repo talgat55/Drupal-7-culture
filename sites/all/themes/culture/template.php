@@ -14,6 +14,8 @@ function culture_form_search_block_form_alter(&$form, &$form_state, $form_id) {
 function culture_preprocess_html(&$vars) {
     // Ally.js for accessibility
     drupal_add_js('https://yastatic.net/share2/share.js', array('type' => 'external', 'scope' => 'footer'));
+
+
 }
 /*
 function culture_preprocess_page(&$vars) {

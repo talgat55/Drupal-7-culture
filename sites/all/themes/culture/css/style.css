@@ -59,7 +59,7 @@
     top: 55px;
     display: none;
     z-index: 99999999999;
-    padding: 25px 105px 20px 105px;
+    padding: 25px 34px 20px 34px;
     border: 2.5px solid #12a69d;
 }
 .block-contact-popup::before{
@@ -80,7 +80,7 @@
     top: 12px;
 }
 .block-contact-popup .c-content {
-    width: 215px;
+    width: 410px;
 }
 
 .block-contact-popup .separator {
