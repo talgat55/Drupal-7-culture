@@ -17,6 +17,7 @@ function culture_preprocess_html(&$vars) {
 
 
 }
+
 /*
 function culture_preprocess_page(&$vars) {
     $header = drupal_get_http_header('status');

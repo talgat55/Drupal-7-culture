@@ -1593,14 +1593,17 @@ div.password-confirm {
     margin-bottom: 10px !important;
 }
 */
+.turizm-detail li:nth-of-type(3n+1) ,
 .culture-detail li:nth-of-type(3n+1) {
     height: 625px;
     width: 40% !important;
 }
 
+.turizm-detail li ,
 .culture-detail li {
     height: 300px;
 }
+
 
 .culture-top-block .cultre-place,
 .afisha-date,
@@ -1616,6 +1619,7 @@ div.password-confirm {
     left: 15px;
 }
 
+.turizm-detail-item ,
 .culture-detail-item {
     position: relative;
 }
@@ -1643,6 +1647,10 @@ div.password-confirm {
 
 }
 
+.turizm-detail.home-page {
+    padding: 0;
+    margin: 80px 0 0 0;
+}
 .culture-detail.home-page {
     padding: 0;
     margin: 0;
@@ -1677,13 +1685,22 @@ div.password-confirm {
     float: left;
 }
 
+.turizm-detail.home-page li ,
 .culture-detail.home-page li {
     list-style: none;
     float: left;
     width: 626px;
     margin: 12px;
 }
-
+.turizm-detail.home-page li{
+    list-style: none;
+    float: left;
+    width: 626px;
+    margin: 12px;
+}
+.cat-turism-page{
+    margin: 0 -12px;
+}
 .special-row.margin-12 {
     margin: 0 -12px;
 }
@@ -3806,4 +3823,81 @@ div.admin-panel .description {
 
 .afisha-link-to-place:hover {
     text-decoration: underline;
+}
+.turist-banner .second-field-banner{
+    display: table;
+    width: 100%;
+    margin-top: 20px;
+}
+.turist-banner .second-field-banner div{
+    display: table-cell;
+    vertical-align: middle;
+
+}
+.turist-banner .second-field-banner div,
+.turist-banner .second-field-banner div a{
+    color: #12a69d;
+    text-decoration: none;
+    font-family: 'NeoSansPro-Regular';
+    font-size: 16px;
+}
+.turism-banner-delivery{
+    height: 2px;
+    background: #12a69d;
+    width: 56%;
+    display: table;
+    margin: 20px auto 11px;
+}
+.link-turism-banner:hover,
+.turist-banner .second-field-banner div a:hover{
+    text-decoration: underline;
+}
+.img-soc-banner-turism{
+    width: auto!important;
+    display: table;
+    margin: 0 auto;
+}
+.link-turism-banner{
+    color: #12a69d;
+    text-decoration: none;
+    font-family: 'NeoSansPro-Regular';
+    font-size: 16px;
+    margin-bottom: 12px;
+    display: inherit;
+}
+.turist-banner .title-field-banner{
+    font-family: 'NeoSansPro-Medium';
+    font-size: 18px;
+    width: 85%;
+    margin: 0 auto;
+}
+.textblock-banner.turism-page-banner{
+    top: -40px!important;
+}
+.turizm-detail-item a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.title-field-banner.download-file{
+    font-family: 'NeoSansPro-Medium';
+    font-size: 18px;
+}
+.link-tofile-bannner{
+    color: #12a69d;
+    margin-top: 39px;
+    text-decoration: none;
+    font-family: 'NeoSansPro-Regular';
+    font-size: 18px;
+    display: inline-block;
+    padding: 6px 27px;
+    background: transparent;
+    border: 1.5px solid #12a69d;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.link-tofile-bannner:hover{
+    background: #12a69d;
+    color: #fff;
 }

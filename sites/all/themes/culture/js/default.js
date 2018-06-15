@@ -463,6 +463,8 @@ function InitSliderNewsPage() {
         ]
     });
 }
+jQuery(window).on('load', function () {
+    var height = jQuery('.turism-news  li').height();
+    jQuery('.turism-news-content').append('<style>.turism-news  li{ height:'+height+'px; }</style>');
 
-
-
+});
