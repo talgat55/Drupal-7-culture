@@ -3901,3 +3901,7 @@ div.admin-panel .description {
     background: #12a69d;
     color: #fff;
 }
+.turist-row .aside.turism{
+    position: absolute;
+    right: -165px;
+}

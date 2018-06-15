@@ -20,7 +20,22 @@
         Туризм
     </h1>
     <div id="main" class="turist-row clearfix">
-        <div class="container clearfix">
+        <div class="container relative clearfix">
+            <div id="stickyblock" class="aside turism">
+
+                    <a href="#" target="_blank" class="block-photo">
+                        <img src="/<?php print path_to_theme(); ?>/images/elipse.png"
+                             alt="Справочник">
+                        <div class="block-aside-photo">
+                            <img src="/<?php print path_to_theme(); ?>/images/spnk.png"
+                                 alt="Иконка">
+
+                            <p>Справочник туриста</p>
+                        </div>
+                    </a>
+
+
+            </div>
             <div class="banner turist-banner home-page clearfix padding-top-20">
                 <img src="<?php echo path_to_theme(); ?>/images/bg-turist-min.jpg"/>
                 <div class="textblock-banner turism-page-banner   left-block">

@@ -19,7 +19,7 @@
                     <?php $datefieldinvert = explode(' ', trim($datefield[1])); ?>
                     <?php if ($i == 4  && $view->query->pager->current_page == 0) { ?>
                     </ul>
-                    <div class="banner turist-banner home-page clearfix padding-top-20">
+                    <div class="banner turist-banner home-page clearfix margin-top-20">
                         <img src="<?php echo path_to_theme(); ?>/images/bg-turist-min.jpg"/>
                         <div class="textblock-banner turism-page-banner   left-block">
 
