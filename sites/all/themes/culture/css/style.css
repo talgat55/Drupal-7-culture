@@ -3956,3 +3956,37 @@ div.admin-panel .description {
 .margin-bottom-100{
     margin-bottom: 100px;
 }
+.turism-row.home-page{
+    margin: 0 -2px;
+    padding: 0;
+}
+.turism-row.home-page li{
+    list-style: none;
+    float: left;
+    width: 33.33%;
+    padding: 0 2px 4px 2px;
+    box-sizing: border-box;
+}
+.turism-row.home-page li img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+.turism-item{
+    position: relative;
+}
+
+.turism-item h3{
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+    background-repeat: repeat-x;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'OpenSans Extra-Bold';
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
