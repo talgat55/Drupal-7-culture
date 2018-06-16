@@ -3905,3 +3905,54 @@ div.admin-panel .description {
     position: absolute;
     right: -165px;
 }
+.turism-bottom-block h3{
+    font-family: 'NeoSansPro-Medium';
+    font-size: 25px;
+    margin-top: 0;
+    text-align: center;
+    font-weight: 400;
+    color: #fff;
+}
+.turizm-detail-part{
+    margin: 0;
+    padding: 0;
+}
+.turizm-detail-part li{
+    float: left;
+    list-style: none;
+    padding: 60px 35px 0 35px;
+    position: relative;
+}
+.turism-bottom-block{
+    position: absolute;
+    bottom: 0;
+    left: 35px;
+    right: 35px;
+    height: 100px;
+}
+.turizm-detail-item-part a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.download-putivoditel{
+    background: url(../images/map.png);
+    background-repeat: no-repeat!important;
+    background-position-x: 100%;
+    padding: 18px 24px;
+    display: table;
+    font-family: 'NeoSansPro-Regular';
+    font-size: 16px;
+    margin: 50px auto;
+    background-color: #12a69d;
+    color: #fff!important;
+    text-decoration: none;
+    border: 1.5px solid #12a69d;
+}
+.download-putivoditel:hover{
+    background-color: transparent;
+    color: #12a69d!important;
+}
+.margin-bottom-100{
+    margin-bottom: 100px;
+}
