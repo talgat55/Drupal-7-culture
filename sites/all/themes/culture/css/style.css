@@ -3974,6 +3974,9 @@ div.admin-panel .description {
 .turism-item{
     position: relative;
 }
+.turism-row.home-page.turism-omsk{
+    margin-bottom: 30px!important;
+}
 
 .turism-item h3{
     background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
