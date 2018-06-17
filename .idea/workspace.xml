@@ -4,6 +4,7 @@
     <list default="true" id="335fdc75-9f90-41e5-bd15-35bce0f7a359" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/css/style.css" afterPath="$PROJECT_DIR$/sites/all/themes/culture/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/js/default.js" afterPath="$PROJECT_DIR$/sites/all/themes/culture/js/default.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,62 +27,65 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="3975" column="1" lean-forward="true" selection-start-line="3975" selection-start-column="1" selection-end-line="3975" selection-end-column="1" />
+            <state relative-caret-position="276">
+              <caret line="4007" column="46" lean-forward="true" selection-start-line="4007" selection-start-column="46" selection-end-line="4007" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page--node--445.tpl.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page--node--445.tpl.php">
+      <file leaf-file-name="node--article.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/node--article.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+            <state relative-caret-position="1274">
+              <caret line="132" column="14" lean-forward="true" selection-start-line="132" selection-start-column="14" selection-end-line="132" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page--node--442.tpl.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page--node--442.tpl.php">
+      <file leaf-file-name="node--turizm.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/node--turizm.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-234">
-              <caret line="41" column="50" lean-forward="false" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
+            <state relative-caret-position="479">
+              <caret line="142" column="66" lean-forward="true" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="66" />
+              <folding>
+                <marker date="1529224336137" expanded="true" signature="4710:4908" ph="..." />
+                <marker date="1529224336137" expanded="true" signature="4777:4908" ph="..." />
+                <marker date="1529224336137" expanded="true" signature="4808:4908" ph="..." />
+                <marker date="1529224336137" expanded="true" signature="6261:7394" ph="..." />
+                <marker date="1529224336137" expanded="true" signature="7134:7263" ph="..." />
+                <marker date="1529224336137" expanded="true" signature="7305:7378" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="afisha_ajax.module" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/afisha_ajax/afisha_ajax.module">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="135" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views-view-unformatted--turism-omsk--block.tpl.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--turism-omsk--block.tpl.php">
+      <file leaf-file-name="default.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/js/default.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page--node--434.tpl.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page--node--434.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="101" column="25" lean-forward="true" selection-start-line="101" selection-start-column="25" selection-end-line="102" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page--node--435.tpl.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page--node--435.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="66" column="18" lean-forward="true" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
-              <folding />
+            <state relative-caret-position="-78">
+              <caret line="132" column="6" lean-forward="true" selection-start-line="132" selection-start-column="6" selection-end-line="132" selection-end-column="6" />
+              <folding>
+                <marker date="1529224371755" expanded="true" signature="2727:2743" ph="..." />
+                <marker date="1529224371755" expanded="true" signature="7652:7683" ph="..." />
+                <marker date="1529224371755" expanded="true" signature="7838:7855" ph="..." />
+                <marker date="1529224371755" expanded="true" signature="11585:11616" ph="..." />
+                <marker date="1529224371755" expanded="true" signature="11771:11788" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,14 +101,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>create</find>
       <find>.cat-place-aside li a</find>
       <find>.margin-botom-news-custom li</find>
       <find>data</find>
       <find>#node-navigation li a</find>
       <find>und</find>
       <find>.place.home-page li img</find>
-      <find>node-type-place</find>
       <find>.image-block-slider</find>
       <find>image-block-slider</find>
       <find>field_duration_date_afisha</find>
@@ -127,6 +129,8 @@
       <find>var_</find>
       <find>slider-main-link.link-button</find>
       <find>.turism-row.home-page li</find>
+      <find>node-type-place</find>
+      <find>$field_link</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -135,7 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--banner-news.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--gallery.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/templates/aq_resizer.php.txt" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/templates/aq_resizer.php" />
@@ -176,7 +179,6 @@
         <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--turisms.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/template.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view--news-turism--block.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/culture/js/default.js" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--news-turism--block.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--435.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--434.tpl.php" />
@@ -186,6 +188,8 @@
         <option value="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--turism-omsk--block.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--445.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/css/style.css" />
+        <option value="$PROJECT_DIR$/sites/all/themes/culture/page/node--turizm.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/culture/js/default.js" />
       </list>
     </option>
   </component>
@@ -251,6 +255,15 @@
               <item name="all" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="culture" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="culture" type="b2602c69:ProjectViewProjectNode" />
+              <item name="culture" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sites" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="all" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="culture" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="culture" type="b2602c69:ProjectViewProjectNode" />
@@ -347,12 +360,12 @@
       <workItem from="1528866132068" duration="19037000" />
       <workItem from="1528916599526" duration="1765000" />
       <workItem from="1528939015905" duration="6355000" />
-      <workItem from="1529039965194" duration="39408000" />
+      <workItem from="1529039965194" duration="49040000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="636089000" />
+    <option name="totallyTimeSpent" value="645721000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -409,13 +422,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--afisha-block--block.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="52" column="28" lean-forward="false" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/js/goesSticky.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -562,14 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/afisha_ajax/afisha_ajax.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--afisha-page.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4498">
@@ -581,6 +579,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -663,32 +662,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/js/default.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="459" column="37" lean-forward="true" selection-start-line="459" selection-start-column="37" selection-end-line="459" selection-end-column="37" />
-          <folding>
-            <marker date="1529074713561" expanded="true" signature="2727:2743" ph="..." />
-            <marker date="1529074713561" expanded="true" signature="7607:7638" ph="..." />
-            <marker date="1529074713561" expanded="true" signature="7793:7810" ph="..." />
-            <marker date="1529074713561" expanded="true" signature="11540:11571" ph="..." />
-            <marker date="1529074713561" expanded="true" signature="11726:11743" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--news--page.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="508">
           <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/node--article.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="132" column="14" lean-forward="true" selection-start-line="132" selection-start-column="14" selection-end-line="132" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -760,11 +737,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/afisha_ajax/afisha_ajax.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="135" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="3975" column="1" lean-forward="true" selection-start-line="3975" selection-start-column="1" selection-end-line="3975" selection-end-column="1" />
+        <state relative-caret-position="276">
+          <caret line="4007" column="46" lean-forward="true" selection-start-line="4007" selection-start-column="46" selection-end-line="4007" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/node--article.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1274">
+          <caret line="132" column="14" lean-forward="true" selection-start-line="132" selection-start-column="14" selection-end-line="132" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/node--turizm.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="142" column="66" lean-forward="true" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="66" />
+          <folding>
+            <marker date="1529224336137" expanded="true" signature="4710:4908" ph="..." />
+            <marker date="1529224336137" expanded="true" signature="4777:4908" ph="..." />
+            <marker date="1529224336137" expanded="true" signature="4808:4908" ph="..." />
+            <marker date="1529224336137" expanded="true" signature="6261:7394" ph="..." />
+            <marker date="1529224336137" expanded="true" signature="7134:7263" ph="..." />
+            <marker date="1529224336137" expanded="true" signature="7305:7378" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/js/default.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="132" column="6" lean-forward="true" selection-start-line="132" selection-start-column="6" selection-end-line="132" selection-end-column="6" />
+          <folding>
+            <marker date="1529224371755" expanded="true" signature="2727:2743" ph="..." />
+            <marker date="1529224371755" expanded="true" signature="7652:7683" ph="..." />
+            <marker date="1529224371755" expanded="true" signature="7838:7855" ph="..." />
+            <marker date="1529224371755" expanded="true" signature="11585:11616" ph="..." />
+            <marker date="1529224371755" expanded="true" signature="11771:11788" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

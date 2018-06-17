@@ -3585,6 +3585,7 @@ div.admin-panel .description {
     padding: 0 15px 30px 15px;
 }
 
+.node-type-turizm .col-md-4,
 .node-type-place .col-md-4,
 .place-row .col-md-4 {
     float: left;
@@ -3593,6 +3594,7 @@ div.admin-panel .description {
     box-sizing: border-box;
 }
 
+.node-type-turizm .col-md-8,
 .node-type-place .col-md-8,
 .place-row .col-md-8 {
     float: left;
@@ -3992,4 +3994,33 @@ div.admin-panel .description {
     padding: 20px;
     box-sizing: border-box;
     width: 100%;
+}
+.cat-place-aside.turizm-single li{
+    border-left: none;
+    border-right: none;
+}
+.cat-place-aside{
+    border: none;
+}
+.cat-place-aside.turizm-single li:last-child{
+    border-bottom: 1.5px solid #000;
+}
+.cat-place-aside.turizm-single li:first-child{
+    border-top: 1.5px solid #000;
+}
+.node-type-turizm .title-section{
+    display: none;
+}
+.turizm-node{
+    margin-top: 30px;
+}
+.cat-place-aside.turizm-single{
+    margin-top: 0;
+}
+.turizm.home-page.single #stickyblock{
+    position: absolute;
+    right: -124px;
+}
+.turizm.home-page.single{
+    position: relative;
 }

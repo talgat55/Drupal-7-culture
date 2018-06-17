@@ -125,8 +125,9 @@ jQuery(document).ready(function () {
     * Sticky Block
      */
 
-    if (jQuery('#stickyblock').length) {
-        jQuery('#stickyblock').goesSticky({scope: jQuery("#main-wrapper"), offest: 0});
+    if (jQuery('#stickyblock, .sticky-block-turizm').length) {
+
+        jQuery('#stickyblock, .sticky-block-turizm').goesSticky({scope: jQuery("#main-wrapper"), offest: 0});
     }
 
     /*
