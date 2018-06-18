@@ -16,12 +16,12 @@
         </div>
     </div>
 <?php endif; ?>
-    <h1 class=" title-section bottom-border-title no-after">
-        Достопримечательности
+    <h1 class=" title-section capitalize bottom-border-title no-after">
+        Экскурсии по Омску
     </h1>
     <div id="main" class="turist-row clearfix">
         <div class="container relative clearfix">
-            <div id="stickyblock" class="aside turism">
+            <!--<div id="stickyblock" class="aside turism">
 
                 <a href="#" target="_blank" class="block-photo">
                     <img src="/<?php print path_to_theme(); ?>/images/elipse.png"
@@ -35,41 +35,9 @@
                 </a>
 
 
-            </div>
-            <div class="part-turism-page">
-                <ul class="turizm-detail-part clearfix">
+            </div>-->
 
-                    <li class="turizm-detail-item-part" >
-                        <a href="#">
-                            <img src="<?php echo path_to_theme(); ?>/images/omsk-min.jpg" />
-                            <div class="turism-bottom-block">
-                                <h3>Достопримечательности Омска</h3>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="turizm-detail-item-part" >
-                        <a href="#">
-                            <img src="<?php echo path_to_theme(); ?>/images/obl-min.jpg" />
-                            <div class="turism-bottom-block">
-                                <h3>Достопримечательности Омской
-                                    области</h3>
-                            </div>
-                        </a>
-                    </li>
-
-
-                </ul>
-
-                <a target="_blank" href="<?php echo path_to_theme(); ?>/images/Putevoditel_omsk_A6_SAJT.pdf" class="download-putivoditel">
-                    Скачать путеводитель по Омску
-                </a>
-
-            </div>
-
-
-
-
-            <div class="banner turist-banner home-page clearfix padding-top-20 margin-bottom-100">
+            <div class="banner turist-banner home-page clearfix padding-top-20 margin-bottom-60">
                 <img src="<?php echo path_to_theme(); ?>/images/bg-turist-min.jpg"/>
                 <div class="textblock-banner turism-page-banner   left-block">
 
@@ -102,6 +70,12 @@
 
                 </div>
             </div>
+
+            <?php  print views_embed_view('turizm_excursii_omsk', 'block'); ?>
+
+
+
+
 
 
 

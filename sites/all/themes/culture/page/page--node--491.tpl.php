@@ -16,12 +16,12 @@
         </div>
     </div>
 <?php endif; ?>
-    <h1 class=" title-section bottom-border-title no-after">
+    <h1 class=" title-section capitalize bottom-border-title no-after">
         Туры по Омской области
     </h1>
     <div id="main" class="turist-row clearfix">
         <div class="container relative clearfix">
-            <?php  print views_embed_view('turism_oblast', 'block'); ?>
+            <?php  print views_embed_view('turizm_oblast', 'block'); ?>
 
             <div class="banner turist-banner home-page clearfix padding-top-20 margin-bottom-60">
                 <img src="<?php echo path_to_theme(); ?>/images/bg-turist-min.jpg"/>

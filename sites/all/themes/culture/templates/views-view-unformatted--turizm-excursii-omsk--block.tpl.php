@@ -16,12 +16,19 @@
                     foreach ($view->style_plugin->rendered_fields as $view_field): ?>
 
 
+                    <?php
+                        if($view_field["field_image_turizm"]){
+                        $redyimgh =  $view_field["field_image_turizm"];
+                        }else{
 
+                        $redyimgh =  path_to_theme().'/images/turizm_omsk_no_image.jpg';
+                        }
 
+                        ?>
                     <li>
                         <a href="<?= $view_field['path'] ?>">
                             <div class="turism-item">
-                                <img src=" <?= $view_field["field_image_turizm"] ?>"/>
+                                <img src=" <?= $redyimgh ?>"/>
                                 <h3><?= $view_field["title"] ?></h3>
 
                             </div>

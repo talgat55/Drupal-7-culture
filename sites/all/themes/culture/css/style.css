@@ -4034,12 +4034,9 @@ div.admin-panel .description {
     float: left;
     width: 25%;
     list-style: none;
-    height: 187px;
+    height: 260px;
 }
-.archelogy-page li:nth-of-type(6n+1){
-    width: 50%;
-    height: 187px;
-}
+
 .archelogy-item{
     padding: 0 8px 16px 8px;
     box-sizing: border-box;
@@ -4072,4 +4069,13 @@ div.admin-panel .description {
 }
 .archelogy-item a{
     text-decoration: none;
+}
+.position-absolute{
+    position: absolute;
+}
+.title-section.capitalize{
+    text-transform: capitalize!important;
+}
+.node-type-archelogy .node-place-img img{
+    max-width: 100%;
 }

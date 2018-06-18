@@ -13,8 +13,8 @@
 
                 <li class="archelogy-item">
                     <a href="<?= $view_field['path'] ?>">
-                        <div class="archelogy-item-block" style="background: url(<?= $view_field["field_image_archelogy"] ?>);">
-
+                        <div class="archelogy-item-block"  >
+                            <img src="<?= $view_field["field_image_detail_archelogy"] ?>"/>
                             <h3><?= $view_field["title"] ?></h3>
                         </div>
                     </a>

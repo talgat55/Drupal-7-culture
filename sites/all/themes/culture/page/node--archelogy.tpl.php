@@ -89,7 +89,7 @@
 <?php
 
 
-$field_image = field_get_items('node', $node, 'field_image_archelogy');
+$field_image = field_get_items('node', $node, 'field_image_detail_archelogy');
 $body = field_get_items('node', $node, 'body');
 $title = field_get_items('node', $node, 'title');
 $my_image_url = file_create_url($field_image[0]['uri']);

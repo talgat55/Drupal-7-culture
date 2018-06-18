@@ -17,27 +17,28 @@
     </div>
 <?php endif; ?>
     <h1 class=" title-section bottom-border-title no-after">
-        Экскурсии по Омску
+        Туризм
     </h1>
     <div id="main" class="turist-row clearfix">
         <div class="container relative clearfix">
+           <!-- <div class="position-absolute">
             <div id="stickyblock" class="aside turism">
 
-                <a href="#" target="_blank" class="block-photo">
-                    <img src="/<?php print path_to_theme(); ?>/images/elipse.png"
-                         alt="Справочник">
-                    <div class="block-aside-photo">
-                        <img src="/<?php print path_to_theme(); ?>/images/spnk.png"
-                             alt="Иконка">
+                    <a href="#" target="_blank" class="block-photo">
+                        <img src="/<?php print path_to_theme(); ?>/images/elipse.png"
+                             alt="Справочник">
+                        <div class="block-aside-photo">
+                            <img src="/<?php print path_to_theme(); ?>/images/spnk.png"
+                                 alt="Иконка">
 
-                        <p>Справочник туриста</p>
-                    </div>
-                </a>
+                            <p>Справочник туриста</p>
+                        </div>
+                    </a>
 
 
             </div>
-
-            <div class="banner turist-banner home-page clearfix padding-top-20 margin-bottom-60">
+            </div>-->
+            <div class="banner turist-banner home-page clearfix padding-top-20">
                 <img src="<?php echo path_to_theme(); ?>/images/bg-turist-min.jpg"/>
                 <div class="textblock-banner turism-page-banner   left-block">
 
@@ -71,14 +72,44 @@
                 </div>
             </div>
 
-            <?php  print views_embed_view('turism_omsk', 'block'); ?>
+            <div class="cat-turism-page">
+                <ul class="turizm-detail home-page clearfix">
+
+                    <li class="turizm-detail-item" style="background: url(<?php echo path_to_theme(); ?>/images/1t-min.jpg) center bottom;">
+                        <a href="/turizm-turi-omskaya-oblast">
+
+                            <div class="culture-bottom-block">
+                                <h3>Туры по Омской области</h3>
+                                <div class="overlay-turizm-detail"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="turizm-detail-item" style="background: url(<?php echo path_to_theme(); ?>/images/2t-min.jpg) center bottom;">
+                        <a href="/turizm-eksursii-omsk">
+
+                            <div class="culture-bottom-block">
+                                <h3>Экскурсии по Омску</h3>
+                                <div class="overlay-turizm-detail"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="turizm-detail-item" style="background: url(<?php echo path_to_theme(); ?>/images/3t-min.jpg) center bottom;">
+                        <a href="/turizm-dostoprimechatelnosti">
+
+                            <div class="culture-bottom-block">
+                                <h3>Достопримечательности города</h3>
+                                <div class="overlay-turizm-detail"></div>
+                            </div>
+                        </a>
+                    </li>
 
 
+                </ul>
 
+            </div>
 
-
-
-
+            <h2 class="title-section bottom-border-title">Все о туризме в Омской области</h2>
+            <?php print views_embed_view('turizm_news', 'block'); ?>
 
         </div>
     </div>

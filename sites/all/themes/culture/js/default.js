@@ -59,7 +59,9 @@ jQuery(document).ready(function () {
     */
 
     jQuery('.cat-place-aside a').click(function (e) {
+        if(!jQuery(this).parent().parent().hasClass('turizm-single')){
         e.preventDefault();
+        }
         jQuery('.cat-place-aside a').removeClass('current');
         jQuery(this).addClass('current');
         var $id = jQuery(this).data('id');
