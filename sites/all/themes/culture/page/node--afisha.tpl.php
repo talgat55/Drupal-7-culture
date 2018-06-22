@@ -263,14 +263,18 @@ $arr = [
 
         </div>
         <?php
+                        $dateprevious = new DateTime('yesterday 23:59');
+                        $dateprevious->modify('+3 hours');
 
+                        $redyprevious = $dateprevious->format('U');
         // place
         $tid = $field_place[0][value];
         $query = new EntityFieldQuery();
         $query->entityCondition('entity_type', 'node')
             ->entityCondition('bundle', 'afisha')
             ->propertyCondition('status', NODE_PUBLISHED)
-            ->fieldCondition('field_place_afisha', 'value', $tid, '=')
+            ->fieldCondition('field_place_afisha', 'value', $tid, '=');
+         $query->fieldCondition('field_date_afisha', 'value', $redyprevious, '>=')
             ->fieldOrderBy('field_date_afisha', 'value', 'ASC')
             ->range(0, 10);
         // Run the query as user 1.
@@ -316,10 +320,20 @@ $arr = [
                       //  $real_path =drupal_get_path_alias($alias);
                         $month = date('m', $field->field_date_afisha['und'][0]['value']) - 1;
                         //  <div class="afisha-item-date">'.$datefieldinvert[1].' '.$datefieldinvert[0].'</div>
+                        $dateprevious = new DateTime('yesterday 23:59');
+                        $dateprevious->modify('+3 hours');
+
+                        $redyprevious = $dateprevious->format('U');
+                        foreach ($field->field_date_afisha['und'] as $val){
+                            if($redyprevious < $val['value']){
+                                $redydate = $val['value'];
+                                break;
+                            }
+                        }
                         echo '
                     <div class="item-afisha">
                         
-                        <div class="afisha-item-date">' . date('d', $field->field_date_afisha['und'][0]['value']) . ' ' . $arr[$month] . '</div>
+                        <div class="afisha-item-date ">' . date('d', $redydate) . ' ' . $arr[$month] . '</div>
                              <img src="' . $my_image_url . '" alt="' . $field->field_image_afisha['und'][0]['alt'] . '" />
                         <div class="title-afisha"><div><h3>' . $field->title . '</h3> <a class="link-c-a" href="/' . $alias . '">Подробнее</a> </div></div>
                     </div>
@@ -327,6 +341,8 @@ $arr = [
                 ';
                     }
                 }
+
+
             }
 
             ?>
