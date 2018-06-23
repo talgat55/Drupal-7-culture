@@ -4092,3 +4092,77 @@ div.admin-panel .description {
 .node-type-archelogy .title-section {
     margin-bottom: 35px;
 }
+.views-reset-button{
+    display: none;
+}
+.page-node-491 .views-exposed-form .views-exposed-widget,
+.page-culturedetails .views-exposed-form .views-exposed-widget{
+    float: none!important;
+}
+.page-node-491 #edit-field-categories-tid,
+.page-culturedetails #edit-field-categories-tid{
+    display: table;
+    margin: 0 auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 11px;
+    border-bottom: 1.5px solid #000;
+}
+.page-node-491 .form-item.form-type-radio.form-item-field-categories-tid,
+.page-culturedetails  .form-item.form-type-radio.form-item-field-categories-tid{
+    display: table-cell;
+    padding-right: 28px;
+}
+.page-node-491 .form-item.form-type-radio.form-item-field-categories-tid::after,
+.page-culturedetails  .form-item.form-type-radio.form-item-field-categories-tid::after{
+    width: 5px;
+    display: inline-block;
+    position: relative;
+    top: -3px;
+    margin: 0 0 0 27px;
+    content: ' ';
+    height: 5px;
+    border-radius: 50%;
+    background: #000;
+}
+.page-node-491 .form-item.form-type-radio.form-item-field-categories-tid:last-child::after,
+.page-culturedetails  .form-item.form-type-radio.form-item-field-categories-tid:last-child::after{
+    display: none;
+}
+.page-node-491 .form-item.form-type-radio.form-item-field-categories-tid:last-child,
+.page-culturedetails  .form-item.form-type-radio.form-item-field-categories-tid:last-child{
+    padding-right: 0;
+}
+.page-node-491 .form-item.form-type-radio input,
+.page-culturedetails  .form-item.form-type-radio input{
+    display: none;
+}
+.page-node-491 .views-exposed-widgets,
+.page-culturedetails  .views-exposed-widgets{
+    position: relative;
+    display: table;
+    margin: 0 auto;
+}
+.page-node-491 .views-submit-button,
+.page-culturedetails .views-submit-button{
+    position: absolute;
+    top: 0;
+    right: -83px;
+}
+.page-node-491  .views-exposed-form .views-exposed-widget .form-submit,
+.page-culturedetails  .views-exposed-form .views-exposed-widget .form-submit{
+    margin-top: 0;
+}
+.page-node-491 .form-item-field-categories-tid label,
+.page-culturedetails .form-item-field-categories-tid label{
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    font-family: 'NeoSansPro-Regular';
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 400;
+}
+.page-node-491 .form-item-field-categories-tid:hover,
+.page-culturedetails .form-item-field-categories-tid:hover{
+    color: #12a69d;
+}

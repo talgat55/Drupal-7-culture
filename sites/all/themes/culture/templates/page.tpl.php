@@ -133,30 +133,6 @@
                         } ?>
                         <?php print render($title_suffix); ?>
 
-
-                        <?php
-                        // page Culture detail
-                        if (current_path() == 'culturedetails') {
-                            $name = 'culture_details';
-
-
-                            $myvoc = taxonomy_vocabulary_machine_name_load($name);
-                            $tree = taxonomy_get_tree($myvoc->vid);
-                            //var_dump($tree);
-                            echo '<ul class="list-terms-culture-details clearfix">';
-                            echo '<li class="current" data-filter>Все материалы</li>';
-
-                            foreach ($tree as $term) {
-                                $terms = taxonomy_get_term_by_name($term->name);
-                                foreach ($terms as $value) {
-                                    $value = $value->field_alias;
-
-                                }
-                                echo '<li data-filter=".' . $value[und][0]['value'] . '"><span class="separator-culture-detail"></span> ' . $term->name . ' </li>';
-                            }
-                            echo '</ul>';
-                        }
-                        ?>
                         <?php print render($page['content']); ?>
 
 

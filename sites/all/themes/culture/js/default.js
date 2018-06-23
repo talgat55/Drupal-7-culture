@@ -1,5 +1,7 @@
 jQuery(document).ready(function () {
     "use strict";
+
+
     /*
     *
      */
@@ -122,6 +124,24 @@ jQuery(document).ready(function () {
 
 
     });
+    /*
+    * Height for Culture detail
+    *
+     */
+    if (jQuery('.page-culturedetails').length) {
+
+        var maxHeight = Math.max.apply(null, jQuery(".page-culturedetails .culture-detail-item").map(function ()
+        {
+            return jQuery(this).height();
+        }).get());
+
+        jQuery('body').append('<style> .page-culturedetails .culture-detail-item{ height:'+maxHeight +'px; }</style>');
+    }
+
+
+
+
+
 
     /*
     * Sticky Block
@@ -321,8 +341,9 @@ jQuery(document).ready(function () {
     * Match Height
      */
     jQuery('.news.home-page li').matchHeight();
-    jQuery('.culture-detail-row li').matchHeight();
+    jQuery('.culture-detail-row .culture-detail-item').matchHeight();
     jQuery('.place.home-page li').matchHeight();
+
 
 
     InitFitRows();
