@@ -4079,3 +4079,16 @@ div.admin-panel .description {
 .node-type-archelogy .node-place-img img{
     max-width: 100%;
 }
+.node-type-archelogy #breadcrumb,
+.page-archelogy #breadcrumb,
+.node-type-place #breadcrumb,
+.node-type-turizm #breadcrumb,
+.custom-top-padd-bred{
+    padding-top: 15px;
+}
+.node-type-archelogy img{
+    max-width: 100%;
+}
+.node-type-archelogy .title-section {
+    margin-bottom: 35px;
+}

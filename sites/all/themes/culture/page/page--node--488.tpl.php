@@ -8,20 +8,30 @@
 <?php if ($breadcrumb): ?>
     <div class="container relative">
         <div class="top-block-content">
-            <div id="breadcrumb">
+            <!--<div id="breadcrumb">
 
-                <?php print $breadcrumb; ?>
+                <?php //print $breadcrumb; ?>
 
+            </div>-->
+            <div id="breadcrumb" class="custom-top-padd-bred">
+                <div class="breadcrumb ">
+                    <span class="inline odd first">
+                        <a href="/">Главная</a>
+                    </span>
+                    <span class="delimiter">/</span>
+                    <span class="inline even last">Туризм</span>
+                </div>
             </div>
         </div>
+
     </div>
 <?php endif; ?>
-    <h1 class=" title-section bottom-border-title no-after">
+    <h1 class=" title-section bottom-border-title no-after margin-top-10">
         Туризм
     </h1>
     <div id="main" class="turist-row clearfix">
         <div class="container relative clearfix">
-           <!-- <div class="position-absolute">
+            <!-- <div class="position-absolute">
             <div id="stickyblock" class="aside turism">
 
                     <a href="#" target="_blank" class="block-photo">
@@ -75,7 +85,8 @@
             <div class="cat-turism-page">
                 <ul class="turizm-detail home-page clearfix">
 
-                    <li class="turizm-detail-item" style="background: url(<?php echo path_to_theme(); ?>/images/1t-min.jpg) center bottom;">
+                    <li class="turizm-detail-item"
+                        style="background: url(<?php echo path_to_theme(); ?>/images/1t-min.jpg) center bottom;">
                         <a href="/turizm-turi-omskaya-oblast">
 
                             <div class="culture-bottom-block">
@@ -84,7 +95,8 @@
                             </div>
                         </a>
                     </li>
-                    <li class="turizm-detail-item" style="background: url(<?php echo path_to_theme(); ?>/images/2t-min.jpg) center bottom;">
+                    <li class="turizm-detail-item"
+                        style="background: url(<?php echo path_to_theme(); ?>/images/2t-min.jpg) center bottom;">
                         <a href="/turizm-eksursii-omsk">
 
                             <div class="culture-bottom-block">
@@ -93,7 +105,8 @@
                             </div>
                         </a>
                     </li>
-                    <li class="turizm-detail-item" style="background: url(<?php echo path_to_theme(); ?>/images/3t-min.jpg) center bottom;">
+                    <li class="turizm-detail-item"
+                        style="background: url(<?php echo path_to_theme(); ?>/images/3t-min.jpg) center bottom;">
                         <a href="/turizm-dostoprimechatelnosti">
 
                             <div class="culture-bottom-block">

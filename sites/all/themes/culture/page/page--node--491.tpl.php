@@ -8,15 +8,25 @@
 <?php if ($breadcrumb): ?>
     <div class="container relative">
         <div class="top-block-content">
-            <div id="breadcrumb">
+            <div id="breadcrumb"  class="custom-top-padd-bred">
 
-                <?php print $breadcrumb; ?>
-
+                <?php // print $breadcrumb; ?>
+                <div class="breadcrumb"  >
+                     <span class="inline odd first">
+                        <a href="/">Главная</a>
+                    </span>
+                    <span class="delimiter">/</span>
+                    <span class="inline even">
+                        <a href="/turizm">Туризм</a>
+                    </span>
+                    <span class="delimiter">/</span>
+                    <span class="inline odd last">Туры по Омской области</span>
+                </div>
             </div>
         </div>
     </div>
 <?php endif; ?>
-    <h1 class=" title-section capitalize bottom-border-title no-after">
+    <h1 class=" title-section capitalize margin-top-10  bottom-border-title no-after">
         Туры по Омской области
     </h1>
     <div id="main" class="turist-row clearfix">

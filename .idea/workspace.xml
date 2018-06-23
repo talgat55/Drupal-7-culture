@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="335fdc75-9f90-41e5-bd15-35bce0f7a359" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/page/node--afisha.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/page/node--afisha.tpl.php" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/css/style.css" afterPath="$PROJECT_DIR$/sites/all/themes/culture/css/style.css" />
       <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--488.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--488.tpl.php" />
       <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--489.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--489.tpl.php" />
       <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--490.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--490.tpl.php" />
       <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--491.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--491.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--afisha-block--block.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--afisha-block--block.tpl.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,21 +29,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="4028" column="16" lean-forward="false" selection-start-line="4028" selection-start-column="16" selection-end-line="4028" selection-end-column="16" />
+            <state relative-caret-position="498">
+              <caret line="4086" column="22" lean-forward="true" selection-start-line="4086" selection-start-column="22" selection-end-line="4086" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page--node--489.tpl.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page--node--488.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page--node--488.tpl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="28" column="72" lean-forward="true" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page--node--489.tpl.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page--node--489.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="39" column="56" lean-forward="true" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
+            <state relative-caret-position="414">
+              <caret line="28" column="75" lean-forward="false" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -139,18 +147,18 @@
         <option value="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--news-archelogy--block.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--archelogy-news--block.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--archeology--page.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--488.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--490.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--491.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/js/default.js" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/page/node--archelogy.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--turizm-oblast--block.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--turizm-excursii-omsk--block.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/culture/css/style.css" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--archelogy--page.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/page/node--afisha.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--afisha-block--block.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--488.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--489.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--490.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--491.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/culture/css/style.css" />
       </list>
     </option>
   </component>
@@ -315,18 +323,18 @@
       <workItem from="1529039965194" duration="60486000" />
       <workItem from="1529297852461" duration="10627000" />
       <workItem from="1529504304752" duration="3828000" />
-      <workItem from="1529689235961" duration="1309000" />
+      <workItem from="1529689235961" duration="7029000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="672931000" />
+    <option name="totallyTimeSpent" value="678651000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25241676" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16863587" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -586,22 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page--node--490.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-676">
-          <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page--node--491.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--turizm-excursii-omsk--block.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -621,14 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page--node--488.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="108" column="18" lean-forward="true" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--turizm-oblast--block.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-286">
@@ -645,18 +629,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/css/style.css">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page--node--488.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="4028" column="16" lean-forward="false" selection-start-line="4028" selection-start-column="16" selection-end-line="4028" selection-end-column="16" />
+        <state relative-caret-position="334">
+          <caret line="28" column="72" lean-forward="true" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page--node--491.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="28" column="55" lean-forward="false" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page--node--490.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="28" column="75" lean-forward="false" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page--node--489.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="39" column="56" lean-forward="true" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
+        <state relative-caret-position="414">
+          <caret line="28" column="75" lean-forward="false" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="4086" column="22" lean-forward="true" selection-start-line="4086" selection-start-column="22" selection-end-line="4086" selection-end-column="22" />
           <folding />
         </state>
       </provider>
