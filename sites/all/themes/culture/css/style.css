@@ -4099,7 +4099,7 @@ div.admin-panel .description {
 .page-culturedetails .views-exposed-form .views-exposed-widget{
     float: none!important;
 }
-.page-node-491 #edit-field-categories-tid,
+.page-node-491 #edit-field-cat-turizm-tid,
 .page-culturedetails #edit-field-categories-tid{
     display: table;
     margin: 0 auto;
@@ -4108,12 +4108,17 @@ div.admin-panel .description {
     padding-bottom: 11px;
     border-bottom: 1.5px solid #000;
 }
-.page-node-491 .form-item.form-type-radio.form-item-field-categories-tid,
+.page-node-491 #edit-field-cat-turizm-tid{
+    margin-bottom: 35px;
+}
+
+
+.page-node-491 .form-item.form-type-radio.form-item-field-cat-turizm-tid,
 .page-culturedetails  .form-item.form-type-radio.form-item-field-categories-tid{
     display: table-cell;
     padding-right: 28px;
 }
-.page-node-491 .form-item.form-type-radio.form-item-field-categories-tid::after,
+.page-node-491 .form-item.form-type-radio.form-item-field-cat-turizm-tid::after,
 .page-culturedetails  .form-item.form-type-radio.form-item-field-categories-tid::after{
     width: 5px;
     display: inline-block;
@@ -4125,11 +4130,11 @@ div.admin-panel .description {
     border-radius: 50%;
     background: #000;
 }
-.page-node-491 .form-item.form-type-radio.form-item-field-categories-tid:last-child::after,
+.page-node-491 .form-item.form-type-radio.form-item-field-cat-turizm-tid:last-child::after,
 .page-culturedetails  .form-item.form-type-radio.form-item-field-categories-tid:last-child::after{
     display: none;
 }
-.page-node-491 .form-item.form-type-radio.form-item-field-categories-tid:last-child,
+.page-node-491 .form-item.form-type-radio.form-item-field-cat-turizm-tid:last-child,
 .page-culturedetails  .form-item.form-type-radio.form-item-field-categories-tid:last-child{
     padding-right: 0;
 }
@@ -4153,7 +4158,7 @@ div.admin-panel .description {
 .page-culturedetails  .views-exposed-form .views-exposed-widget .form-submit{
     margin-top: 0;
 }
-.page-node-491 .form-item-field-categories-tid label,
+.page-node-491 .form-item-field-cat-turizm-tid label,
 .page-culturedetails .form-item-field-categories-tid label{
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -4162,7 +4167,7 @@ div.admin-panel .description {
     cursor: pointer;
     font-weight: 400;
 }
-.page-node-491 .form-item-field-categories-tid:hover,
+.page-node-491 .form-item-field-cat-turizm-tid:hover,
 .page-culturedetails .form-item-field-categories-tid:hover{
     color: #12a69d;
 }
