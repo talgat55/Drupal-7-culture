@@ -255,13 +255,14 @@ jQuery(document).ready(function () {
                 jQuery(".afisha-row-list").html(' ');
                 if (data != '') {
                     jQuery(".afisha-row-list").html(data);
-                    jQuery(".afisha-row-list").hide();
+                    jQuery(".afisha-row-list").css('visibility', 'hidden' );
 
                     var $container = jQuery('.afisha-row-list');
                     $container.imagesLoaded(function () {
                         $container.isotope('reloadItems').isotope({sortBy: 'original-order'});
                     });
-                   jQuery(".afisha-row-list").delay(200).fadeIn();
+                    setTimeout(function() { jQuery(".afisha-row-list").css('visibility', 'visible ' ); }, 800);
+
                 } else {
                     jQuery(".afisha-row-list").html('<div class="not-found"  >Записей не найдено</div>');
                 }
@@ -328,12 +329,12 @@ jQuery(document).ready(function () {
             jQuery(".afisha-row-list").html(' ');
             if (data != '') {
                 jQuery(".afisha-row-list").html(data);
-                jQuery(".afisha-row-list").hide();
+                jQuery(".afisha-row-list").css('visibility', 'hidden' );
                 var $container = jQuery('.afisha-row-list');
                 $container.imagesLoaded(function () {
                     $container.isotope('reloadItems').isotope({sortBy: 'original-order'});
                 });
-                jQuery(".afisha-row-list").delay(200).fadeIn();
+                setTimeout(function() { jQuery(".afisha-row-list").css('visibility', 'visible ' ); }, 800);
             } else {
                 jQuery(".afisha-row-list").html('<div class="not-found"  >Записей не найдено</div>');
             }
