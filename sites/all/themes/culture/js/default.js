@@ -187,9 +187,11 @@ jQuery(document).ready(function () {
         zoom: true,
         exthumbimage: false
     });
+
     /*
     * Load More News
      */
+
     jQuery('.pager-load-more.news a').click(function (e) {
         if (window.a == undefined) {
             window.a = 1;
@@ -217,6 +219,7 @@ jQuery(document).ready(function () {
         });
         e.preventDefault();
     });
+
     /*
     * Calendar Afisha
      */
@@ -252,10 +255,13 @@ jQuery(document).ready(function () {
                 jQuery(".afisha-row-list").html(' ');
                 if (data != '') {
                     jQuery(".afisha-row-list").html(data);
+                    jQuery(".afisha-row-list").hide();
+
                     var $container = jQuery('.afisha-row-list');
                     $container.imagesLoaded(function () {
                         $container.isotope('reloadItems').isotope({sortBy: 'original-order'});
                     });
+                   jQuery(".afisha-row-list").delay(200).fadeIn();
                 } else {
                     jQuery(".afisha-row-list").html('<div class="not-found"  >Записей не найдено</div>');
                 }
@@ -265,6 +271,7 @@ jQuery(document).ready(function () {
 
         }
     });
+
     /*
     *  Afisha change select
      */
@@ -321,11 +328,12 @@ jQuery(document).ready(function () {
             jQuery(".afisha-row-list").html(' ');
             if (data != '') {
                 jQuery(".afisha-row-list").html(data);
+                jQuery(".afisha-row-list").hide();
                 var $container = jQuery('.afisha-row-list');
                 $container.imagesLoaded(function () {
                     $container.isotope('reloadItems').isotope({sortBy: 'original-order'});
                 });
-
+                jQuery(".afisha-row-list").delay(200).fadeIn();
             } else {
                 jQuery(".afisha-row-list").html('<div class="not-found"  >Записей не найдено</div>');
             }
@@ -351,6 +359,8 @@ jQuery(document).ready(function () {
     InitFitRowsAfisha();
     InitSliderNewsPage();
     InitFilterRowsAfisha();
+
+
 // end redy function
 });
 
@@ -384,6 +394,7 @@ function InitFitRowsAfisha() {
 
 
         var $container = jQuery('.afisha-row-list');
+
         $container.imagesLoaded(function () {
             $container.isotope({
                 itemSelector: '.culture-detail-item',

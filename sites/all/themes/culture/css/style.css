@@ -4167,7 +4167,22 @@ div.admin-panel .description {
     cursor: pointer;
     font-weight: 400;
 }
+
 .page-node-491 .form-item-field-cat-turizm-tid:hover,
 .page-culturedetails .form-item-field-categories-tid:hover{
     color: #12a69d;
+}
+
+.page-news .pager-load-more.news{
+    margin-bottom: 40px;
+}
+
+.page-afisha  .isotope.no-transition,
+.page-afisha .isotope.no-transition .isotope-item,
+.page-afisha  .culture-detail-item.no-transition {
+    -webkit-transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -ms-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    transition-duration: 0s;
 }
