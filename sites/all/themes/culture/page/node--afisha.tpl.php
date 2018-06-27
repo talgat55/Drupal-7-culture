@@ -267,6 +267,7 @@ $arr = [
                         $dateprevious->modify('+3 hours');
 
                         $redyprevious = $dateprevious->format('U');
+                        $mounth = $dateprevious->format('U');
         // place
         $tid = $field_place[0][value];
         $query = new EntityFieldQuery();
@@ -310,6 +311,7 @@ $arr = [
               echo '</pre>';*/
             if (count($news_items) > 0) {
                 $nid = $node->nid;
+                $output = [];
                 foreach ($news_items as $field) {
                     if ($nid != $field->nid) {
                         //$my_image_url = file_create_url($field->field_image_afisha['und'][0]['uri']);
@@ -325,22 +327,50 @@ $arr = [
 
                         $redyprevious = $dateprevious->format('U');
                         foreach ($field->field_date_afisha['und'] as $val){
-                            if($redyprevious < $val['value']){
+
+                            if($redyprevious < $val['value']  && $mounth == $val['value']){
                                 $redydate = $val['value'];
                                 break;
                             }
+
                         }
-                        echo '
-                    <div class="item-afisha">
-                        
-                        <div class="afisha-item-date ">' . date('d', $redydate) . ' ' . $arr[$month] . '</div>
-                             <img src="' . $my_image_url . '" alt="' . $field->field_image_afisha['und'][0]['alt'] . '" />
-                        <div class="title-afisha"><div><h3>' . $field->title . '</h3> <a class="link-c-a" href="/' . $alias . '">Подробнее</a> </div></div>
-                    </div>
-                
-                ';
+
+                        array_push(
+                            $output,
+                            array(
+                                'src'=>  $my_image_url,
+                                'day'=>  date('d', $redydate)  ,
+                                'month'=>  $month,
+                                'title' =>   $field->title,
+                                'path' => $alias
+                            )
+                        );
+
+
                     }
                 }
+                 function cmp($a, $b)
+                {
+                    return strcmp($a["day"], $b["day"]);
+                }
+                usort($output, "cmp");
+
+
+            print_r($output);
+            foreach ($output as $field) {
+                echo '
+                            <div class="item-afisha">
+                                <div class="afisha-item-date ">' . $field['day'] . ' ' . $arr[$field['month']] . '</div>
+                                     <img src="' . $field['src'] . '" alt="' .  $field['title'] . '" />
+                                <div class="title-afisha"><div><h3>' . $field['title'] . '</h3> <a class="link-c-a" href="/' . $field['path']  . '">Подробнее</a> </div></div>
+                            </div>
+                        ';
+            }
+
+
+
+
+
 
 
             }

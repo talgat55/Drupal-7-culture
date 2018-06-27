@@ -62,7 +62,8 @@
     padding: 25px 34px 20px 34px;
     border: 2.5px solid #12a69d;
 }
-.block-contact-popup::before{
+
+.block-contact-popup::before {
     content: " ";
     width: 28px;
     height: 28px;
@@ -74,11 +75,13 @@
     right: 41px;
     transform: rotateZ(45deg);
 }
-.block-contact-popup .close{
+
+.block-contact-popup .close {
     position: absolute;
     right: 13px;
     top: 12px;
 }
+
 .block-contact-popup .c-content {
     width: 410px;
 }
@@ -118,10 +121,12 @@
     text-decoration: none;
     text-align: center;
 }
-.block-contact-popup .text a:hover{
+
+.block-contact-popup .text a:hover {
     color: #12a69d;
 }
-.block-contact-popup .close:hover{
+
+.block-contact-popup .close:hover {
     opacity: .5;
 }
 
@@ -190,22 +195,25 @@ body {
 .node-type-gallery #breadcrumb {
     padding-top: 10px;
 }
-li.bvi-panel-close{
+
+li.bvi-panel-close {
     list-style: none;
 }
+
 .bvi-body .gallery-item,
 .bvi-body .ui-datepicker .ui-datepicker-prev,
-.bvi-body .ui-datepicker .ui-datepicker-next{
+.bvi-body .ui-datepicker .ui-datepicker-next {
     border: 1px solid #000;
 }
 
-
-.bvi-body .img-cat-place-aside-block{
-    display: none!important;
+.bvi-body .img-cat-place-aside-block {
+    display: none !important;
 }
-.bvi-body .banner.home-page img{
+
+.bvi-body .banner.home-page img {
     opacity: 0;
 }
+
 /*
 * Header
  */
@@ -324,7 +332,8 @@ li.bvi-panel-close{
     border-bottom: 1.2px solid #fff;
     cursor: pointer;
 }
-.alternative-version-view span a{
+
+.alternative-version-view span a {
     text-decoration: none;
     color: #fff;
 }
@@ -1480,8 +1489,8 @@ div.password-confirm {
 
 .slider-main-title {
     font-family: 'NeoSansPro-Medium';
-    font-size: 50px;
-    line-height: 60px;
+    font-size: 40px;
+    line-height: 49px;
     color: #fff;
 }
 
@@ -1593,17 +1602,16 @@ div.password-confirm {
     margin-bottom: 10px !important;
 }
 */
-.turizm-detail li:nth-of-type(3n+1) ,
+.turizm-detail li:nth-of-type(3n+1),
 .culture-detail li:nth-of-type(3n+1) {
     height: 625px;
     width: 40% !important;
 }
 
-.turizm-detail li ,
+.turizm-detail li,
 .culture-detail li {
     height: 300px;
 }
-
 
 .culture-top-block .cultre-place,
 .afisha-date,
@@ -1619,7 +1627,7 @@ div.password-confirm {
     left: 15px;
 }
 
-.turizm-detail-item ,
+.turizm-detail-item,
 .culture-detail-item {
     position: relative;
 }
@@ -1651,6 +1659,7 @@ div.password-confirm {
     padding: 0;
     margin: 80px 0 0 0;
 }
+
 .culture-detail.home-page {
     padding: 0;
     margin: 0;
@@ -1685,22 +1694,25 @@ div.password-confirm {
     float: left;
 }
 
-.turizm-detail.home-page li ,
+.turizm-detail.home-page li,
 .culture-detail.home-page li {
     list-style: none;
     float: left;
     width: 626px;
     margin: 12px;
 }
-.turizm-detail.home-page li{
+
+.turizm-detail.home-page li {
     list-style: none;
     float: left;
     width: 626px;
     margin: 12px;
 }
-.cat-turism-page{
+
+.cat-turism-page {
     margin: 0 -12px;
 }
+
 .special-row.margin-12 {
     margin: 0 -12px;
 }
@@ -3089,6 +3101,7 @@ div.admin-panel .description {
     transition: all 0.3s ease;
     display: block;
     padding: 0 15px 15px 15px;
+    background: #fff;
 }
 
 .culture-detail-row .culture-bottom-block div p {
@@ -3828,40 +3841,47 @@ div.admin-panel .description {
 .afisha-link-to-place:hover {
     text-decoration: underline;
 }
-.turist-banner .second-field-banner{
+
+.turist-banner .second-field-banner {
     display: table;
     width: 100%;
     margin-top: 20px;
 }
-.turist-banner .second-field-banner div{
+
+.turist-banner .second-field-banner div {
     display: table-cell;
     vertical-align: middle;
 
 }
+
 .turist-banner .second-field-banner div,
-.turist-banner .second-field-banner div a{
+.turist-banner .second-field-banner div a {
     color: #12a69d;
     text-decoration: none;
     font-family: 'NeoSansPro-Regular';
     font-size: 16px;
 }
-.turism-banner-delivery{
+
+.turism-banner-delivery {
     height: 2px;
     background: #12a69d;
     width: 56%;
     display: table;
     margin: 20px auto 11px;
 }
+
 .link-turism-banner:hover,
-.turist-banner .second-field-banner div a:hover{
+.turist-banner .second-field-banner div a:hover {
     text-decoration: underline;
 }
-.img-soc-banner-turism{
-    width: auto!important;
+
+.img-soc-banner-turism {
+    width: auto !important;
     display: table;
     margin: 0 auto;
 }
-.link-turism-banner{
+
+.link-turism-banner {
     color: #12a69d;
     text-decoration: none;
     font-family: 'NeoSansPro-Regular';
@@ -3869,25 +3889,30 @@ div.admin-panel .description {
     margin-bottom: 12px;
     display: inherit;
 }
-.turist-banner .title-field-banner{
+
+.turist-banner .title-field-banner {
     font-family: 'NeoSansPro-Medium';
     font-size: 18px;
     width: 85%;
     margin: 0 auto;
 }
-.textblock-banner.turism-page-banner{
-    top: -40px!important;
+
+.textblock-banner.turism-page-banner {
+    top: -40px !important;
 }
-.turizm-detail-item a{
+
+.turizm-detail-item a {
     display: block;
     width: 100%;
     height: 100%;
 }
-.title-field-banner.download-file{
+
+.title-field-banner.download-file {
     font-family: 'NeoSansPro-Medium';
     font-size: 18px;
 }
-.link-tofile-bannner{
+
+.link-tofile-bannner {
     color: #12a69d;
     margin-top: 39px;
     text-decoration: none;
@@ -3901,15 +3926,18 @@ div.admin-panel .description {
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-.link-tofile-bannner:hover{
+
+.link-tofile-bannner:hover {
     background: #12a69d;
     color: #fff;
 }
-.turist-row .aside.turism{
+
+.turist-row .aside.turism {
     position: absolute;
     right: -165px;
 }
-.turism-bottom-block h3{
+
+.turism-bottom-block h3 {
     font-family: 'NeoSansPro-Medium';
     font-size: 25px;
     margin-top: 0;
@@ -3917,31 +3945,38 @@ div.admin-panel .description {
     font-weight: 400;
     color: #fff;
 }
-.turizm-detail-part{
+
+.turizm-detail-part {
     margin: 0;
     padding: 0;
 }
-.turizm-detail-part li{
+
+.turizm-detail-part li {
     float: left;
     list-style: none;
     padding: 60px 35px 0 35px;
     position: relative;
+    width: 50%;
+    box-sizing: border-box;
 }
-.turism-bottom-block{
+
+.turism-bottom-block {
     position: absolute;
     bottom: 0;
     left: 35px;
     right: 35px;
     height: 100px;
 }
-.turizm-detail-item-part a{
+
+.turizm-detail-item-part a {
     display: block;
     width: 100%;
     height: 100%;
 }
-.download-putivoditel{
+
+.download-putivoditel {
     background: url(../images/map.png);
-    background-repeat: no-repeat!important;
+    background-repeat: no-repeat !important;
     background-position-x: 100%;
     padding: 18px 24px;
     display: table;
@@ -3949,40 +3984,47 @@ div.admin-panel .description {
     font-size: 16px;
     margin: 50px auto;
     background-color: #12a69d;
-    color: #fff!important;
+    color: #fff !important;
     text-decoration: none;
     border: 1.5px solid #12a69d;
 }
-.download-putivoditel:hover{
+
+.download-putivoditel:hover {
     background-color: transparent;
-    color: #12a69d!important;
+    color: #12a69d !important;
 }
-.margin-bottom-100{
+
+.margin-bottom-100 {
     margin-bottom: 100px;
 }
-.turism-row.home-page{
+
+.turism-row.home-page {
     margin: 0 -2px;
     padding: 0;
 }
-.turism-row.home-page li{
+
+.turism-row.home-page li {
     list-style: none;
     float: left;
     width: 33.33%;
     padding: 0 2px 4px 2px;
     box-sizing: border-box;
 }
-.turism-row.home-page li img{
+
+.turism-row.home-page li img {
     max-width: 100%;
     vertical-align: middle;
 }
-.turism-item{
+
+.turism-item {
     position: relative;
 }
-.turism-row.home-page.turism-omsk{
-    margin-bottom: 30px!important;
+
+.turism-row.home-page.turism-omsk {
+    margin-bottom: 30px !important;
 }
 
-.turism-item h3{
+.turism-item h3 {
     background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
     background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
@@ -3997,60 +4039,74 @@ div.admin-panel .description {
     box-sizing: border-box;
     width: 100%;
 }
-.cat-place-aside.turizm-single li{
+
+.cat-place-aside.turizm-single li {
     border-left: none;
     border-right: none;
 }
-.cat-place-aside{
+
+.cat-place-aside {
     border: none;
 }
-.cat-place-aside.turizm-single li:last-child{
+
+.cat-place-aside.turizm-single li:last-child {
     border-bottom: 1.5px solid #000;
 }
-.cat-place-aside.turizm-single li:first-child{
+
+.cat-place-aside.turizm-single li:first-child {
     border-top: 1.5px solid #000;
 }
-.node-type-turizm .title-section{
+
+.node-type-turizm .title-section {
     display: none;
 }
-.turizm-node{
+
+.turizm-node {
     margin-top: 30px;
 }
-.cat-place-aside.turizm-single{
+
+.cat-place-aside.turizm-single {
     margin-top: 0;
 }
-.turizm.home-page.single #stickyblock{
+
+.turizm.home-page.single #stickyblock {
     position: absolute;
     right: -124px;
 }
-.turizm.home-page.single{
+
+.turizm.home-page.single {
     position: relative;
 }
-.archelogy-page{
+
+.archelogy-page {
     margin: 0;
     padding: 0;
 }
-.archelogy-page li{
+
+.archelogy-page li {
     float: left;
     width: 25%;
     list-style: none;
     height: 260px;
 }
 
-.archelogy-item{
+.archelogy-item {
     padding: 0 8px 16px 8px;
     box-sizing: border-box;
 }
-.archelogy-item img{
+
+.archelogy-item img {
     max-width: 100%;
     vertical-align: middle;
 }
-.archelogy-item-block{
+
+.archelogy-item-block {
     height: 100%;
-    background-position: 50% 50%!important;
+    background-position: 50% 50% !important;
     position: relative;
 }
-.archelogy-item-block h3{
+
+.archelogy-item-block h3 {
     background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
     background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
@@ -4067,40 +4123,50 @@ div.admin-panel .description {
     font-size: 18px;
     font-weight: 400;
 }
-.archelogy-item a{
+
+.archelogy-item a {
     text-decoration: none;
 }
-.position-absolute{
+
+.position-absolute {
     position: absolute;
 }
-.title-section.capitalize{
-    text-transform: capitalize!important;
+
+.title-section.capitalize {
+    text-transform: capitalize !important;
 }
-.node-type-archelogy .node-place-img img{
+
+.node-type-archelogy .node-place-img img {
     max-width: 100%;
 }
+
 .node-type-archelogy #breadcrumb,
 .page-archelogy #breadcrumb,
 .node-type-place #breadcrumb,
 .node-type-turizm #breadcrumb,
-.custom-top-padd-bred{
+.custom-top-padd-bred {
     padding-top: 15px;
 }
-.node-type-archelogy img{
+
+.node-type-archelogy img {
     max-width: 100%;
 }
+
 .node-type-archelogy .title-section {
     margin-bottom: 35px;
 }
-.views-reset-button{
+
+.views-reset-button {
     display: none;
 }
+
 .page-node-491 .views-exposed-form .views-exposed-widget,
-.page-culturedetails .views-exposed-form .views-exposed-widget{
-    float: none!important;
+.page-culturedetails .views-exposed-form .views-exposed-widget {
+    float: none !important;
 }
+
 .page-node-491 #edit-field-cat-turizm-tid,
-.page-culturedetails #edit-field-categories-tid{
+.page-culturedetails #edit-field-categories-tid {
     display: table;
     margin: 0 auto;
     padding-right: 10px;
@@ -4108,18 +4174,19 @@ div.admin-panel .description {
     padding-bottom: 11px;
     border-bottom: 1.5px solid #000;
 }
-.page-node-491 #edit-field-cat-turizm-tid{
+
+.page-node-491 #edit-field-cat-turizm-tid {
     margin-bottom: 35px;
 }
 
-
 .page-node-491 .form-item.form-type-radio.form-item-field-cat-turizm-tid,
-.page-culturedetails  .form-item.form-type-radio.form-item-field-categories-tid{
+.page-culturedetails .form-item.form-type-radio.form-item-field-categories-tid {
     display: table-cell;
     padding-right: 28px;
 }
+
 .page-node-491 .form-item.form-type-radio.form-item-field-cat-turizm-tid::after,
-.page-culturedetails  .form-item.form-type-radio.form-item-field-categories-tid::after{
+.page-culturedetails .form-item.form-type-radio.form-item-field-categories-tid::after {
     width: 5px;
     display: inline-block;
     position: relative;
@@ -4130,36 +4197,43 @@ div.admin-panel .description {
     border-radius: 50%;
     background: #000;
 }
+
 .page-node-491 .form-item.form-type-radio.form-item-field-cat-turizm-tid:last-child::after,
-.page-culturedetails  .form-item.form-type-radio.form-item-field-categories-tid:last-child::after{
+.page-culturedetails .form-item.form-type-radio.form-item-field-categories-tid:last-child::after {
     display: none;
 }
+
 .page-node-491 .form-item.form-type-radio.form-item-field-cat-turizm-tid:last-child,
-.page-culturedetails  .form-item.form-type-radio.form-item-field-categories-tid:last-child{
+.page-culturedetails .form-item.form-type-radio.form-item-field-categories-tid:last-child {
     padding-right: 0;
 }
+
 .page-node-491 .form-item.form-type-radio input,
-.page-culturedetails  .form-item.form-type-radio input{
+.page-culturedetails .form-item.form-type-radio input {
     display: none;
 }
+
 .page-node-491 .views-exposed-widgets,
-.page-culturedetails  .views-exposed-widgets{
+.page-culturedetails .views-exposed-widgets {
     position: relative;
     display: table;
     margin: 0 auto;
 }
+
 .page-node-491 .views-submit-button,
-.page-culturedetails .views-submit-button{
+.page-culturedetails .views-submit-button {
     position: absolute;
     top: 0;
     right: -83px;
 }
-.page-node-491  .views-exposed-form .views-exposed-widget .form-submit,
-.page-culturedetails  .views-exposed-form .views-exposed-widget .form-submit{
+
+.page-node-491 .views-exposed-form .views-exposed-widget .form-submit,
+.page-culturedetails .views-exposed-form .views-exposed-widget .form-submit {
     margin-top: 0;
 }
+
 .page-node-491 .form-item-field-cat-turizm-tid label,
-.page-culturedetails .form-item-field-categories-tid label{
+.page-culturedetails .form-item-field-categories-tid label {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     font-family: 'NeoSansPro-Regular';
@@ -4169,20 +4243,566 @@ div.admin-panel .description {
 }
 
 .page-node-491 .form-item-field-cat-turizm-tid:hover,
-.page-culturedetails .form-item-field-categories-tid:hover{
+.page-culturedetails .form-item-field-categories-tid:hover {
     color: #12a69d;
 }
 
-.page-news .pager-load-more.news{
+.page-news .pager-load-more.news {
     margin-bottom: 40px;
 }
 
-.page-afisha  .isotope.no-transition,
+.page-afisha .isotope.no-transition,
 .page-afisha .isotope.no-transition .isotope-item,
-.page-afisha  .culture-detail-item.no-transition {
+.page-afisha .culture-detail-item.no-transition {
     -webkit-transition-duration: 0s;
     -moz-transition-duration: 0s;
     -ms-transition-duration: 0s;
     -o-transition-duration: 0s;
     transition-duration: 0s;
+}
+
+.responsive-menus.responsified span.toggler {
+    color: #333 !important;
+    box-shadow: none;
+    background: #fff !important;
+}
+
+@media (max-width: 1299px) {
+    .container {
+        width: 1000px;
+    }
+
+    .sldier-main-holder .slider-nav .slider-arrow-right {
+        right: -45px;
+    }
+
+    .sldier-main-holder .slider-nav .slider-arrow-left {
+        left: -45px;
+    }
+
+    #logo img {
+        width: 289px;
+    }
+
+    .right-top-header {
+        width: 30%;
+    }
+
+    .main-menu li {
+        padding: 0 54.7px 0 0 !important;
+
+    }
+
+    .turizm-detail.home-page li,
+    .culture-detail.home-page li {
+        list-style: none;
+        float: left;
+        width: 566px;
+    }
+}
+
+@media (max-width: 1024px) {
+    #page-wrapper {
+        width: 100%;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    html {
+        overflow-x: hidden;
+        overflow: hidden;
+    }
+
+    .main-menu li {
+        padding: 0 21.7px 0 0 !important;
+    }
+
+    .textblock-banner {
+        width: 46%;
+    }
+
+    .turizm-detail li:nth-of-type(3n+1),
+    .culture-detail li:nth-of-type(3n+1),
+    .turizm-detail li,
+    .culture-detail li {
+        height: 300px !important;
+        width: 100% !important;
+    }
+
+    .news.home-page li {
+        width: 33.33%;
+    }
+
+    .place.home-page li {
+        width: 50%;
+    }
+
+    .place.home-page li img {
+        height: auto;
+    }
+
+    .img-cat-place-aside-block {
+        display: none !important;
+    }
+
+    .share-block p {
+        display: none;
+    }
+
+    .cat-place-aside li a {
+        padding: 0 5px;
+    }
+
+    .cat-place-aside li .img-cat-place-aside-block, .cat-place-aside li h3 {
+        display: block;
+    }
+
+    .gallery-col-md-single {
+        width: 50%;
+    }
+
+    .culture-detail-row li {
+        width: 33.33%;
+    }
+
+    .banner.home-page img {
+        height: auto;
+        width: auto;
+    }
+
+    .slider-main-text {
+        font-size: 14px;
+    }
+
+    .slider-main-title {
+        font-size: 37px;
+        line-height: 48px;
+    }
+
+    .afisha-row-list li {
+        width: 50%;
+    }
+
+    .afisha-row-list li img {
+        min-width: 100%;
+    }
+
+    .correct-afisha-row {
+        position: relative;
+    }
+
+    .afisha-row-holder .col-md-8 {
+        float: left;
+        width: 100%;
+        margin-top: 274px;
+    }
+
+    .afisha-row-holder .col-md-4 {
+        float: right;
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .node-type-afisha .content-article {
+        position: relative;
+    }
+
+    .node-type-afisha .col-md-5 {
+        position: absolute;
+        top: 0;
+    }
+
+    .node-type-afisha .col-md-7 {
+        margin-top: 350px;
+    }
+
+    .node-type-afisha .col-md-5,
+    .node-type-afisha .col-md-7 {
+        width: 100%;
+    }
+    .archelogy-page li{
+        width: 33.33%;
+    }
+    .archelogy-item img{
+        height: 100%;
+    }
+    .turizm-detail-item{
+        background-repeat: no-repeat!important;
+        background-size: cover!important;
+        background-position: center center!important;
+    }
+    .textblock-banner,
+    .page-node-488 .textblock-banner{
+        border-radius: 0;
+    }
+    .textblock-banner.turism-page-banner {
+        top: -32px !important;
+    }
+    .page-node-491 .form-item.form-type-radio.form-item-field-cat-turizm-tid{
+        display: inline-block;
+    }
+    .turizm-detail-item-part img{
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width: 876px) {
+    .ui-widget.ui-widget-content{
+        display: table!important;
+        margin: 0 auto;
+    }
+    .center-top-header,
+    .right-top-header,
+    #logo {
+        display: block;
+        width: 100%;
+    }
+
+    #logo img {
+        width: 289px;
+        margin: 15px auto;
+        display: table;
+    }
+
+    .alternative-version-view {
+        margin: 0px auto;
+        display: table;
+        padding-top: 15px;
+    }
+
+    #footer-wrapper .alternative-version-view {
+        text-decoration: none;
+    }
+
+    #footer-wrapper .alternative-version-view,
+    #footer-wrapper .link-to-social,
+    .top-header-menu ul.inline, .top-header-menu ul.links.inline,
+    .link-to-social {
+        margin: 0 auto;
+    }
+    .turism-row.home-page li,
+    #footer-wrapper .main-footer-menu li,
+    .news.home-page li {
+        width: 50%;
+    }
+
+    #footer-wrapper .col-md-6 {
+        width: 100%;
+    }
+
+    .main-footer-menu {
+        margin-top: 15px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+    .culture-detail-row li {
+        width: 50%;
+    }
+     .page-culturedetails .form-item.form-type-radio.form-item-field-categories-tid {
+        display: inline-block;
+    }
+    .culture-row-image{
+        height: auto;
+    }
+    .culture-detail-row li:hover a{
+        box-shadow: none;
+        border: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .culture-detail-row li {
+        width: 50%;
+    }
+
+    .culture-row-image {
+        height: auto;
+    }
+
+    .page-node-491 .form-item.form-type-radio.form-item-field-cat-turizm-tid::after, .page-culturedetails .form-item.form-type-radio.form-item-field-categories-tid::after {
+        display: none;
+    }
+
+    .container {
+        width: 98%;
+    }
+
+    .page-node-491 .form-item.form-type-radio.form-item-field-cat-turizm-tid, .page-culturedetails .form-item.form-type-radio.form-item-field-categories-tid {
+        display: inline-block;
+    }
+
+    .text-block-slider {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .sldier-main-holder .slider-nav .slider-arrow-right {
+        right: 15px;
+    }
+
+    .sldier-main-holder .slider-nav .slider-arrow-left {
+        left: 15px;
+    }
+
+    .textblock-banner {
+        border-radius: 0;
+    }
+
+    .banner.home-page img {
+        height: auto;
+    }
+
+    .textblock-banner {
+        right: 0;
+        width: 100%;
+        top: 0;
+        position: relative;
+        height: auto;
+    }
+
+    .textblock-banner-wallpaper {
+        position: relative;
+        top: 5px;
+        transform: none;
+
+    }
+
+    .textblock-banner.right-block {
+        right: 0;
+    }
+
+    .text-block-slider .col-md-6 {
+        width: 100%;
+        float: none;
+    }
+
+    .text-block-slider--right-block {
+        width: 93%;
+        display: table;
+        margin: 13px auto;
+    }
+
+    .slider-main-title {
+        font-size: 27px;
+        line-height: 35px;
+    }
+
+    .slider-main-text {
+        padding: 5px 0;
+    }
+
+    .sldier-main-holder .slider-nav img {
+        width: 15px;
+    }
+
+    .gallery-col-md-single {
+        width: 100% !important;
+    }
+
+    .news .col-md-7,
+    #footer-wrapper .main-footer-menu li,
+    .news.home-page li {
+        width: 100%;
+    }
+
+    .news.home-page li:hover {
+        transform: none;
+    }
+
+    .content-article {
+        margin: 0 auto;
+    }
+
+    .node-type-archelogy .col-md-4, .node-type-turizm .col-md-4, .node-type-place .col-md-4, .place-row .col-md-4 {
+        width: 100%;
+        padding: 0 !important;
+    }
+
+    .node-type-culture-detail #breadcrumb,
+    .node-type-archelogy .col-md-8, .node-type-turizm .col-md-8, .node-type-place .col-md-8, .place-row .col-md-8 {
+        width: 100%;
+    }
+
+    .place-node-site, .place-node-phone, .place-node-adress {
+        display: block;
+    }
+
+    .gallery-item {
+        width: 50% !important;
+    }
+
+    .culture-detail-row li:hover a {
+        transform: none;
+        box-shadow: none;
+        z-index: 1;
+    }
+
+    .top-block-content #breadcrumb, .top-block-content .share-block {
+        display: block;
+    }
+
+    .share-block {
+        text-align: left;
+    }
+
+    #node-navigation {
+        margin: 0 0 30px auto;
+    }
+
+    .date-main-slier {
+        font-size: 30px
+    }
+
+    .title-afisha a {
+        font-size: 12px;
+    }
+
+    .afisha-top-bar-page div {
+        display: block;
+        padding-bottom: 20px;
+    }
+    .title-afisha-node{
+        font-size: 24px;
+    }
+    .archelogy-page li {
+        width: 50%;
+        height: auto;
+    }
+    .archelogy-item img{
+        width: 100%;
+    }
+    .archelogy-item img {
+        max-height: 100%;
+    }
+    .textblock-banner.left-block{
+        left: 0;
+    }
+    .textblock-banner.turism-page-banner {
+        top: -7px!important;
+    }
+    .banner.home-page img {
+        height: auto;
+        width: 100%;
+    }
+    .turism-bottom-block h3 {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: 100% !important;
+    }
+    .main-block-af li span{
+        display: block;
+    }
+    .node-type-afisha .col-md-7 {
+        margin-top: 461px;
+    }
+    .main-block-af li span:last-child{
+        text-align: left;
+    }
+    .title-section {
+        font-size: 18px;
+    }
+
+    .top-header {
+        display: table;
+        width: 100%;
+    }
+
+    .slider-main-title {
+        font-size: 25px;
+    }
+
+    .slider-main-text {
+        font-size: 15px;
+    }
+
+    .special-row.margin-12 {
+        margin: 0;
+    }
+
+    .date-main-slier {
+        font-size: 41px;
+    }
+
+    .place-main-slier {
+        font-size: 11px;
+    }
+
+    .date-main-slier span {
+        font-size: 25px;
+    }
+
+    #logo img {
+        display: table;
+        margin: 0 auto;
+    }
+    .turizm-detail-part li,
+    .turism-row.home-page li,
+    .afisha-row-list li,
+    .culture-detail-row li,
+    .block-contact-popup .c-content {
+        width: 100%;
+    }
+
+    .culture-bottom-block h3 {
+        font-size: 23px;
+    }
+
+    .turizm-detail.home-page li, .culture-detail.home-page li {
+        margin: 0 0 20px 0;
+    }
+
+    .center-top-header,
+    .right-top-header,
+    #logo {
+        display: block;
+        width: 100%;
+    }
+    .turism-row.home-page li img {
+        min-width: 100%;
+    }
+    .archelogy-page li,
+    .place.home-page li {
+        width: 100%;
+    }
+
+    .main-footer-menu {
+        text-align: center;
+    }
+
+    .center-top-header {
+        margin: 20px 0;
+    }
+
+    .node-place-img h1 {
+        font-size: 16px;
+    }
+
+    .list-terms-afisha li {
+        display: block;
+        width: 100%;
+    }
+    .block-text-main-slider{
+        padding: 17px 0;
+    }
+    .title-afisha{
+        opacity: 1;
+    }
+    .node-type-archelogy img{
+        max-width: 100%;
+        margin: 0 auto;
+        display: table;
+    }
+    .article-slider div{
+        margin: 0!important;
+    }
 }
