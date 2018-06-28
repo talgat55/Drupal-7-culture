@@ -3779,10 +3779,27 @@ div.admin-panel .description {
 #node-navigation {
     padding: 0;
     display: table;
-    margin: 0 0 0 auto;
+    margin: 0 0 30px auto;
     width: 90%;
 }
-
+.button-print{
+    display: table-cell;
+    vertical-align: middle;
+    color: #333;
+    text-decoration: none;
+    font-family: 'NeoSansPro-Regular';
+    position: relative;
+    top: 3px;
+}
+.button-print img{
+    height: 13px;
+    position: relative;
+    top: 2px;
+}
+.button-print:hover{
+    text-decoration: underline;
+    color: #20acaf;
+}
 #node-navigation li a {
     display: table;
     width: 100%;
@@ -4266,7 +4283,8 @@ div.admin-panel .description {
     box-shadow: none;
     background: #fff !important;
 }
-.bvi-body .turizm-detail.home-page li{
+
+.bvi-body .turizm-detail.home-page li {
     border: 1px solid #000;
 
 }
@@ -4427,38 +4445,46 @@ div.admin-panel .description {
     .node-type-afisha .col-md-7 {
         width: 100%;
     }
-    .archelogy-page li{
+
+    .archelogy-page li {
         width: 33.33%;
     }
-    .archelogy-item img{
+
+    .archelogy-item img {
         height: 100%;
     }
-    .turizm-detail-item{
-        background-repeat: no-repeat!important;
-        background-size: cover!important;
-        background-position: center center!important;
+
+    .turizm-detail-item {
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center center !important;
     }
+
     .textblock-banner,
-    .page-node-488 .textblock-banner{
+    .page-node-488 .textblock-banner {
         border-radius: 0;
     }
+
     .textblock-banner.turism-page-banner {
         top: -32px !important;
     }
-    .page-node-491 .form-item.form-type-radio.form-item-field-cat-turizm-tid{
+
+    .page-node-491 .form-item.form-type-radio.form-item-field-cat-turizm-tid {
         display: inline-block;
     }
-    .turizm-detail-item-part img{
+
+    .turizm-detail-item-part img {
         max-width: 100%;
     }
 
 }
 
 @media (max-width: 876px) {
-    .ui-widget.ui-widget-content{
-        display: table!important;
+    .ui-widget.ui-widget-content {
+        display: table !important;
         margin: 0 auto;
     }
+
     .center-top-header,
     .right-top-header,
     #logo {
@@ -4488,6 +4514,7 @@ div.admin-panel .description {
     .link-to-social {
         margin: 0 auto;
     }
+
     .turism-row.home-page li,
     #footer-wrapper .main-footer-menu li,
     .news.home-page li {
@@ -4505,16 +4532,20 @@ div.admin-panel .description {
     .footer-bottom {
         text-align: center;
     }
+
     .culture-detail-row li {
         width: 50%;
     }
-     .page-culturedetails .form-item.form-type-radio.form-item-field-categories-tid {
+
+    .page-culturedetails .form-item.form-type-radio.form-item-field-categories-tid {
         display: inline-block;
     }
-    .culture-row-image{
+
+    .culture-row-image {
         height: auto;
     }
-    .culture-detail-row li:hover a{
+
+    .culture-detail-row li:hover a {
         box-shadow: none;
         border: none;
     }
@@ -4528,7 +4559,6 @@ div.admin-panel .description {
     .culture-row-image {
         height: auto;
     }
-
     .page-node-491 .form-item.form-type-radio.form-item-field-cat-turizm-tid::after, .page-culturedetails .form-item.form-type-radio.form-item-field-categories-tid::after {
         display: none;
     }
@@ -4632,7 +4662,11 @@ div.admin-panel .description {
     .node-type-archelogy .col-md-8, .node-type-turizm .col-md-8, .node-type-place .col-md-8, .place-row .col-md-8 {
         width: 100%;
     }
-
+    .button-print{
+        padding-left: 13px;
+        padding-top: 15px;
+        display: block;
+    }
     .place-node-site, .place-node-phone, .place-node-adress {
         display: block;
     }
@@ -4671,29 +4705,37 @@ div.admin-panel .description {
         display: block;
         padding-bottom: 20px;
     }
-    .title-afisha-node{
+
+    .title-afisha-node {
         font-size: 24px;
     }
+
     .archelogy-page li {
         width: 50%;
         height: auto;
     }
-    .archelogy-item img{
+
+    .archelogy-item img {
         width: 100%;
     }
+
     .archelogy-item img {
         max-height: 100%;
     }
-    .textblock-banner.left-block{
+
+    .textblock-banner.left-block {
         left: 0;
     }
+
     .textblock-banner.turism-page-banner {
-        top: -7px!important;
+        top: -7px !important;
     }
+
     .banner.home-page img {
         height: auto;
         width: 100%;
     }
+
     .turism-bottom-block h3 {
         font-size: 19px;
     }
@@ -4703,15 +4745,19 @@ div.admin-panel .description {
     .gallery-item {
         width: 100% !important;
     }
-    .main-block-af li span{
+
+    .main-block-af li span {
         display: block;
     }
+
     .node-type-afisha .col-md-7 {
         margin-top: 461px;
     }
-    .main-block-af li span:last-child{
+
+    .main-block-af li span:last-child {
         text-align: left;
     }
+
     .title-section {
         font-size: 18px;
     }
@@ -4749,6 +4795,7 @@ div.admin-panel .description {
         display: table;
         margin: 0 auto;
     }
+
     .turizm-detail-part li,
     .turism-row.home-page li,
     .afisha-row-list li,
@@ -4771,9 +4818,11 @@ div.admin-panel .description {
         display: block;
         width: 100%;
     }
+
     .turism-row.home-page li img {
         min-width: 100%;
     }
+
     .archelogy-page li,
     .place.home-page li {
         width: 100%;
@@ -4795,30 +4844,172 @@ div.admin-panel .description {
         display: block;
         width: 100%;
     }
-    .block-text-main-slider{
+
+    .block-text-main-slider {
         padding: 17px 0;
     }
-    .title-afisha{
+
+    .title-afisha {
         opacity: 1;
     }
-    .node-type-archelogy img{
+
+    .node-type-archelogy img {
         max-width: 100%;
         margin: 0 auto;
         display: table;
     }
-    .article-slider div{
-        margin: 0!important;
+
+    .article-slider div {
+        margin: 0 !important;
     }
-    .bvi-body  .cat-turism-page{
-        margin:0;
+
+    .bvi-body .cat-turism-page {
+        margin: 0;
     }
-    .bvi-body  .turizm-detail li,
-    .bvi-body  .turizm-detail li:nth-of-type(3n+1){
+
+    .bvi-body .turizm-detail li,
+    .bvi-body .turizm-detail li:nth-of-type(3n+1) {
         height: 110px !important;
     }
-    .bvi-body  .news.home-page,
-    .bvi-body  .correct-afisha-row,
-    .bvi-body  .special-row.margin-10 {
+
+    .bvi-body .news.home-page,
+    .bvi-body .correct-afisha-row,
+    .bvi-body .special-row.margin-10 {
         margin: 0;
+    }
+}
+
+@media print {
+    .container,#content, #page {
+        width: 100%;
+        margin: 0;
+        float: none;
+    }
+    .content-article img,
+    .button-print,
+    .news-tags,
+    #node-navigation,
+    #breadcrumb,
+    .share-block{
+        display: none!important;
+    }
+
+    body {
+        font: 13pt Georgia, "Times New Roman", Times, serif;
+        line-height: 1.3;
+        background: #fff !important;
+        color: #000;
+        height: 100%;
+        overflow-y: hidden;
+        margin-top: 0;
+    }
+
+    h1 {
+        font-size: 24pt;
+    }
+
+    h2, h3, h4 {
+        font-size: 14pt;
+        margin-top: 25px;
+    }
+
+    /* Alle Seitenumbrüche definieren */
+    a {
+        page-break-inside: avoid
+    }
+
+    blockquote {
+        page-break-inside: avoid;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        page-break-inside: avoid
+    }
+
+    img {
+        page-break-inside: avoid;
+        page-break-after: avoid;
+    }
+
+    table, pre {
+        page-break-inside: avoid
+    }
+
+    ul, ol, dl {
+        page-break-before: avoid
+    }
+
+    /* Linkfarbe und Linkverhalten darstellen */
+    a:link, a:visited, a {
+        background: transparent;
+        color: #520;
+        font-weight: bold;
+        text-decoration: underline;
+        text-align: left;
+    }
+
+    a {
+        page-break-inside: avoid
+    }
+
+    a[href^=http]:after {
+        content: " <" attr(href) "> ";
+    }
+
+
+
+    /**
+     * Eingebundene Videos verschwinden lassen und den Whitespace der iframes auf null reduzieren.
+     */
+    .entry iframe, ins {
+        display: none;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        line-height: 0pt !important;
+        white-space: nowrap;
+    }
+
+    .embed-youtube, .embed-responsive {
+        position: absolute;
+        height: 0;
+        overflow: hidden;
+    }
+
+    /* Unnötige Elemente ausblenden für den Druck */
+    #header-widgets, nav, aside.mashsb-container,
+    .sidebar, .mashshare-top, .mashshare-bottom,
+    .content-ads, .make-comment, .author-bio,
+    .heading, .related-posts, #decomments-form-add-comment,
+    #breadcrumbs, #footer, .post-byline, .meta-single,
+    .site-title img, .post-tags, .readability {
+        display: none;
+    }
+
+
+    footer,
+    header{
+        display: none;
+    }
+
+    /* Wichtige Elemente definieren */
+    p, address, li, dt, dd, blockquote {
+        font-size: 100%
+    }
+
+    /* Zeichensatz fuer Code Beispiele */
+    code, pre {
+        font-family: "Courier New", Courier, mono
+    }
+
+    ul, ol {
+        list-style: square;
+        margin-left: 18pt;
+        margin-bottom: 20pt;
+    }
+
+    li {
+        line-height: 1.6em;
     }
 }
