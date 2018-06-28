@@ -4266,6 +4266,10 @@ div.admin-panel .description {
     box-shadow: none;
     background: #fff !important;
 }
+.bvi-body .turizm-detail.home-page li{
+    border: 1px solid #000;
+
+}
 
 @media (max-width: 1299px) {
     .container {
@@ -4804,5 +4808,17 @@ div.admin-panel .description {
     }
     .article-slider div{
         margin: 0!important;
+    }
+    .bvi-body  .cat-turism-page{
+        margin:0;
+    }
+    .bvi-body  .turizm-detail li,
+    .bvi-body  .turizm-detail li:nth-of-type(3n+1){
+        height: 110px !important;
+    }
+    .bvi-body  .news.home-page,
+    .bvi-body  .correct-afisha-row,
+    .bvi-body  .special-row.margin-10 {
+        margin: 0;
     }
 }

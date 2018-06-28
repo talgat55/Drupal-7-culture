@@ -17,7 +17,6 @@
                     <ul class="afisha-row-list clearfix">
 
                         <?php
-
                         $dateprevious = new DateTime('yesterday 23:59');
                         $dateprevious->modify('+3 hours');
 

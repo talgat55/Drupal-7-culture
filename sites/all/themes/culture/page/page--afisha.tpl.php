@@ -113,13 +113,14 @@
                 <?php
                 $name = 'cat_afisha';
 
-
+                
 
 
                 $myvoc = taxonomy_vocabulary_machine_name_load($name);
                 $tree = taxonomy_get_tree($myvoc->vid);
                 //var_dump($tree);
                 echo '<ul class="list-terms-afisha clearfix">';
+
                 echo '<li class="current"  data-filter="">Все</li>';
                 foreach ($tree as $key => $term) {
 
