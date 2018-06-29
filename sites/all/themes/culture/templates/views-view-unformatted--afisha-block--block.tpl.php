@@ -11,31 +11,109 @@
         <div class="special-row margin-10">
         <div class="afisha-carousel home-page">
             <?php
-
+            $arr = [
+                'января',
+                'февраля',
+                'марта',
+                'апреля',
+                'мая',
+                'июня',
+                'июля',
+                'августа',
+                'сентября',
+                'октября',
+                'ноября',
+                'декабря'
+            ];
+            $output = [];
             foreach ($view->style_plugin->rendered_fields as $view_field): ?>
                 <?php // krumo($view_field);exit;
-                var_dump($view_field["field_date_afisha"]);
-            //$datefield = explode(',', $view_field['field_date_afisha']);
-           // $datefieldinvert =   explode(' ',trim($datefield[1]));
+
+                $my_image_url =$view_field['field_image_afisha'];
+
+                $alias = $view_field['path'];
+                //  $real_path =drupal_get_path_alias($alias);
+               // $month = date('m', $view_field['field_date_afisha']) - 1;
+                //  <div class="afisha-item-date">'.$datefieldinvert[1].' '.$datefieldinvert[0].'</div>
+                $dateprevious = new DateTime('yesterday 23:59');
+                $dateprevious->modify('+3 hours');
+                $redyprevious = $dateprevious->format('U');
+
+                $arr_date = explode(",", $view_field['field_date_afisha']);
+                if (count($arr_date) >= 2) {
+                    foreach ($arr_date as $val) {
+
+                        if ($redyprevious < $val ) {
+                            $redydate = $val;
+                            // $day = date('d', $val['value']);
+                            $date = $redydate;
+                            array_push(
+                                $output,
+                                array(
+                                    'date' => $date,
+                                    'src' => $my_image_url,
+                                    'title' => $view_field['title'],
+                                    'path' => $alias
+                                )
+                            );
+                            break;
+                        }
+
+                    }
+                }else{
+                    $date = $view_field['field_date_afisha'];
+                      if ($redyprevious < $date ) {
+                          array_push(
+                              $output,
+                              array(
+                                  'date' => $date,
+                                  'src' => $my_image_url,
+                                  'title' => $view_field['title'],
+                                  'path' => $alias
+                              )
+                          );
+                      }
+                }
+
+
+
+
+
+
+            endforeach;
+
+
+
+            function cmp($a, $b)
+            {
+                return strcmp($a["date"], $b["date"]);
+            }
+
+            usort($output, "cmp");
+
+
+            foreach ($output as $field) {
+
+                if($field['date'] == ''){
+                    $month = date('m', $field['date']['0']['value']) - 1;
+                    $day = date('d', $field['date']['0']['value']);
+                }else{
+                    $month = date('m', $field['date']) - 1;
+                    $day = date('d', $field['date']);
+                }
 
                 echo '
-                    <div class="item-afisha">
-                        <div class="afisha-item-date">'.$datefieldinvert[1].' '.$datefieldinvert[0].'</div>
-                        ' . $view_field['field_image_afisha'] . '
-                        <div class="title-afisha">'.$view_field['title'].'</div>
+                   <div class="item-afisha">
+                        <div class="afisha-item-date">'.$day.' '.$arr[$month].'</div>
+                        <img src="' . $field['src'] . '" alt="' . $field['title'] . '" />
+                        <div class="title-afisha"><a href="'.$field['path'].'">' . $field['title'] . '</a></div>
                     </div>
-            ';
-                //var_dump($view_field);
-                /*  $params = array(
-                      'style_name' => 'original',
-                      'path' => $view_field['field_main_img'],
-                      'alt' => '',
-                      'title' => '',
-                      'attributes' => array('class' => array('image')),
-                      'getsize' => FALSE,
-                  );
-                  */
-            endforeach; ?>
+                        ';
+            }
+
+
+
+            ?>
 
 
         </div>

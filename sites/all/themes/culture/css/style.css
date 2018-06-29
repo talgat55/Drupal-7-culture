@@ -1559,7 +1559,8 @@ div.password-confirm {
 
 .news.home-page li img {
     width: 100%;
-    height: auto;
+    /*height: auto;*/
+    height: 170px;
 }
 
 .news.home-page li h3 {
@@ -4887,7 +4888,11 @@ div.admin-panel .description {
     }
     .content-article img,
     .button-print,
+    #stickyblock,
     .news-tags,
+    .slider-arrow-left.slick-arrow,
+    .slider-arrow-right.slick-arrow,
+    .article-slider-row,
     #node-navigation,
     #breadcrumb,
     .share-block{
