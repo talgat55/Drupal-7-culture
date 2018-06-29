@@ -14,9 +14,9 @@
 
             foreach ($view->style_plugin->rendered_fields as $view_field): ?>
                 <?php // krumo($view_field);exit;
-                print_r($view_field['field_date_afisha']);
-            $datefield = explode(',', $view_field['field_date_afisha']);
-            $datefieldinvert =   explode(' ',trim($datefield[1]));
+                var_dump($view_field["field_date_afisha"]);
+            //$datefield = explode(',', $view_field['field_date_afisha']);
+           // $datefieldinvert =   explode(' ',trim($datefield[1]));
 
                 echo '
                     <div class="item-afisha">

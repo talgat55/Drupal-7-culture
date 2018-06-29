@@ -157,7 +157,9 @@ $arr = [
                                 <p><?php if ($field_place[0][value] == 'none') {
                                         print '-';
                                     } else {
-                                     print '<a class="afisha-link-to-place" href="'.$field_link_to_place[0][value].'">' ;   print $field_place[0][value];  print '</a>';
+                                        print '<a class="afisha-link-to-place" href="' . $field_link_to_place[0][value] . '">';
+                                        print $field_place[0][value];
+                                        print '</a>';
                                     } ?></p>
                             </div>
                             <ul class="main-block-af">
@@ -187,10 +189,9 @@ $arr = [
                                                 if ($key == 0) {
 
 
-
-                                                $monthdurationdate = (int)format_date($fieldvaluedateducration['value'], 'custom', 'm') - 1;
-                                                print(format_date($fieldvaluedateducration['value'], 'custom', 'd'));
-                                                print ' ' . $arr[$monthdurationdate] . ' ';
+                                                    $monthdurationdate = (int)format_date($fieldvaluedateducration['value'], 'custom', 'm') - 1;
+                                                    print(format_date($fieldvaluedateducration['value'], 'custom', 'd'));
+                                                    print ' ' . $arr[$monthdurationdate] . ' ';
 
                                                 }
                                             }
@@ -263,11 +264,11 @@ $arr = [
 
         </div>
         <?php
-                        $dateprevious = new DateTime('yesterday 23:59');
-                        $dateprevious->modify('+3 hours');
+        $dateprevious = new DateTime('yesterday 23:59');
+        $dateprevious->modify('+3 hours');
 
-                        $redyprevious = $dateprevious->format('U');
-                        $mounth = $dateprevious->format('U');
+        $redyprevious = $dateprevious->format('U');
+        $mounth = $dateprevious->format('U');
         // place
         $tid = $field_place[0][value];
         $query = new EntityFieldQuery();
@@ -275,7 +276,7 @@ $arr = [
             ->entityCondition('bundle', 'afisha')
             ->propertyCondition('status', NODE_PUBLISHED)
             ->fieldCondition('field_place_afisha', 'value', $tid, '=');
-         $query->fieldCondition('field_date_afisha', 'value', $redyprevious, '>=')
+        $query->fieldCondition('field_date_afisha', 'value', $redyprevious, '>=')
             ->fieldOrderBy('field_date_afisha', 'value', 'ASC')
             ->range(0, 10);
         // Run the query as user 1.
@@ -312,36 +313,41 @@ $arr = [
             if (count($news_items) > 0) {
                 $nid = $node->nid;
                 $output = [];
+                $date = '';
                 foreach ($news_items as $field) {
                     if ($nid != $field->nid) {
                         //$my_image_url = file_create_url($field->field_image_afisha['und'][0]['uri']);
                         $my_image_url = image_style_url("afisha_related", $field->field_image_afisha['und'][0]['uri']);
-                          $path = 'node/' . $field->nid ;
-                      //  $path = $field->nid;
+                        $path = 'node/' . $field->nid;
+                        //  $path = $field->nid;
                         $alias = drupal_get_path_alias($path);
-                      //  $real_path =drupal_get_path_alias($alias);
+                        //  $real_path =drupal_get_path_alias($alias);
                         $month = date('m', $field->field_date_afisha['und'][0]['value']) - 1;
                         //  <div class="afisha-item-date">'.$datefieldinvert[1].' '.$datefieldinvert[0].'</div>
                         $dateprevious = new DateTime('yesterday 23:59');
                         $dateprevious->modify('+3 hours');
-
                         $redyprevious = $dateprevious->format('U');
-                        foreach ($field->field_date_afisha['und'] as $val){
 
-                            if($redyprevious < $val['value']  && $mounth == $val['value']){
-                                $redydate = $val['value'];
-                                break;
+                        if (count($field->field_date_afisha['und']) >= 2) {
+                            foreach ($field->field_date_afisha['und'] as $val) {
+
+                                if ($redyprevious < $val['value']  ) {
+                                    $redydate = $val['value'];
+                                   // $day = date('d', $val['value']);
+                                    $date = $redydate;
+                                    break;
+                                }
+
                             }
-
+                        }else{
+                            $date = $field->field_date_afisha['und']['0']['value'];
                         }
-
                         array_push(
                             $output,
                             array(
-                                'src'=>  $my_image_url,
-                                'day'=>  date('d', $redydate)  ,
-                                'month'=>  $month,
-                                'title' =>   $field->title,
+                                'date' => $date,
+                                'src' => $my_image_url,
+                                'title' => $field->title,
                                 'path' => $alias
                             )
                         );
@@ -349,28 +355,34 @@ $arr = [
 
                     }
                 }
-                 function cmp($a, $b)
+                function cmp($a, $b)
                 {
-                    return strcmp($a["day"], $b["day"]);
+                    return strcmp($a["date"], $b["date"]);
                 }
+
                 usort($output, "cmp");
+/*
+                echo '<pre>';
+                print_r($output);
+                echo '</pre>';*/
+                foreach ($output as $field) {
 
+                    if($field['date'] == ''){
+                        $month = date('m', $field['date']['0']['value']) - 1;
+                        $day = date('d', $field['date']['0']['value']);
+                    }else{
+                        $month = date('m', $field['date']) - 1;
+                        $day = date('d', $field['date']);
+                    }
 
-            print_r($output);
-            foreach ($output as $field) {
-                echo '
+                    echo '
                             <div class="item-afisha">
-                                <div class="afisha-item-date ">' . $field['day'] . ' ' . $arr[$field['month']] . '</div>
-                                     <img src="' . $field['src'] . '" alt="' .  $field['title'] . '" />
-                                <div class="title-afisha"><div><h3>' . $field['title'] . '</h3> <a class="link-c-a" href="/' . $field['path']  . '">Подробнее</a> </div></div>
+                                <div class="afisha-item-date ">' . $day . ' ' . $arr[$month] . '</div>
+                                     <img src="' . $field['src'] . '" alt="' . $field['title'] . '" />
+                                <div class="title-afisha"><div><h3>' . $field['title'] . '</h3> <a class="link-c-a" href="/' . $field['path'] . '">Подробнее</a> </div></div>
                             </div>
                         ';
-            }
-
-
-
-
-
+                }
 
 
             }
