@@ -104,7 +104,7 @@
             <div class="afisha-select-block">
                 <select class="select-afisha-page">
                     <option value="soon">Сегодня</option>
-                    <!--<option value="thisweek">На выходных</option>-->
+                    <option value="thisweek">На выходных</option>
                     <option value="tomorrow">Завтра</option>
                 </select>
             </div>

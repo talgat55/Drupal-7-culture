@@ -18,12 +18,12 @@
 
                         <?php
                         $dateprevious = new DateTime('yesterday 23:59');
-                        $dateprevious->modify('+3 hours');
+                        $dateprevious->modify('+6 hours');
 
                         $redyprevious = $dateprevious->format('U');
 
                         $datenext = new DateTime('tomorrow  00:00');
-                        $datenext->modify('+3 hours');
+                        $datenext->modify('+6 hours');
 
                         $redynext = $datenext->format('U');
 
