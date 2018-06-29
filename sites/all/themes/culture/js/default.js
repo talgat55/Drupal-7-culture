@@ -215,6 +215,16 @@ jQuery(document).ready(function () {
         zoom: true,
         exthumbimage: false
     });
+    /*
+    * Lightbox for News
+     */
+    jQuery('.article-slider-row').lightGallery({
+        download: false,
+        selector: '.article-slider-row .ligh-news',
+        thumbnail: true,
+        zoom: true,
+        exthumbimage: false
+    });
 
     /*
     * Load More News

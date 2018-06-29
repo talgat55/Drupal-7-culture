@@ -1518,6 +1518,9 @@ div.password-confirm {
     transition: all 0.3s ease;
 
 }
+.article-slider div{
+    cursor: pointer;
+}
 
 .news.home-page li .news-item {
     padding: 15px;

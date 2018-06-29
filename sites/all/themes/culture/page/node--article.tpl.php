@@ -169,7 +169,7 @@
             foreach ($field_gallery as $field) {
 
                 $my_image_url = file_create_url($field['uri']);
-                print('<div><img src="' . $my_image_url . '" alt="' . $field['alt'] . '" /> </div>');
+                print('<div><a class="ligh-news"  data-src="'.$my_image_url.'"   ><img src="' . $my_image_url . '" alt="' . $field['alt'] . '" /></a> </div>');
 
             }
 
