@@ -41,7 +41,7 @@ regions[content] = Content
  
 
 settings[shortcut_module_link] = 0
-
+settings[turizm_image_banner] = images/bg-turist-min.jpg
 
 ; Information added by Drupal.org packaging script on 2018-03-28
 version = "1.00"

@@ -4292,7 +4292,10 @@ div.admin-panel .description {
     border: 1px solid #000;
 
 }
-
+.afisha-row-list li img{
+    width: 250px;
+    height: 169px;
+}
 @media (max-width: 1299px) {
     .container {
         width: 1000px;
@@ -4566,7 +4569,10 @@ div.admin-panel .description {
     .page-node-491 .form-item.form-type-radio.form-item-field-cat-turizm-tid::after, .page-culturedetails .form-item.form-type-radio.form-item-field-categories-tid::after {
         display: none;
     }
-
+    .afisha-row-list li img{
+        width: auto;
+        height: auto;
+    }
     .container {
         width: 98%;
     }
@@ -4644,15 +4650,18 @@ div.admin-panel .description {
     }
 
     .news .col-md-7,
-    #footer-wrapper .main-footer-menu li,
-    .news.home-page li {
+    #footer-wrapper .main-footer-menu li  {
         width: 100%;
     }
-
+    .news.home-page li{
+        width: 50%;
+    }
     .news.home-page li:hover {
         transform: none;
     }
-
+    .news.home-page li img{
+        height: auto;
+    }
     .content-article {
         margin: 0 auto;
     }
@@ -4746,6 +4755,9 @@ div.admin-panel .description {
 }
 
 @media (max-width: 480px) {
+    .news.home-page li{
+        width: 100%;
+    }
     .gallery-item {
         width: 100% !important;
     }
