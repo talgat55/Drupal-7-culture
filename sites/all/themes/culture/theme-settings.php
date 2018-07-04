@@ -4,6 +4,7 @@ function culture_form_system_theme_settings_alter(&$form, &$form_state)
     $form['theme_settings']['turizm_image_banner'] = array(
         '#type' => 'managed_file',
         '#title' => t('Изображение для баннера стрниц туризма'),
+        '#upload_location' => 'public://images/',
         '#default_value' => theme_get_setting('turizm_image_banner'),
     );
     $form['theme_settings']['turizm_title_banner'] = array(
@@ -39,16 +40,19 @@ function culture_form_system_theme_settings_alter(&$form, &$form_state)
     );
     $form['theme_settings']['turizm_image_omsk_obl'] = array(
         '#type' => 'managed_file',
+        '#upload_location' => 'public://images/',
         '#title' => t('Изображение для блока туров по омской области  стрницы туризма'),
         '#default_value' => theme_get_setting('turizm_image_omsk_obl'),
     );
     $form['theme_settings']['turizm_image_omsk'] = array(
         '#type' => 'managed_file',
+        '#upload_location' => 'public://images/',
         '#title' => t('Изображение для блока эксурсий  омску  стрницы туризма'),
         '#default_value' => theme_get_setting('turizm_image_omsk'),
     );
     $form['theme_settings']['turizm_image_adavance'] = array(
         '#type' => 'managed_file',
+        '#upload_location' => 'public://images/',
         '#title' => t('Изображение для блока достопримечательностей  стрницы туризма'),
         '#default_value' => theme_get_setting('turizm_image_adavance'),
     );
