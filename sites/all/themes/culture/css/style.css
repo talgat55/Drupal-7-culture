@@ -4341,7 +4341,9 @@ div.admin-panel .description {
 
     html {
         overflow-x: hidden;
-        overflow: hidden;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        height:100%;
     }
 
     .main-menu li {

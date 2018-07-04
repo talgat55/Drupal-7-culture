@@ -42,6 +42,15 @@ regions[content] = Content
 
 settings[shortcut_module_link] = 0
 settings[turizm_image_banner] = images/bg-turist-min.jpg
+settings[turizm_title_banner] = Туристский-информационный центр
+settings[turizm_phone_one_banner] = +7 (3812) 90-98-89
+settings[turizm_phone_two_banner] = +7 913 149-98-89
+settings[turizm_address_banner] = г. Омск, Музейная, 3
+settings[turizm_link_to_vk_banner] = https://vk.com/tur_omsk
+settings[turizm_link_to_ws_banner] = http://omsk-turinfo.com/
+settings[turizm_image_omsk_obl] = images/1t-min.jpg
+settings[turizm_image_omsk] = images/2t-min.jpg
+settings[turizm_image_adavance] = images/3t-min.jpg
 
 ; Information added by Drupal.org packaging script on 2018-03-28
 version = "1.00"
