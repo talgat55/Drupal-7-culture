@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="335fdc75-9f90-41e5-bd15-35bce0f7a359" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--488.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--488.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/theme-settings.php" afterPath="$PROJECT_DIR$/sites/all/themes/culture/theme-settings.php" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/culture/css/style.css" afterPath="$PROJECT_DIR$/sites/all/themes/culture/css/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,11 +38,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="theme-settings.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="theme-settings.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/theme-settings.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="350">
               <caret line="86" column="34" lean-forward="true" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="670">
+              <caret line="5039" column="1" lean-forward="false" selection-start-line="5039" selection-start-column="1" selection-end-line="5039" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -143,13 +151,13 @@
         <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--afisha.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/templates/views-view-unformatted--afisha-page.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/js/default.js" />
-        <option value="$PROJECT_DIR$/sites/all/themes/culture/css/style.css" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/culture.info" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--489.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--490.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--491.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/page/page--node--488.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/culture/theme-settings.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/culture/css/style.css" />
       </list>
     </option>
   </component>
@@ -213,6 +221,15 @@
               <item name="all" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="culture" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="culture" type="b2602c69:ProjectViewProjectNode" />
+              <item name="culture" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sites" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="all" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="culture" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="culture" type="b2602c69:ProjectViewProjectNode" />
@@ -319,12 +336,12 @@
       <workItem from="1531296092738" duration="3353000" />
       <workItem from="1531370934132" duration="766000" />
       <workItem from="1531460276954" duration="6000" />
-      <workItem from="1531494930333" duration="308000" />
+      <workItem from="1531494930333" duration="1477000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="763279000" />
+    <option name="totallyTimeSpent" value="764448000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -347,7 +364,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3181818" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.317217" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -643,13 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="4573" column="28" lean-forward="false" selection-start-line="4573" selection-start-column="28" selection-end-line="4573" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/page/page--node--490.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="724">
@@ -672,6 +682,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="86" column="34" lean-forward="true" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/culture/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="670">
+          <caret line="5039" column="1" lean-forward="false" selection-start-line="5039" selection-start-column="1" selection-end-line="5039" selection-end-column="1" />
           <folding />
         </state>
       </provider>
