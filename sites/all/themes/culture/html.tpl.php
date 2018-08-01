@@ -3,6 +3,7 @@
 <head>
     <meta name="yandex-verification" content="a492a40ce2f32422" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>

@@ -49,17 +49,15 @@
             </div>
             </div>-->
             <div class="banner turist-banner home-page clearfix padding-top-20">
-               <img src="<?php echo path_to_theme(); ?>/images/bg-turist-min.jpg"/>
+              <?php  /* <img src="<?php echo path_to_theme(); ?>/images/bg-turist-min.jpg"/>   */ ?>
                 <?php
                 $file = file_load(theme_get_setting('turizm_image_banner'));
                 $uri = $file->uri;
                 $url = file_create_url($uri);
                 
-               /* ?>
-                <img src="<?php echo $url; ?>"/>
-                <?php
-                */
                 ?>
+                <img src="<?php echo $url; ?>"  alt="Баннер Туризма"/>
+
                 <div class="textblock-banner turism-page-banner   left-block">
 
                     <div class="textblock-banner-wallpaper">
@@ -111,12 +109,12 @@
                     $url_adavance = file_create_url($uri_adavance);
 
 
-               /*     ?>
+                    ?>
                     <li class="turizm-detail-item"
                         style="background: url(<?php echo $url_omsk_obl; ?>) center bottom;">
-                        */?>
-                    <li class="turizm-detail-item"
-                        style="background: url(<?php echo path_to_theme(); ?>/images/1t-min.jpg) center bottom;">
+
+                   <?php /* <li class="turizm-detail-item"
+                        style="background: url(<?php echo path_to_theme(); ?>/images/1t-min.jpg) center bottom;">*/?>
 
                         <a href="/turizm-turi-omskaya-oblast">
 
@@ -126,12 +124,12 @@
                             </div>
                         </a>
                     </li>
-                    <?php  /*
+
                     <li class="turizm-detail-item"
                         style="background: url(<?php echo $url_omsk; ?>) center bottom;">
-                       */ ?>
+                         <?php /*
                     <li class="turizm-detail-item"
-                        style="background: url(<?php echo path_to_theme(); ?>/images/2t-min.jpg) center bottom;">
+                        style="background: url(<?php echo path_to_theme(); ?>/images/2t-min.jpg) center bottom;">  */ ?>
                         <a href="/turizm-eksursii-omsk">
 
                             <div class="culture-bottom-block">
@@ -140,14 +138,13 @@
                             </div>
                         </a>
                     </li>
-                    <?php /*
+
                     <li class="turizm-detail-item"
                         style="background: url(<?php echo $url_adavance; ?>) center bottom;">
                         <?php
-                        */
-                        ?>
+                        /*
                     <li class="turizm-detail-item"
-                        style="background: url(<?php echo path_to_theme(); ?>/images/3t-min.jpg) center bottom;">
+                        style="background: url(<?php echo path_to_theme(); ?>/images/3t-min.jpg) center bottom;">  */ ?>
                         <a href="/turizm-dostoprimechatelnosti">
 
                             <div class="culture-bottom-block">

@@ -399,6 +399,20 @@ jQuery(document).ready(function () {
     InitSliderNewsPage();
     InitFilterRowsAfisha();
 
+    // for block culture dtails inhome page mathch height
+    if(jQuery(window).width() < 591){
+
+        jQuery('.front .culture-detail-item' ).each(function(){
+            var firstheight = jQuery(this).find('.culture-top-block').outerHeight();
+            var secondtheight = jQuery(this).find('.culture-bottom-block').outerHeight();
+
+            jQuery(this).css('height', firstheight + secondtheight );
+        });
+
+    }
+
+
+
 
 // end redy function
 });

@@ -4042,7 +4042,8 @@ div.admin-panel .description {
 }
 
 .turism-row.home-page.turism-omsk {
-    margin-bottom: 30px !important;
+    /*margin-bottom: 30px !important;*/
+    margin-bottom: 0;
 }
 
 .turism-item h3 {
@@ -4355,13 +4356,17 @@ div.admin-panel .description {
     }
 
     .turizm-detail li:nth-of-type(3n+1),
-    .culture-detail li:nth-of-type(3n+1),
-    .turizm-detail li,
-    .culture-detail li {
+    .turizm-detail li {
         height: 300px !important;
         width: 100% !important;
     }
+    .culture-detail li:nth-of-type(3n+1),
+    .culture-detail li{
+        width: 100% !important;
+        background-repeat: no-repeat!important;
+        background-size: cover!important;
 
+    }
     .news.home-page li {
         width: 33.33%;
     }

@@ -64,7 +64,7 @@ function culture_form_system_theme_settings_alter(&$form, &$form_state)
         if ($file1->status == 0) {
             $file1->status = FILE_STATUS_PERMANENT;
             file_save($file1);
-            drupal_set_message('Картинка успешно сохранена.', 'status');
+            drupal_set_message('Картинка успешно сохранена. 2', 'status');
         }
     }
     $form['theme_settings']['turizm_image_omsk'] = array(
@@ -80,7 +80,7 @@ function culture_form_system_theme_settings_alter(&$form, &$form_state)
         if ($file2->status == 0) {
             $file2->status = FILE_STATUS_PERMANENT;
             file_save($file2);
-            drupal_set_message('Картинка успешно сохранена.', 'status');
+            drupal_set_message('Картинка успешно сохранена. 3', 'status');
         }
     }
     $form['theme_settings']['turizm_image_adavance'] = array(
@@ -96,7 +96,7 @@ function culture_form_system_theme_settings_alter(&$form, &$form_state)
         if ($file3->status == 0) {
             $file3->status = FILE_STATUS_PERMANENT;
             file_save($file3);
-            drupal_set_message('Картинка успешно сохранена.', 'status');
+            drupal_set_message('Картинка успешно сохранена. 4', 'status');
         }
     }
 

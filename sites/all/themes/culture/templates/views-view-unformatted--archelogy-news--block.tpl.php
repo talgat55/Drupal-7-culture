@@ -22,7 +22,7 @@
                         <a href="<?= $view_field['path'] ?>">
                             <div class="news-item">
                                 <div class="date-news"><?= $datefieldinvert[1] ?> <?= $datefieldinvert[0] ?> </div>
-                                <img src=" <?= $view_field["field_image"] ?>"/>
+                                <img src=" <?= $view_field["field_image"] ?>" alt="<?= $view_field["title"] ?>"/>
                                 <h3><?= $view_field["title"] ?></h3>
                                 <div class="news-text-block">
                                     <?= $view_field["field_anons"] ?>

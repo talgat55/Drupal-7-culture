@@ -162,7 +162,7 @@ $field_link_path = field_get_items('node', $node, 'field_path_link_archelogy');
 
 
         <div class="node-place-img">
-                <img src="<?php echo $my_image_url; ?>" />
+                <img src="<?php echo $my_image_url; ?>" alt="<?php  echo  $node ->title ?>"/>
                 <h1><?php  echo  $node ->title ?></h1>
         </div>
 

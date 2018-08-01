@@ -20,7 +20,7 @@
                     <?php if ($i == 4  && $view->query->pager->current_page == 0) { ?>
                     </ul>
                     <div class="banner turist-banner home-page clearfix margin-top-20">
-                        <img src="<?php echo path_to_theme(); ?>/images/bg-turist-min.jpg"/>
+                        <img src="<?php echo path_to_theme(); ?>/images/bg-turist-min.jpg" alt="Баннер туризма"/>
                         <div class="textblock-banner turism-page-banner   left-block">
 
                             <div class="textblock-banner-wallpaper">
@@ -43,7 +43,7 @@
                         <a href="<?= $view_field['path'] ?>">
                             <div class="news-item">
                                 <div class="date-news"><?= $datefieldinvert[1] ?> <?= $datefieldinvert[0] ?> </div>
-                                <img src=" <?= $view_field["field_image"] ?>"/>
+                                <img src=" <?= $view_field["field_image"] ?>" alt="<?= $view_field["title"] ?>"/>
                                 <h3><?= $view_field["title"] ?></h3>
                                 <div class="news-text-block">
                                     <?= $view_field["field_anons"] ?>

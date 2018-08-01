@@ -24,7 +24,7 @@
                         echo '
                    
                         ';
-                        print views_embed_view('_1', 'block');
+                        print views_embed_view('banner_culture_details', 'block');
                         // print views_embed_view('faculty_core','block_1', $node->nid);
 
                         echo '<ul class="culture-detail-row">';
