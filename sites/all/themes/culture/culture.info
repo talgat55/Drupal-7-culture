@@ -51,6 +51,10 @@ settings[turizm_link_to_ws_banner] = http://omsk-turinfo.com/
 settings[turizm_image_omsk_obl] = images/1t-min.jpg
 settings[turizm_image_omsk] = images/2t-min.jpg
 settings[turizm_image_adavance] = images/3t-min.jpg
+settings[header_block_about] = Текст
+settings[header_block_contact_content] = Текст
+settings[header_block_contact_adress] = Текст
+settings[header_block_contact_email] = Текст
 
 ; Information added by Drupal.org packaging script on 2018-03-28
 version = "1.00"

@@ -3,20 +3,28 @@ jQuery(document).ready(function () {
 
 
     /*
+    * Replace urls
+     */
+    if (jQuery('.node-type-turizm').length){
+        jQuery(".inline.odd:contains('Экскурсии по Омску')").wrap( "<a href='/turizm-eksursii-omsk'></a>" );
+        jQuery(".inline.odd:contains('Туры по Омской области')").wrap( "<a href='/turizm-turi-omskaya-oblast'></a>" );
+    }
+
+    /*
     *
      */
     jQuery('.bvi-panel-open').bvi('Init', {
-            "BviPanel" : "1",
-            "BviPanelBg" : "white",
-            "BviPanelFontSize" : "12",
-            "BviPanelLetterSpacing" : "normal",
-            "BviPanelLineHeight" : "normal",
-            "BviPanelImg" : "1",
-            "BviPanelImgXY" : "1",
-            "BviPanelReload" : "0",
-            "BviCloseClassAndId" : ".hide-screen-fixed",
-            "BviFixPanel" : "1", "BviPlay" : "1"
-        });
+        "BviPanel": "1",
+        "BviPanelBg": "white",
+        "BviPanelFontSize": "12",
+        "BviPanelLetterSpacing": "normal",
+        "BviPanelLineHeight": "normal",
+        "BviPanelImg": "1",
+        "BviPanelImgXY": "1",
+        "BviPanelReload": "0",
+        "BviCloseClassAndId": ".hide-screen-fixed",
+        "BviFixPanel": "1", "BviPlay": "1"
+    });
     /*
     *  Main Slider
      */
@@ -44,16 +52,23 @@ jQuery(document).ready(function () {
     *  Pop UP Contacts Block
      */
 
-    jQuery('.block-contact-popup .close').click(function (e) {
+    jQuery('.block-contact-popup .close, .block-contact-popup-about .close').click(function (e) {
         e.preventDefault();
-        jQuery('.block-contact-popup').fadeOut();
+        if (jQuery(this).parent().hasClass('block-contact-popup-about')) {
+            jQuery('.block-contact-popup-about').fadeOut();
+        } else {
+            jQuery('.block-contact-popup').fadeOut();
+        }
     });
 
-    jQuery('.top-header-menu .menu-contact li a').click(function (e) {
+    jQuery('.top-header-menu .menu-contact li a.contact').click(function (e) {
         e.preventDefault();
         jQuery('.block-contact-popup').fadeIn();
     });
-
+    jQuery('.top-header-menu .menu-contact li a.about').click(function (e) {
+        e.preventDefault();
+        jQuery('.block-contact-popup-about').fadeIn();
+    });
 
 
     /*
@@ -61,8 +76,8 @@ jQuery(document).ready(function () {
     */
 
     jQuery('.cat-place-aside a').click(function (e) {
-        if(!jQuery(this).parent().parent().hasClass('turizm-single')){
-        e.preventDefault();
+        if (!jQuery(this).parent().parent().hasClass('turizm-single')) {
+            e.preventDefault();
         }
         jQuery('.cat-place-aside a').removeClass('current');
         jQuery(this).addClass('current');
@@ -89,8 +104,8 @@ jQuery(document).ready(function () {
 
                 if (doom != '') {
 
-                    if(doom.length == 1){
-                        window.location.replace('/'+doom[0].path);
+                    if (doom.length == 1) {
+                        window.location.replace('/' + doom[0].path);
                     }
                     jQuery.each(doom, function () {
 
@@ -130,17 +145,12 @@ jQuery(document).ready(function () {
      */
     if (jQuery('.page-culturedetails').length) {
 
-        var maxHeight = Math.max.apply(null, jQuery(".page-culturedetails .culture-detail-item").map(function ()
-        {
+        var maxHeight = Math.max.apply(null, jQuery(".page-culturedetails .culture-detail-item").map(function () {
             return jQuery(this).height();
         }).get());
 
-        jQuery('body').append('<style> .page-culturedetails .culture-detail-item{ height:'+maxHeight +'px; }</style>');
+        jQuery('body').append('<style> .page-culturedetails .culture-detail-item{ height:' + maxHeight + 'px; }</style>');
     }
-
-
-
-
 
 
     /*
@@ -293,13 +303,15 @@ jQuery(document).ready(function () {
                 jQuery(".afisha-row-list").html(' ');
                 if (data != '') {
                     jQuery(".afisha-row-list").html(data);
-                    jQuery(".afisha-row-list").css('visibility', 'hidden' );
+                    jQuery(".afisha-row-list").css('visibility', 'hidden');
 
                     var $container = jQuery('.afisha-row-list');
                     $container.imagesLoaded(function () {
                         $container.isotope('reloadItems').isotope({sortBy: 'original-order'});
                     });
-                    setTimeout(function() { jQuery(".afisha-row-list").css('visibility', 'visible ' ); }, 800);
+                    setTimeout(function () {
+                        jQuery(".afisha-row-list").css('visibility', 'visible ');
+                    }, 800);
 
                 } else {
                     jQuery(".afisha-row-list").html('<div class="not-found"  >Записей не найдено</div>');
@@ -349,7 +361,7 @@ jQuery(document).ready(function () {
             var firstday = new Date(d.setDate(last1) - 5 * 60 * 60 * 1000).getTime();
             var lastday = new Date(d.setDate(last) + 11 * 60 * 60 * 1000).getTime();
 
-            console.log(firstday+' '+lastday);
+            console.log(firstday + ' ' + lastday);
 
         } else {
             var d = new Date();
@@ -367,12 +379,14 @@ jQuery(document).ready(function () {
             jQuery(".afisha-row-list").html(' ');
             if (data != '') {
                 jQuery(".afisha-row-list").html(data);
-                jQuery(".afisha-row-list").css('visibility', 'hidden' );
+                jQuery(".afisha-row-list").css('visibility', 'hidden');
                 var $container = jQuery('.afisha-row-list');
                 $container.imagesLoaded(function () {
                     $container.isotope('reloadItems').isotope({sortBy: 'original-order'});
                 });
-                setTimeout(function() { jQuery(".afisha-row-list").css('visibility', 'visible ' ); }, 800);
+                setTimeout(function () {
+                    jQuery(".afisha-row-list").css('visibility', 'visible ');
+                }, 800);
             } else {
                 jQuery(".afisha-row-list").html('<div class="not-found"  >Записей не найдено</div>');
             }
@@ -388,54 +402,32 @@ jQuery(document).ready(function () {
     * Match Height
      */
     jQuery('.news.home-page li').matchHeight();
-    jQuery('.culture-detail-row .culture-detail-item').matchHeight();
+    //jQuery('.culture-detail-row .culture-detail-item').matchHeight();
+    jQuery('.culture-detail-rows .culture-detail-item a').matchHeight();
     jQuery('.place.home-page li').matchHeight();
 
 
-
-    InitFitRows();
     InitFilterRows();
     InitFitRowsAfisha();
     InitSliderNewsPage();
     InitFilterRowsAfisha();
 
     // for block culture dtails inhome page mathch height
-    if(jQuery(window).width() < 591){
+    if (jQuery(window).width() < 591) {
 
-        jQuery('.front .culture-detail-item' ).each(function(){
+        jQuery('.front .culture-detail-item').each(function () {
             var firstheight = jQuery(this).find('.culture-top-block').outerHeight();
             var secondtheight = jQuery(this).find('.culture-bottom-block').outerHeight();
 
-            jQuery(this).css('height', firstheight + secondtheight );
+            jQuery(this).css('height', firstheight + secondtheight);
         });
 
     }
-
-
 
 
 // end redy function
 });
 
-/*
-*  Culture Details  Rows
- */
-function InitFitRows() {
-    "use strict";
-
-    if (jQuery('.culture-detail-row').length) {
-
-
-        var $container = jQuery('.culture-detail-row');
-        $container.imagesLoaded(function () {
-            $container.slideDown(1000).isotope({
-                itemSelector: '.culture-detail-item',
-                layoutMode: 'masonry'
-            });
-        });
-
-    }
-}
 
 /*
 *    Afisha  Rows
@@ -550,8 +542,9 @@ function InitSliderNewsPage() {
         ]
     });
 }
+
 jQuery(window).on('load', function () {
     var height = jQuery('.turism-news  li').height();
-    jQuery('.turism-news-content').append('<style>.turism-news  li{ height:'+height+'px; }</style>');
+    jQuery('.turism-news-content').append('<style>.turism-news  li{ height:' + height + 'px; }</style>');
 
 });

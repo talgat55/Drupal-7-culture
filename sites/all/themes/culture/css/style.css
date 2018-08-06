@@ -52,6 +52,7 @@
     font-style: normal;
 }
 
+.block-contact-popup-about,
 .block-contact-popup {
     position: absolute;
     right: 0;
@@ -62,7 +63,7 @@
     padding: 25px 34px 20px 34px;
     border: 2.5px solid #12a69d;
 }
-
+.block-contact-popup-about::before ,
 .block-contact-popup::before {
     content: " ";
     width: 28px;
@@ -76,12 +77,17 @@
     transform: rotateZ(45deg);
 }
 
+.block-contact-popup-about .close ,
 .block-contact-popup .close {
     position: absolute;
     right: 13px;
     top: 12px;
 }
 
+.block-contact-popup-about .c-content {
+    width: 810px;
+    text-align: center;
+}
 .block-contact-popup .c-content {
     width: 410px;
 }
@@ -133,7 +139,9 @@
 .top-header-menu {
     position: relative;
 }
-
+.top-header-menu a.about{
+    padding-left: 20px;
+}
 .display-none-overflow {
     display: none;
     height: 0;
@@ -4490,6 +4498,9 @@ div.admin-panel .description {
     .turizm-detail-item-part img {
         max-width: 100%;
     }
+    .block-contact-popup-about .c-content {
+        width: 600px;
+    }
 
 }
 
@@ -4758,6 +4769,9 @@ div.admin-panel .description {
 
     .turism-bottom-block h3 {
         font-size: 19px;
+    }
+    .block-contact-popup-about .c-content {
+        width: 100%;
     }
 }
 
