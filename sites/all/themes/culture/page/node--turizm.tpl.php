@@ -108,6 +108,7 @@ $field_link_path = field_get_items('node', $node, 'field_path_link_turizm');
             $query->entityCondition('entity_type', 'node')
                 ->entityCondition('bundle', 'turizm')
                 ->propertyCondition('status', NODE_PUBLISHED)
+                ->propertyOrderBy('title', 'ASC')
                 ->fieldCondition('field_part_turizm', 'value', $field_part[0]['value'], '=');
             $query->range(0, 150);
             $result = $query->execute();
@@ -115,26 +116,54 @@ $field_link_path = field_get_items('node', $node, 'field_path_link_turizm');
                 $news_items_nids = array_keys($result['node']);
                 $news_items = entity_load('node', $news_items_nids);
             }
-           /* echo '<pre>';
-            print_r($news_items);
-            echo '</pre>';*/
 
+
+
+
+            $name = 'turizm';
+            $myvoc = taxonomy_vocabulary_machine_name_load($name);
+            $tree = taxonomy_get_tree($myvoc->vid);
+
+            function cmp($a, $b)
+            {
+                return strcmp($a->title, $b->title);
+            }
+
+            usort($news_items, "cmp");
             echo '<ul class="cat-place-aside turizm-single">';
-            foreach ($news_items as $value){
-                $tid = $value->vid;
-                $path = 'node/' . $value->nid;
-                //$path =  $node->nid ;
-                $alias = drupal_get_path_alias($path);
-                if( $node->vid == $tid){
-                    $currentclass= 'class="current"';
-                }else{
-                    $currentclass= '';
+
+
+            foreach ($tree as $value) {
+                $tid = $value->tid;
+                echo '<li>';
+                echo '<h3>' . $value->name . '</h3>';
+                echo '<ul class="cats-sorts">';
+                foreach ($news_items as $value2) {
+                    if ($tid == $value2->field_cat_turizm['und']['0']['tid']) {
+
+
+                        $tid2 = $value2->vid;
+                        $path = 'node/' . $value2->nid;
+                        //$path =  $node->nid ;
+                        $alias = drupal_get_path_alias($path);
+                        if ($node->vid == $tid2) {
+                            $currentclass = 'class="current"';
+                        } else {
+                            $currentclass = '';
+                        }
+                        echo '<li ' . $tid2 . '><a href="/' . $alias . '"   ' . $currentclass . ' > ';
+                        echo '<h3>' . $value2->title . '</h3>';
+                        echo '</a></li>';
+                    }
                 }
-                echo '<li '.$tid.'><a href="/'.$alias.'"   '.$currentclass.' > ';
-                echo '<h3>'.$value->title.'</h3>';
-                echo '</a></li>';
+                echo '</ul>';
+
+
+                echo '</li>';
 
             }
+
+
             echo '</ul>';
 
             ?>
@@ -143,18 +172,18 @@ $field_link_path = field_get_items('node', $node, 'field_path_link_turizm');
             <div id="stickyblock" class="aside sticky-block-turizm">
                 <?php
 
-                if($field_link[0]['value']) {
+                if ($field_link[0]['value']) {
 
 
                     ?>
-                    <a href="<?php  echo $field_link_path[0]['value']; ?>" target="_blank" class="block-photo">
+                    <a href="<?php echo $field_link_path[0]['value']; ?>" target="_blank" class="block-photo">
                         <img src="/<?php print path_to_theme(); ?>/images/elipse.png"
                              alt="Фоторепортаж">
                         <div class="block-aside-photo">
                             <img src="/<?php print path_to_theme(); ?>/images/photo-camera.png"
                                  alt="Иконка">
 
-                            <p><?php  echo $field_link_title[0]['value'];  ?></p>
+                            <p><?php echo $field_link_title[0]['value']; ?></p>
                         </div>
                     </a>
                     <?php
@@ -167,14 +196,14 @@ $field_link_path = field_get_items('node', $node, 'field_path_link_turizm');
             </div>
 
 
-        <div class="node-place-img">
-                <img src="<?php echo $my_image_url; ?>"  alt="<?php  echo  $node ->title ?>"/>
-                <h1><?php  echo  $node ->title ?></h1>
-        </div>
+            <div class="node-place-img">
+                <img src="<?php echo $my_image_url; ?>" alt="<?php echo $node->title ?>"/>
+                <h1><?php echo $node->title ?></h1>
+            </div>
 
 
             <div class="content-place">
-                 <?php print($body[0]["value"]); ?>
+                <?php print($body[0]["value"]); ?>
 
 
             </div>

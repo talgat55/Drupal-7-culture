@@ -85,7 +85,10 @@
  * @see html.tpl.php
  */
 ?>
-<?php include('header.tpl.php'); ?>
+<?php include('header.tpl.php');
+
+?>
+
 
             <h1 class="heading-main-hide">Главная страница</h1>
             <div id="main" class="clearfix">

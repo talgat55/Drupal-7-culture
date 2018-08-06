@@ -119,6 +119,7 @@
 }
 
 .block-contact-popup .text a,
+.block-contact-popup-about .c-content,
 .block-contact-popup .text {
     font-family: 'NeoSansPro-Regular';
     font-size: 16px;
@@ -127,7 +128,15 @@
     text-decoration: none;
     text-align: center;
 }
-
+.cat-place-aside ul li{
+    border:none!important;
+}
+.block-contact-popup-about .c-content a{
+    color: #12a69d;
+}
+.block-contact-popup-about .c-content a:hover{
+    color: #000;
+}
 .block-contact-popup .text a:hover {
     color: #12a69d;
 }
@@ -3664,6 +3673,7 @@ div.admin-panel .description {
     font-family: 'NeoSansPro-Regular';
     font-size: 16px;
     color: #000;
+    display: block;
 }
 
 .img-cat-place-aside-block {

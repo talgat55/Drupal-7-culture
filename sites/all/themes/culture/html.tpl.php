@@ -3,7 +3,13 @@
 <head>
     <meta name="yandex-verification" content="a492a40ce2f32422" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-  
+    <?php if ($is_front) :?>
+
+
+        <meta name="title" content="Омский портал «Культура» – это единый ресурс о культурной жизни Омска и Омской области">
+        <meta name="description" content="Омский портал «Культура» – это единый ресурс, на котором сосредоточены новости, анонсы, спецпроекты и аналитические материалы о культурной жизни Омска и Омской области.">
+
+    <?php endif; ?>
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>

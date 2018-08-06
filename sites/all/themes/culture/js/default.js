@@ -424,7 +424,6 @@ jQuery(document).ready(function () {
 
     }
 
-
 // end redy function
 });
 
@@ -449,6 +448,8 @@ function InitFitRowsAfisha() {
 
     }
 }
+
+
 
 //------------------
 //    Filterable in Culture detail page
