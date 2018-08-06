@@ -61,5 +61,12 @@
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
+  <a id="back_to_top" href="#"  >
+			<span>
+				<svg width="23" height="23" viewBox="0 0 23 23">
+                <path fill="#fff" d="M12.313 8.107l-0.813-0.813-6.506 6.506 1.626 1.626 4.879-4.878 4.879 4.878 1.626-1.626z"></path>
+                </svg>
+			</span>
+  </a>
 </body>
 </html>

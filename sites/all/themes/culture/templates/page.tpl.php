@@ -120,6 +120,9 @@ PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8v
 
 
                 <div id="content" class="column">
+                    <?php if (!empty($tabs)): ?>
+                        <?php print render($tabs); ?>
+                    <?php endif; ?>
                     <div class="section">
                         <?php print render($title_prefix); ?>
                         <?php

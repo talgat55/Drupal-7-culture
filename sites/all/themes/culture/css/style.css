@@ -4305,6 +4305,9 @@ div.admin-panel .description {
     color: #333 !important;
     box-shadow: none;
     background: #fff !important;
+    display: inline-block!important;
+    padding: 0 15px!important;
+
 }
 
 .bvi-body .turizm-detail.home-page li {
@@ -4314,6 +4317,39 @@ div.admin-panel .description {
 .afisha-row-list li img{
     width: 250px;
     height: 169px;
+}
+
+#back_to_top {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 9px 13px;
+    border: 2px solid #12a69d;
+    color: #fff;
+    z-index: 9999;
+    background-color: #12a69d;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#back_to_top:hover {
+    background-color: #333333;
+    border-color: #333333;
+}
+
+#back_to_top svg {
+    vertical-align: middle;
+    display: block;
+}
+
+.backactive {
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 @media (max-width: 1299px) {
     .container {

@@ -411,7 +411,7 @@ jQuery(document).ready(function () {
     InitFitRowsAfisha();
     InitSliderNewsPage();
     InitFilterRowsAfisha();
-
+    backToTop();
     // for block culture dtails inhome page mathch height
     if (jQuery(window).width() < 591) {
 
@@ -427,7 +427,25 @@ jQuery(document).ready(function () {
 // end redy function
 });
 
+// ---------------------------------------------------------
+// Back To Top
+// ---------------------------------------------------------
+function backToTop() {
+    "use strict";
+    jQuery(window).scroll(function () {
+        if (jQuery(this).scrollTop() > 100) {
+            jQuery('#back_to_top').addClass('backactive');
+        } else {
+            jQuery('#back_to_top').removeClass('backactive');
+        }
+    });
+    jQuery(document).on('click', '#back_to_top', function (e) {
+        e.preventDefault();
 
+        jQuery('body,html').animate({scrollTop: 0}, jQuery(window).scrollTop() / 3, 'linear');
+    });
+
+}
 /*
 *    Afisha  Rows
  */
