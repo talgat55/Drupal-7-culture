@@ -97,7 +97,7 @@
                 ?>
                 <div class="share-block">
                     <?php
-                    $path = drupal_get_path_alias('node/'.$node->nid);
+                    $path = 'http://kultura55.ru/'.drupal_get_path_alias('node/'.$node->nid);
 
                     ?>
                     <p>Поделиться</p>
