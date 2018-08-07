@@ -1,14 +1,40 @@
+
+(function($) {
+    Drupal.behaviors.mybehavior = {
+        attach: function (context, settings) {
+
+            jQuery( ".page-culturedetails .bef-select-as-radios.form-radio, .page-node-491  .bef-select-as-radios.form-radio" ).each(function( index ) {
+                if(jQuery(this).prop("checked")){
+                    jQuery(this).parent().find('label').addClass('active');
+                }
+            });
+        }
+    };
+
+})(jQuery);
+
 jQuery(document).ready(function () {
     "use strict";
 
+    /*
+    *  Expose filter set active class
+    */
+    // for Page Culture details
+    jQuery( ".page-culturedetails .bef-select-as-radios.form-radio, .page-node-491  .bef-select-as-radios.form-radio" ).each(function( index ) {
+        if(jQuery(this).prop("checked")){
+            jQuery(this).parent().find('label').addClass('active');
+        }
+    });
 
     /*
     * Replace urls   in pages turizm
      */
+
     if (jQuery('.node-type-turizm').length){
         jQuery(".inline.odd:contains('Экскурсии по Омску')").wrap( "<a href='/turizm-eksursii-omsk'></a>" );
         jQuery(".inline.odd:contains('Туры по Омской области')").wrap( "<a href='/turizm-turi-omskaya-oblast'></a>" );
     }
+
     /*
     * Replace urls  in page culture details
      */
@@ -97,9 +123,9 @@ jQuery(document).ready(function () {
     */
 
     jQuery('.cat-place-aside a').click(function (e) {
-        if (!jQuery(this).parent().parent().hasClass('turizm-single')) {
+        if (!jQuery('body').hasClass('node-type-turizm')) {
             e.preventDefault();
-        }
+
         jQuery('.cat-place-aside a').removeClass('current');
         jQuery(this).addClass('current');
         var $id = jQuery(this).data('id');
@@ -158,7 +184,7 @@ jQuery(document).ready(function () {
 
         });
 
-
+        }
     });
     /*
     * Height for Culture detail

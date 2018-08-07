@@ -4347,6 +4347,10 @@ div.admin-panel .description {
     display: block;
 }
 
+.form-item.form-type-radio .option.active{
+    color:  #12a69d;
+}
+
 .backactive {
     opacity: 1 !important;
     visibility: visible !important;
@@ -4821,9 +4825,11 @@ div.admin-panel .description {
     }
 }
 
+
 @media (max-width: 480px) {
     .news.home-page li{
         width: 100%;
+        margin-bottom:0!important;
     }
     .gallery-item {
         width: 100% !important;
@@ -5045,10 +5051,6 @@ div.admin-panel .description {
     }
 
 
-
-    /**
-     * Eingebundene Videos verschwinden lassen und den Whitespace der iframes auf null reduzieren.
-     */
     .entry iframe, ins {
         display: none;
         width: 0 !important;

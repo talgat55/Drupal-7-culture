@@ -98,6 +98,7 @@ $my_image_url = file_create_url($field_image[0]['uri']);
 $field_link = field_get_items('node', $node, 'field_link_turizm');
 $field_link_title = field_get_items('node', $node, 'field_title_link_turizm');
 $field_link_path = field_get_items('node', $node, 'field_path_link_turizm');
+$field_part = field_get_items('node', $node, 'field_part_turizm');
 ?>
 <div id="main" class="clearfix">
 
@@ -118,54 +119,70 @@ $field_link_path = field_get_items('node', $node, 'field_path_link_turizm');
             }
 
 
-
-
-            $name = 'turizm';
-            $myvoc = taxonomy_vocabulary_machine_name_load($name);
-            $tree = taxonomy_get_tree($myvoc->vid);
-
-            function cmp($a, $b)
-            {
-                return strcmp($a->title, $b->title);
-            }
-
-            usort($news_items, "cmp");
-            echo '<ul class="cat-place-aside turizm-single">';
-
-
-            foreach ($tree as $value) {
-                $tid = $value->tid;
-                echo '<li>';
-                echo '<h3>' . $value->name . '</h3>';
-                echo '<ul class="cats-sorts">';
-                foreach ($news_items as $value2) {
-                    if ($tid == $value2->field_cat_turizm['und']['0']['tid']) {
-
-
-                        $tid2 = $value2->vid;
-                        $path = 'node/' . $value2->nid;
-                        //$path =  $node->nid ;
-                        $alias = drupal_get_path_alias($path);
-                        if ($node->vid == $tid2) {
-                            $currentclass = 'class="current"';
-                        } else {
-                            $currentclass = '';
-                        }
-                        echo '<li ' . $tid2 . '><a href="/' . $alias . '"   ' . $currentclass . ' > ';
-                        echo '<h3>' . $value2->title . '</h3>';
-                        echo '</a></li>';
+            if ($field_part[0]['value'] == 'omsk') {
+                echo '<ul class="cat-place-aside turizm-single">';
+                foreach ($news_items as $value) {
+                    $tid = $value->vid;
+                    $path = 'node/' . $value->nid;
+                    //$path =  $node->nid ;
+                    $alias = drupal_get_path_alias($path);
+                    if ($node->vid == $tid) {
+                        $currentclass = 'class="current"';
+                    } else {
+                        $currentclass = '';
                     }
+                    echo '<li ' . $tid . '><a href="/' . $alias . '"   ' . $currentclass . ' > ';
+                    echo '<h3>' . $value->title . '</h3>';
+                    echo '</a></li>';
                 }
                 echo '</ul>';
+            } else {
+                $name = 'turizm';
+                $myvoc = taxonomy_vocabulary_machine_name_load($name);
+                $tree = taxonomy_get_tree($myvoc->vid);
+
+                function cmp($a, $b)
+                {
+                    return strcmp($a->title, $b->title);
+                }
+
+                usort($news_items, "cmp");
+                echo '<ul class="cat-place-aside turizm-single">';
 
 
-                echo '</li>';
+                foreach ($tree as $value) {
+                    $tid = $value->tid;
+                    echo '<li>';
+                    echo '<h3>' . $value->name . '</h3>';
+                    echo '<ul class="cats-sorts">';
+                    foreach ($news_items as $value2) {
+                        if ($tid == $value2->field_cat_turizm['und']['0']['tid']) {
 
+
+                            $tid2 = $value2->vid;
+                            $path = 'node/' . $value2->nid;
+                            //$path =  $node->nid ;
+                            $alias = drupal_get_path_alias($path);
+                            if ($node->vid == $tid2) {
+                                $currentclass = 'class="current"';
+                            } else {
+                                $currentclass = '';
+                            }
+                            echo '<li ' . $tid2 . '><a href="/' . $alias . '"   ' . $currentclass . ' > ';
+                            echo '<h3>' . $value2->title . '</h3>';
+                            echo '</a></li>';
+                        }
+                    }
+                    echo '</ul>';
+
+
+                    echo '</li>';
+
+                }
+
+
+                echo '</ul>';
             }
-
-
-            echo '</ul>';
-
             ?>
         </div>
         <div class="col-md-8 turizm home-page single clearfix">

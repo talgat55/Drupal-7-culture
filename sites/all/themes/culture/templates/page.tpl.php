@@ -97,12 +97,12 @@
                 ?>
                 <div class="share-block">
                     <?php
-                    $uri = $_SERVER['HTTP_HOST'] . '/' . request_uri();
+                    $path = drupal_get_path_alias('node/'.$node->nid);
 
                     ?>
                     <p>Поделиться</p>
                     <div class="ya-share2" data-services="telegram,vkontakte,facebook"
-                         data-title='<?php print $node->title; ?>' data-url="<?php echo $uri; ?>"></div>
+                         data-title='<?php print $node->title; ?>' data-url="<?php echo $path; ?>"></div>
                 </div>
                 <?php if ($node->type == 'article') { ?>
                     <a class="button-print" href="#" onClick="window.print()"><img src="data:image/svg+xml;base64,
