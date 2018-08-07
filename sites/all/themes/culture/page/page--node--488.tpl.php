@@ -109,12 +109,13 @@
                     $url_adavance = file_create_url($uri_adavance);
 
 
-                    ?>
+                   /* ?>
                     <li class="turizm-detail-item"
                         style="background: url(<?php echo $url_omsk_obl; ?>) center bottom;">
 
-                   <?php /* <li class="turizm-detail-item"
-                        style="background: url(<?php echo path_to_theme(); ?>/images/1t-min.jpg) center bottom;">*/?>
+                   <?php */?>
+                    <li class="turizm-detail-item"
+                        style="background: url(<?php echo path_to_theme(); ?>/images/1t-min.jpg) center bottom;">
 
                         <a href="/turizm-turi-omskaya-oblast">
 
@@ -124,12 +125,12 @@
                             </div>
                         </a>
                     </li>
-
+                    <?php /*
                     <li class="turizm-detail-item"
                         style="background: url(<?php echo $url_omsk; ?>) center bottom;">
-                         <?php /*
+                         <?php */ ?>
                     <li class="turizm-detail-item"
-                        style="background: url(<?php echo path_to_theme(); ?>/images/2t-min.jpg) center bottom;">  */ ?>
+                        style="background: url(<?php echo path_to_theme(); ?>/images/2t-min.jpg) center bottom;">
                         <a href="/turizm-eksursii-omsk">
 
                             <div class="culture-bottom-block">
@@ -138,13 +139,13 @@
                             </div>
                         </a>
                     </li>
-
+                    <?php /*
                     <li class="turizm-detail-item"
                         style="background: url(<?php echo $url_adavance; ?>) center bottom;">
                         <?php
-                        /*
+                        */  ?>
                     <li class="turizm-detail-item"
-                        style="background: url(<?php echo path_to_theme(); ?>/images/3t-min.jpg) center bottom;">  */ ?>
+                        style="background: url(<?php echo path_to_theme(); ?>/images/3t-min.jpg) center bottom;">
                         <a href="/turizm-dostoprimechatelnosti">
 
                             <div class="culture-bottom-block">

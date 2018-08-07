@@ -3,12 +3,33 @@ jQuery(document).ready(function () {
 
 
     /*
-    * Replace urls
+    * Replace urls   in pages turizm
      */
     if (jQuery('.node-type-turizm').length){
         jQuery(".inline.odd:contains('Экскурсии по Омску')").wrap( "<a href='/turizm-eksursii-omsk'></a>" );
         jQuery(".inline.odd:contains('Туры по Омской области')").wrap( "<a href='/turizm-turi-omskaya-oblast'></a>" );
     }
+    /*
+    * Replace urls  in page culture details
+     */
+
+    if (jQuery('.node-type-culture-detail').length){
+        var text = jQuery(".inline.odd").eq(1).html();
+        var obg_cd = JSON.parse(culture_data );
+
+
+        jQuery.each( obg_cd, function( i, val ) {
+
+                if(val.title == text){
+                    console.log('true');
+                    jQuery(".inline.odd:contains('"+text+"')").wrap( "<a href='/culturedetails?field_categories_tid="+val.tid+"'></a>" );
+                }
+
+
+        });
+
+    }
+
 
     /*
     *
@@ -423,6 +444,11 @@ jQuery(document).ready(function () {
         });
 
     }
+
+
+
+
+
 
 // end redy function
 });

@@ -84,8 +84,28 @@
  * @see bartik_process_page()
  * @see html.tpl.php
  */
-?>
 
+$name = 'culture_details';
+$myvoc = taxonomy_vocabulary_machine_name_load($name);
+$tree = taxonomy_get_tree($myvoc->vid);
+$output = [];
+
+
+foreach ($tree as $value ){
+    array_push(
+        $output,
+        array(
+            'tid' => $value->tid,
+            'title' => $value->name
+        )
+    );
+}
+
+?>
+<script>
+    var culture_data = '<?php echo json_encode($output); ?>';
+
+</script>
 
 <div id="main" class="clearfix">
 
