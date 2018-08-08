@@ -1652,6 +1652,10 @@ div.password-confirm {
 .culture-detail-item {
     position: relative;
 }
+.culture-detail-item.lazy{
+    background-position: center bottom;
+    background-size: cover!important;
+}
 
 .culture-top-block {
     padding: 20px;
@@ -4354,6 +4358,12 @@ div.admin-panel .description {
 .backactive {
     opacity: 1 !important;
     visibility: visible !important;
+}
+.afisha-carousel .item-afisha {
+    height: 205px;
+}
+.afisha-carousel .item-afisha img{
+    height: 173px;
 }
 @media (max-width: 1299px) {
     .container {

@@ -117,7 +117,12 @@ $field_part = field_get_items('node', $node, 'field_part_turizm');
                 $news_items_nids = array_keys($result['node']);
                 $news_items = entity_load('node', $news_items_nids);
             }
+            function cmp($a, $b)
+            {
+                return strcmp($a->title, $b->title);
+            }
 
+            usort($news_items, "cmp");
 
             if ($field_part[0]['value'] == 'omsk') {
                 echo '<ul class="cat-place-aside turizm-single">';
@@ -141,12 +146,7 @@ $field_part = field_get_items('node', $node, 'field_part_turizm');
                 $myvoc = taxonomy_vocabulary_machine_name_load($name);
                 $tree = taxonomy_get_tree($myvoc->vid);
 
-                function cmp($a, $b)
-                {
-                    return strcmp($a->title, $b->title);
-                }
 
-                usort($news_items, "cmp");
                 echo '<ul class="cat-place-aside turizm-single">';
 
 

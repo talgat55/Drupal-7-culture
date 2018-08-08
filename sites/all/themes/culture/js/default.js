@@ -15,7 +15,11 @@
 
 jQuery(document).ready(function () {
     "use strict";
-
+    /*
+    * Lazy Load
+     */
+    var myLazyLoad = new LazyLoad();
+    jQuery('.lazy').Lazy();
     /*
     *  Expose filter set active class
     */
@@ -216,6 +220,7 @@ jQuery(document).ready(function () {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
+        lazyLoad: 'ondemand',
         dots: false,
         autoplay: true,
         arrows: false,
@@ -261,7 +266,11 @@ jQuery(document).ready(function () {
         jQuery(this).parent().parent().parent().find('.afisha-carousel').slick('slickNext');
     });
 
+    var countitems =  jQuery('.afisha-carousel .item-afisha').length;
 
+    if(countitems <= 4){
+        jQuery('.afisha-carousel-holder .slider-arrow-right, .afisha-carousel-holder .slider-arrow-left').fadeOut();
+    }
     /*
     * Lightbox for gallery
      */

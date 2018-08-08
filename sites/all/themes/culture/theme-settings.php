@@ -8,7 +8,7 @@ function culture_form_system_theme_settings_alter(&$form, &$form_state)
         '#default_value' => theme_get_setting('turizm_image_banner'),
     );
 
-
+/*
     $image_custom_index = theme_get_setting('turizm_image_banner');
     if (!$image_custom_index) {
         $fid = theme_get_setting('turizm_image_banner');
@@ -18,7 +18,10 @@ function culture_form_system_theme_settings_alter(&$form, &$form_state)
             file_save($file);
             drupal_set_message('Картинка успешно сохранена.', 'status');
         }
-    }
+    }*/
+    $file = file_load(theme_get_setting('turizm_image_banner'));
+    $file->status = FILE_STATUS_PERMANENT;
+    file_save($file);
 
     $form['theme_settings']['turizm_title_banner'] = array(
         '#type' => 'textfield',
@@ -57,7 +60,7 @@ function culture_form_system_theme_settings_alter(&$form, &$form_state)
         '#title' => t('Изображение для блока туров по омской области  стрницы туризма'),
         '#default_value' => theme_get_setting('turizm_image_omsk_obl'),
     );
-    $image_custom_index1 = theme_get_setting('turizm_image_omsk_obl');
+   /* $image_custom_index1 = theme_get_setting('turizm_image_omsk_obl');
     if (!$image_custom_index1) {
         $fid1 = theme_get_setting('turizm_image_omsk_obl');
         $file1 = file_load($fid1);
@@ -66,14 +69,17 @@ function culture_form_system_theme_settings_alter(&$form, &$form_state)
             file_save($file1);
             drupal_set_message('Картинка успешно сохранена. 2', 'status');
         }
-    }
+    }*/
+    $file2 = file_load(theme_get_setting('turizm_image_omsk_obl'));
+    $file2->status = FILE_STATUS_PERMANENT;
+    file_save($file2);
     $form['theme_settings']['turizm_image_omsk'] = array(
         '#type' => 'managed_file',
         '#upload_location' => 'public://images/',
         '#title' => t('Изображение для блока эксурсий  омску  стрницы туризма'),
         '#default_value' => theme_get_setting('turizm_image_omsk'),
     );
-    $image_custom_index2 = theme_get_setting('turizm_image_omsk');
+   /* $image_custom_index2 = theme_get_setting('turizm_image_omsk');
     if (!$image_custom_index2) {
         $fid2 = theme_get_setting('turizm_image_omsk');
         $file2 = file_load($fid2);
@@ -82,14 +88,17 @@ function culture_form_system_theme_settings_alter(&$form, &$form_state)
             file_save($file2);
             drupal_set_message('Картинка успешно сохранена. 3', 'status');
         }
-    }
+    }*/
+    $file3 = file_load(theme_get_setting('turizm_image_omsk'));
+    $file3->status = FILE_STATUS_PERMANENT;
+    file_save($file3);
     $form['theme_settings']['turizm_image_adavance'] = array(
         '#type' => 'managed_file',
         '#upload_location' => 'public://images/',
         '#title' => t('Изображение для блока достопримечательностей  стрницы туризма'),
         '#default_value' => theme_get_setting('turizm_image_adavance'),
     );
-    $image_custom_index3 = theme_get_setting('turizm_image_adavance');
+   /* $image_custom_index3 = theme_get_setting('turizm_image_adavance');
     if (!$image_custom_index3) {
         $fid3 = theme_get_setting('turizm_image_adavance');
         $file3 = file_load($fid3);
@@ -98,7 +107,10 @@ function culture_form_system_theme_settings_alter(&$form, &$form_state)
             file_save($file3);
             drupal_set_message('Картинка успешно сохранена. 4', 'status');
         }
-    }
+    }*/
+    $file4 = file_load(theme_get_setting('turizm_image_adavance'));
+    $file4->status = FILE_STATUS_PERMANENT;
+    file_save($file4);
     $form['theme_settings']['header_block_about'] = array(
         '#type' => 'textarea',
         '#title' => t('Контент блока  О нас '),

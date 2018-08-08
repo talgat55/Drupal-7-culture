@@ -49,14 +49,14 @@
             </div>
             </div>-->
             <div class="banner turist-banner home-page clearfix padding-top-20">
-              <?php  /* <img src="<?php echo path_to_theme(); ?>/images/bg-turist-min.jpg"/>   */ ?>
+            <img src="<?php echo path_to_theme(); ?>/images/bg-turist-min.jpg"/>
                 <?php
                 $file = file_load(theme_get_setting('turizm_image_banner'));
                 $uri = $file->uri;
                 $url = file_create_url($uri);
                 
-                ?>
-                <img src="<?php echo $url; ?>"  alt="Баннер Туризма"/>
+               /* ?>
+                <img src="<?php echo $url; ?>"  alt="Баннер Туризма"/>  */?>
 
                 <div class="textblock-banner turism-page-banner   left-block">
 

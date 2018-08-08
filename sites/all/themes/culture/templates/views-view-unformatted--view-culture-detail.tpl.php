@@ -34,7 +34,7 @@
 
 
                     echo '
-                        <li class="culture-detail-item"  style="background: url(' . $redyimg . ') center bottom;">
+                        <li class="culture-detail-item lazy"   data-src="'.$redyimg.'"   >
                         <a href="' . $view_field['path'] . '">
                             <div class="overlay-culture-detail"></div>
                                    <div  class="culture-top-block clearfix">

@@ -25,8 +25,8 @@
                     <a href="'.$view_field['path'].'" >
                     <div  class="news-item">
                         <div class="date-news">'.$datefieldinvert[1].' '.$datefieldinvert[0].'</div>
-                        '.$view_field["field_image"].'
-                        <h3>'.$view_field["title"].'</h3>
+                        <img data-src="'.$view_field["field_image"].'"  />
+                        <h3  >'.$view_field["title"].'</h3>
                         <div class="news-text-block">
                             '.$view_field["field_anons"].'
                         </div>

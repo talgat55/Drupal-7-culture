@@ -101,11 +101,11 @@
                     $month = date('m', $field['date']) - 1;
                     $day = date('d', $field['date']);
                 }
-
+ /// <img data-lazy="' . $field['src'] . '" alt="' . $field['title'] . '" />
                 echo '
                    <div class="item-afisha">
                         <div class="afisha-item-date">'.$day.' '.$arr[$month].'</div>
-                        <img src="' . $field['src'] . '" alt="' . $field['title'] . '" />
+                        <img data-lazy="' . $field['src'] . '" alt="" />
                         <div class="title-afisha"><a href="'.$field['path'].'">' . $field['title'] . '</a></div>
                     </div>
                         ';
