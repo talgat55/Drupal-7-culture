@@ -83,8 +83,11 @@
                 $file = file_load(theme_get_setting('turizm_image_banner'));
                 $uri = $file->uri;
                 $url = file_create_url($uri);
+               /*  <img src="<?php echo $url; ?>"/>
+               */
                 ?>
-                <img src="<?php echo $url; ?>"/>
+
+                <img src="<?php echo path_to_theme(); ?>/images/bg-turist-min.jpg"/>
                 <div class="textblock-banner turism-page-banner   left-block">
 
                     <div class="textblock-banner-wallpaper">

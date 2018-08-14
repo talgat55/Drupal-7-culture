@@ -1529,6 +1529,7 @@ div.password-confirm {
     list-style: none;
     width: 25%;
     float: left;
+    min-height: 430px;
     margin-bottom: 50px;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -4733,6 +4734,7 @@ div.admin-panel .description {
     }
     .news.home-page li{
         width: 50%;
+        min-height: auto!important;
     }
     .news.home-page li:hover {
         transform: none;

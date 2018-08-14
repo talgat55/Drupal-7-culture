@@ -3,6 +3,8 @@
 <head>
     <meta name="yandex-verification" content="a492a40ce2f32422"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
     <?php if ($is_front) : ?>
 
         <meta name="description"

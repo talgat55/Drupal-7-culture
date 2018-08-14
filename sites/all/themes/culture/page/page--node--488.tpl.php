@@ -47,7 +47,9 @@
 
 
             </div>
+
             </div>-->
+
             <div class="banner turist-banner home-page clearfix padding-top-20">
             <img src="<?php echo path_to_theme(); ?>/images/bg-turist-min.jpg"/>
                 <?php

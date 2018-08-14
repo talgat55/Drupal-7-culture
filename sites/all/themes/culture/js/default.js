@@ -382,7 +382,10 @@ jQuery(document).ready(function () {
     /*
     *  Afisha change select
      */
-
+    function getMonths(date) {
+        var month = date + 1;
+        return month < 10 ? '0' + month : '' + month; // ('' + month) for string result
+    }
 
     jQuery('.select-afisha-page').on('change', function () {
 
@@ -406,18 +409,26 @@ jQuery(document).ready(function () {
 
 
             var d = new Date();
+            var y = d.getFullYear();
+            var m = d.getMonth();
             var first = d.getDate() - d.getDay(); // First day is the day of the month - the day of the week
-            var last = first + 8; // last day is the first day + 6
+            var last = first + 7; // last day is the first day + 6
             var last1 = first + 6; // last day is the first day + 6
 
             // var firstday = new Date(d.setDate(last1)).getTime();
             //  var firstday = new Date(d.setDate(last1)+24*60*60*1000).getTime();
             //  var lastday = new Date(d.setDate(last)).getTime();
             //  var lastday = new Date(d.setDate(last)+24*60*60*1000).getTime();
-            var firstday = new Date(d.setDate(last1) - 5 * 60 * 60 * 1000).getTime();
-            var lastday = new Date(d.setDate(last) + 11 * 60 * 60 * 1000).getTime();
 
-            console.log(firstday + ' ' + lastday);
+            var sec  = y+'-'+getMonths(m)+'-'+last+'T23:59:59+00:00';
+            var firs = y+'-'+getMonths(m)+'-'+last1+'T00:00:00+00:00';
+
+
+            //var firstday = Date.UTC(y, parseInt(m+1), last1);
+            //var lastday = Date.UTC(y, parseInt(m+1), last);
+             var firstday = Date.parse(firs);
+             var lastday =  Date.parse(sec);
+            console.log(firs + ' ' + sec);
 
         } else {
             var d = new Date();
@@ -457,7 +468,8 @@ jQuery(document).ready(function () {
     /*
     * Match Height
      */
-    jQuery('.news.home-page li').matchHeight();
+    jQuery('.news.home-page .item-news-page').matchHeight();
+    jQuery('.front .news.home-page .item-news-page').matchHeight();
     //jQuery('.culture-detail-row .culture-detail-item').matchHeight();
     jQuery('.culture-detail-rows .culture-detail-item a').matchHeight();
     jQuery('.place.home-page li').matchHeight();

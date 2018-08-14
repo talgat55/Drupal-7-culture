@@ -32,7 +32,6 @@
     <div id="main" class="turist-row clearfix">
         <div class="container relative clearfix">
             <!--<div id="stickyblock" class="aside turism">
-
                 <a href="#" target="_blank" class="block-photo">
                     <img src="/<?php print path_to_theme(); ?>/images/elipse.png"
                          alt="Справочник">
@@ -43,8 +42,6 @@
                         <p>Справочник туриста</p>
                     </div>
                 </a>
-
-
             </div>-->
 
             <div class="banner turist-banner home-page clearfix padding-top-20 margin-bottom-60">
@@ -52,8 +49,10 @@
                 $file = file_load(theme_get_setting('turizm_image_banner'));
                 $uri = $file->uri;
                 $url = file_create_url($uri);
+                /* <img src="<?php echo $url; ?>"/> */
                 ?>
-                <img src="<?php echo $url; ?>"/>
+
+                <img src="<?php echo path_to_theme(); ?>/images/bg-turist-min.jpg"/>
                 <div class="textblock-banner turism-page-banner   left-block">
 
                     <div class="textblock-banner-wallpaper">
