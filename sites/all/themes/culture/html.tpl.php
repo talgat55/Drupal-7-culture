@@ -71,8 +71,7 @@
             gtag('config', 'UA-121337907-1');
         </script>
     <?php endif; ?>
-</head>
-
+</head> 
 <body class="<?php print $classes; ?>">
 
 

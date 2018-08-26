@@ -18,24 +18,22 @@ function culture_preprocess_html(&$vars) {
 
 }
 
-/*
-function culture_preprocess_page(&$vars) {
-    $header = drupal_get_http_header('status');
-    if ($header == '404 Not Found') {
-        $vars['theme_hook_suggestions'][] = 'page__404';
-    }
-}*/
-/**
- * Implements hook_page_alter().
- */
-/*
-function culture_page_alter(&$page) {
-    if (isset($page['news_baner_main'])) {
-        $GLOBALS['region_news_baner_main'] = $page['news_baner_main'];
-    }
+function culture_form_alter(&$form, &$form_state, $form_id) {
+
+  if($form_id == 'system_theme_settings'){
+      $image_custom_index1 = $form_state['values']['turizm_image_banner'];
+      if (!$image_custom_index1) {
+          $file1 = file_load($image_custom_index1);
+          if ($file1->status == 0) {
+              $file1->status = FILE_STATUS_PERMANENT;
+              file_save($file1);
+          }
+      }
+
+
+  }
 }
 
-**/
 function pn_node($node, $mode = 'n') {
     if (!function_exists('prev_next_nid')) {
         return NULL;

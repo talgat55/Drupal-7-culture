@@ -1,18 +1,5 @@
 <?php
-function save_image_form_submit(&$form, &$form_state, $form_id){
-    $image_custom_index = $form_state['values']['turizm_image_banner'];
-    if (!$image_custom_index) {
-        $file = file_load($image_custom_index);
-        if ($file->status == 0) {
-            $file->status = FILE_STATUS_PERMANENT;
-            file_save($file);
-        }
-    }
 
-}
-if (isset($form['submit'])) {
-    $form['submit']['#submit'][] ='save_image_form_submit';
-}
 function culture_form_system_theme_settings_alter(&$form, &$form_state)
 {
 

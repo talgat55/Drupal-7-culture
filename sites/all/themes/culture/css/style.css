@@ -5005,8 +5005,18 @@ div.admin-panel .description {
         background: #fff !important;
         color: #000;
         height: 100%;
-        overflow-y: hidden;
-        margin-top: 0;
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+    }
+    html{
+        height: 100%;
+        overflow: visible;
+        margin: 0;
+        padding: 0;
+    }
+    #footer-wrapper{
+        background-color: transparent;
     }
 
     h1 {
@@ -5116,4 +5126,8 @@ div.admin-panel .description {
 }
 .page-node-491 ul.turism-row.home-page.turism-omsk.clearfix {
     margin-bottom: 0!important;
+}
+
+.page-node-490 .banner.home-page {
+    margin-bottom: 40px;
 }

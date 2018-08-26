@@ -3,6 +3,10 @@
 /**
  * Implements hook_menu().
  */
+function startOfWeek($aDate){
+    $d=strtotime($aDate);
+    return strtotime(date('Y-m-d',$d).' - '.date("w",$d).' days');
+}
 function afisha_ajax_menu()
 {
     $items['node/get/ajax/%/%'] = array(
@@ -122,7 +126,7 @@ function summary($page_callback_result, $apidate, $apidate2)
     ];
 
     $output = "";
-
+    $year = date('Y');
     foreach ($page_callback_result as $node) {
         $my_image_url ='';
 
@@ -160,8 +164,16 @@ function summary($page_callback_result, $apidate, $apidate2)
         }
 
         if ($node->field_field_duration_date_afisha['und'][0]['value']) {
+
+            /*$custom_date = strtotime( date('d-m-Y', strtotime($day2.'-'.intVal($monthsearch2+1).'-'.$year)) );
+            $week_start_day = date('d', strtotime('this week last monday', $custom_date));
+            $week_start_mounth = date('m', strtotime('this week last monday', $custom_date));*/
+            $mnt_d = date('d', startOfWeek($year . "-" . intVal($monthsearch2 + 1) . "-" . $day2));
+            $mnt_m = date('m', startOfWeek($year . "-" . intVal($monthsearch2 + 1) . "-" . $day2));
+            // !=$day2 &&  $mnt_m != intVal($monthsearch2+1)
+            if(intVal($mnt_d + 1) !=$day2){
             $output .= '   
-                     <li class="culture-detail-item  ' . $value['und'][0]['value'] . '">
+                     <li  class="culture-detail-item  ' . $value['und'][0]['value'] . '">
                          <a href="' . $alias . '">
                          
                             <div class="culture-top-block clearfix">
@@ -179,6 +191,7 @@ function summary($page_callback_result, $apidate, $apidate2)
         
                          </a>         
                      </li>';
+        }
         } else {
             foreach ($node->field_date_afisha['und'] as $date) {     // for array dates
 

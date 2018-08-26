@@ -10,7 +10,7 @@
     <div class="container relative">
 
         <div class="special-row margin-10">
-            <ul class="news home-page clearfix">
+            <ul class="news home-page clearfix  ">
                 <?php
                 $i = 0;
                 foreach ($view->style_plugin->rendered_fields as $view_field): ?>

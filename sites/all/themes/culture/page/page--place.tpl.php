@@ -39,9 +39,11 @@
                     foreach ($terms as $term){
 
                         $my_image_url = file_create_url($term->field_image_tax_place['und'][0]['uri']);
+                        
                         $my_image_url_hover = file_create_url($term->field_image_tax_hover_place['und'][0]['uri']);
 
                         $my_image_url_hover_redy = $my_image_url_hover ? $my_image_url_hover : $my_image_url;
+
                         $tid = $term->tid;
 
 
@@ -63,7 +65,7 @@
 
                     echo '<li><a  '.$class.' href="#" data-id="'.$tid.'"> ';
                     echo '<h3>'.$value->name.'</h3>';
-                    echo '<div class="img-cat-place-aside-block">';
+                    echo '<div class="img-cat-place-aside-block" >';
 
 
                     echo '<img class="img-std-place"  src="'.$my_image_url_redy.'" />';
